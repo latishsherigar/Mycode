@@ -1,0 +1,25 @@
+LISTING 5: The Word Code
+
+PRIVATE Sub CreateDocument(vCategory As Variant)
+DIM i AS Integer
+	IF Len(txtFileName) > 0 THEN
+		Set oCustomerDoc = oWordApp.Documents.Add("ProductTemplate2.dot")
+		oCustomerDoc.SaveAs "c:\temp\" & txtFileName
+	ELSE
+		EXIT Sub
+	END IF
+    
+Begin Callout A
+	oCustomerDoc.Bookmarks("Customer").Range.Text = mCustomer
+	oCustomerDoc.Bookmarks("Category").Range.Text = mCategory
+End Callout A
+
+	FOR i = 0 To UBound(vCategory)
+		oCustomerDoc.Bookmarks("Products").Range.InsertAfter _
+			(vCategory(i))
+		oCustomerDoc.Bookmarks("Products").Range.InsertBreak _
+			(wdLineBreak)
+	NEXT
+oCustomerDoc.Save        
+oCustomerDoc.Range.MoveEnd
+END Sub

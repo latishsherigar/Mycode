@@ -1,0 +1,106 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\zip32.dll=
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Unzip32.dll=
+C:\WINDOWS\system32\shlwapi.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\COMCTL32.OCX=
+C:\WINDOWS\system32\Comdlg32.ocx=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Hideit.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\shlwapi.dll=Yes
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Unzip32.dll=Yes
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\zip32.dll=Yes
+C:\WINDOWS\system32\Comdlg32.ocx=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Hideit.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\shlwapi.dll=$(WinSysPath)
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Unzip32.dll=$(WinSysPath)
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\zip32.dll=$(WinSysPath)
+C:\WINDOWS\system32\Comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Hideit.exe=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Hideit
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Hideit
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Hideit]
+Icon1=Hideit.exe
+Title1=Hideit
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Package
+ProjectFolder=D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit
+ServerSideCab=
+File1=D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Package\setup.exe
+File2=D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Package\Setup.Lst
+File3=D:\LATISH\PROGRAMMING\VB\PRACTISE CODES\Hideit\Package\Hideit.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

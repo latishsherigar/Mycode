@@ -1,0 +1,169 @@
+#START TRANSACTION;
+
+drop table generic_master;
+
+create table generic_master
+(
+ mastercode varchar(100),
+ answ1 varchar(100),
+ code1 varchar(20),
+ disp_order SMALLINT(2) 
+);
+
+begin;
+
+DELETE FROM generic_master
+where mastercode IN (
+'FINANCIAL_PERIOD',
+'PAN_NO',
+'SERVICE_TAX_NO',
+'AUTHORISED_SIGNATORY',
+'ADDRESS_LINE1',
+'TELEPHONE_NO',
+'EMAIL_ID'
+);
+
+INSERT INTO generic_master(mastercode,answ1,code1,disp_order )
+VALUES('FINANCIAL_PERIOD','APR-SEP','01',1);
+
+INSERT INTO generic_master(mastercode,answ1,code1,disp_order )
+VALUES('FINANCIAL_PERIOD','OCT-MAR','02',2);
+
+INSERT INTO generic_master(mastercode,answ1)
+VALUES('PAN_NO','ABAFS1309M');
+
+INSERT INTO generic_master(mastercode,answ1)
+VALUES('SERVICE_TAX_NO','STC/K-III/TH-I/BAS/36/04-05');
+
+INSERT INTO generic_master(mastercode,answ1)
+VALUES('AUTHORISED_SIGNATORY','Shri Durga Eximport Services');
+
+INSERT INTO generic_master(mastercode,answ1)
+VALUES('ADDRESS_LINE1','B-703,SUNFLOWER, Flower Valley Complex,
+ Khadakpadada Cricle, Kalyan(W) Pin - 421301');
+
+INSERT INTO generic_master(mastercode,answ1)
+VALUES('TELEPHONE_NO','98190 21728');
+
+INSERT INTO generic_master(mastercode,answ1)
+VALUES('EMAIL_ID','shri.durga@rediffmail.com');
+
+COMMIT;
+
+drop table form_st3;
+
+CREATE TABLE form_st3(
+ fst3_fin_yr varchar(4),
+ fst3_fin_period_cd varchar(3),
+ fst3_assessee_name varchar(50),
+ fst3_premises_reg_no varchar(50),
+ fst3_lastday_amt_payable varchar(10)
+);
+
+drop table  ret_filed_srvs_cat;
+
+CREATE TABLE ret_filed_srvs_cat(
+  rfsc_fin_yr varchar(4),
+  rfsc_fin_period_cd varchar(3),
+  rfsc_desc varchar(1000),
+  rfsc_order_no SMALLINT(2) UNSIGNED
+);
+
+drop table ip_srvc_credit_srvs;  
+
+CREATE TABLE ip_srvc_credit_srvs(
+  ipsvcs_fin_yr varchar(4),
+  ipsvcs_fin_period_cd varchar(3),
+  ipsvcs_desc varchar(1000),
+  ipsvcs_order_no SMALLINT(2) UNSIGNED
+);
+
+
+DELETE FROM generic_master
+WHERE mastercode = 'PAY_DET_SRV_TAX_CAT';
+
+INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Amount received towards taxable
+ service(s) provided','01',1);
+
+INSERT INTO generic_master(mastercode,answ1,code1,disp_order )
+VALUES('PAY_DET_SRV_TAX_CAT','Amount received in advance towards
+ taxable service(s) to be provided','02',2);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Amount Billed- gross','03',3);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Amount billed for exempted services
+ other than export','04',4);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Amount billed for exported services,
+ without payment of tax','05',5);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Amount billed for services on 
+which tax is to be paid','06',6);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Abatement claimed - Value ','07',7);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Notification number of Abatement','08',8);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Notification number of exemption','09',9);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Provisional Assessment order No.','10',10);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Service Tax payable','11',11);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Education cess payable','12',12);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Service tax paid in cash','13',13);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Challan Number','14',14);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Challan date','15',15);
+ 
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Service tax paid through cenvat credit','16',16);
+
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Education cess paid in cash','17',17);
+
+ INSERT INTO generic_master(mastercode,answ1,code1,disp_order)
+VALUES('PAY_DET_SRV_TAX_CAT','Education cess paid through education 
+cess credit','18',18);
+
+DROP  TABLE pay_det_srvctax_cat;
+
+CREATE TABLE pay_det_srvctax_cat(
+  pdsc_id int primary key auto_increment,
+  pdsc_fin_yr varchar(4),
+  pdsc_fin_period_cd varchar(3),
+  pdsc_group_no varchar(2),
+  pdsc_header varchar(500)
+);
+
+//LAST_INSERT_ID()
+
+DROP  TABLE pay_det_srvctax_cat_det;
+
+CREATE TABLE pay_det_srvctax_cat_det(
+  pdscd_pdsc_id int,
+  pdscd_desc_cd varchar(100),
+  pdscd_f1  varchar(50),
+  pdscd_f2  varchar(50),
+  pdscd_f3  varchar(50),
+  pdscd_f4  varchar(50),
+  pdscd_f5  varchar(50),
+  pdscd_f6  varchar(50),
+  pdscd_ftotal  varchar(50)
+);

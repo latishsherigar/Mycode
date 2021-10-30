@@ -1,0 +1,11 @@
+--01:14:39--  http://localhost/sdes_test/bill_printer/invoice_move_stag_data.php
+           => `c.out'
+Resolving localhost... 127.0.0.1
+Connecting to localhost|127.0.0.1|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K .......... .......... .......... .......... .......     409.01 KB/s
+
+01:14:39 (409.01 KB/s) - `c.out' saved [48959]
+

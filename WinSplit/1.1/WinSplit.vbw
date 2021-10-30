@@ -1,0 +1,9 @@
+frmSplitter = 66, 87, 477, 426, C, 110, 145, 521, 484, C
+SplitterFunctions = 44, 58, 455, 397, C
+Declarations = 22, 29, 433, 368, C
+MergerFunctions = 0, 0, 411, 339, C
+CommonFunctions = 0, 0, 442, 316, C
+clsCommonDialog = 110, 110, 445, 430, C
+ctlprogressbar = 0, 0, 343, 320, C, 44, 58, 486, 374, C
+ctlbutton = 66, 87, 508, 403, C, 88, 116, 499, 455, C
+ctlHyperLink = 0, 0, 0, 0, C, 66, 87, 471, 403, C

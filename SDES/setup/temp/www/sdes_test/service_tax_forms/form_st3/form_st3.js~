@@ -1,0 +1,269 @@
+
+function replaceAll( str, from, to ) {
+    var idx = str.indexOf( from );
+
+
+    while ( idx > -1 ) {
+        str = str.replace( from, to );
+        idx = str.indexOf( from );
+    }
+
+    return str;
+}
+
+function pop_fin_yr(stryear)
+{
+var d = new Date();
+var sel_yr_text ;
+var curr_year;
+
+if(stryear==""){
+  curr_year = d.getFullYear();
+}
+else{
+  curr_year = stryear;   
+}
+
+curr_year = parseInt(curr_year);
+
+ document.write('<SELECT name="fin_year" onchange=loaddata();>');
+ for(i=2000;i<=parseInt(d.getFullYear()) + 1;++i){
+    
+    sel_yr_text=""; 
+    
+    j = String(i+1).substr(2);
+    //alert('<option value=' + i + '-' + j + ' ' + sel_yr_text );
+    
+    if( i==curr_year)
+      {
+       sel_yr_text="selected";
+      }
+     document.write('<option value=' + i + '-' + j + ' ' + sel_yr_text +' >' 
+                    + i + '-' + j + '</option>');
+  }
+ document.write('</SELECT>');
+
+}
+
+
+function add_pay_srv_tax_cat()
+{
+document.form_st3.operation.value ="add_pdsc";
+document.form_st3.submit();
+}
+
+function del_pay_srv_tax_cat(pdsc_group_no)
+{
+if(confirm('Are you sure u wish to continue ?')){
+  document.form_st3.operation.value ="del_pdsc";
+  document.form_st3.pdsc_group_no.value =pdsc_group_no;
+  document.form_st3.submit();
+ } 
+}
+
+/*
+function add_pay_srv_tax_cat()
+{
+ var v_pay_srv_tax_cat_Div = document.getElementById('pay_srv_tax_cat_Div');
+ var a = document.getElementById('pay_srv_tax_cat_count');
+ var b = parseInt(a.value);
+ var divIdName = 'pay_srv_tax_cat_Div' + b;
+ var v_div = document.createElement('div');
+ v_div.setAttribute("id",divIdName);
+ a.value = b + 1;
+ v_div.innerHTML = replaceAll(asas.innerHTML,"divno%", b);
+ v_pay_srv_tax_cat_Div.appendChild(v_div);
+ //alert(v_div.innerHTML);
+
+}
+*/
+
+function removeEvent(divNum)
+{
+var d = document.getElementById('pay_srv_tax_cat_Div');
+var olddiv = document.getElementById(divNum);
+d.removeChild(olddiv);
+}
+
+function validate_input(){
+
+
+}
+
+function loaddata(){
+  document.form_st3.operation.value="loaddata";
+  document.form_st3.submit();
+}
+
+function fin_period_change(){
+  loaddata();
+}
+
+function submitform(){
+  document.form_st3.operation.value = "savedata";
+  return confirm("Are you sure you want to save the data ?");
+}
+
+function add_rfsc()
+{
+ var v_rfsc_desc_count = parseInt(document.getElementById('rfsc_desc_count').value);
+ var v_div_rfsc = document.getElementById('div_rfsc');
+ var divIdName = 'div_child_rfsc' ;
+ var v_div = document.createElement('div');
+ v_div.setAttribute("id",divIdName);
+ v_div.innerHTML = replaceAll(document.getElementById('div_template_rfsc').innerHTML,"_no%", v_rfsc_desc_count);
+ v_div_rfsc.appendChild(v_div);
+ ++document.getElementById('rfsc_desc_count').value; 
+}
+
+
+function add_ipsvcs()
+{
+ var v_ipsvcs_desc_count = parseInt(document.getElementById('ipsvcs_desc_count').value);
+ var v_div_ipsvcs = document.getElementById('div_ipsvcs');
+ var divIdName = 'div_child_ipsvcs' ;
+ var v_div = document.createElement('div');
+ v_div.setAttribute("id",divIdName);
+ v_div.innerHTML = replaceAll(document.getElementById('div_template_ipsvcs').innerHTML,"_no%", v_ipsvcs_desc_count);
+ v_div_ipsvcs.appendChild(v_div);
+ ++document.getElementById('ipsvcs_desc_count').value; 
+
+}
+
+function validate_pdsc_cell(e,txtbox,data_type){
+
+  if(data_type=='NUMBER'){  
+    return numbersonly(e);
+    }
+    
+  return true;
+  
+}
+  
+function IsBlankString(strtext){
+if(trim(strtext)==''){
+ return true;
+}
+return false;
+}
+
+
+function cal_total_values(txtbox,pdsc_id,pdsc_code,pdsc_data_type){
+var frm = document.form_st3;
+var txta = eval("frm.pdsc_" + pdsc_id + "_" + pdsc_code + "_a.value");
+var txtb = eval("frm.pdsc_" + pdsc_id + "_" + pdsc_code + "_b.value");
+var txtc = eval("frm.pdsc_" + pdsc_id + "_" + pdsc_code + "_c.value");
+var txtd = eval("frm.pdsc_" + pdsc_id + "_" + pdsc_code + "_d.value");
+var txte = eval("frm.pdsc_" + pdsc_id + "_" + pdsc_code + "_e.value");
+var txtf = eval("frm.pdsc_" + pdsc_id + "_" + pdsc_code + "_f.value");
+
+
+if(pdsc_data_type=='NUMBER'){  
+   inta=parseFloat(IsBlankString(txta)?0:txta);
+   intb=parseFloat(IsBlankString(txtb)?0:txtb);
+   intc=parseFloat(IsBlankString(txtc)?0:txtc);
+   intd=parseFloat(IsBlankString(txtd)?0:txtd);
+   inte=parseFloat(IsBlankString(txte)?0:txte);
+   intf=parseFloat(IsBlankString(txtf)?0:txtf);
+   totaltxtbox = eval("frm.pdsc_" + pdsc_id + "_" + pdsc_code + "_g");
+   totaltxtbox.value = inta + intb + intc + intd + inte + intf;
+   if(totaltxtbox.value == 0){
+     if(IsBlankString(txta)||IsBlankString(txtb)||IsBlankString(txtc)||
+        IsBlankString(txtd)||IsBlankString(txte)||IsBlankString(txtf)){
+          totaltxtbox.value = '';         
+       }
+   }
+}   
+
+return true;
+
+}
+
+function isDate(dtStr){
+	var daysInMonth = DaysArray(12)
+	var pos1=dtStr.indexOf(dtCh)
+	var pos2=dtStr.indexOf(dtCh,pos1+1)
+	var strDay=dtStr.substring(0,pos1)
+	var strMonth=dtStr.substring(pos1+1,pos2)
+	var strYear=dtStr.substring(pos2+1)
+	strYr=strYear
+	if (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)
+	if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)
+	for (var i = 1; i <= 3; i++) {
+		if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)
+	}
+	month=parseInt(strMonth)
+	day=parseInt(strDay)
+	year=parseInt(strYr)
+	if (pos1==-1 || pos2==-1){
+		alert("The date format should be : dd/mm/yyyy")
+		return false
+	}
+	if (strMonth.length<1 || month<1 || month>12){
+		alert("Please enter a valid month")
+		return false
+	}
+	if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month]){
+		alert("Please enter a valid day")
+		return false
+	}
+	if (strYear.length != 4 || year==0 || year<minYear || year>maxYear){
+		alert("Please enter a valid 4 digit year between "+minYear+" and "+maxYear)
+		return false
+	}
+	if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false){
+		alert("Please enter a valid date")
+		return false
+	}
+return true
+}
+
+function IsNumeric(sText)
+
+{
+   var ValidChars = "0123456789.";
+   var IsNumber=true;
+   var Char;
+
+ 
+   for (i = 0; i < sText.length && IsNumber == true; i++) 
+      { 
+      Char = sText.charAt(i); 
+      if (ValidChars.indexOf(Char) == -1) 
+         {
+         IsNumber = false;
+         }
+      }
+   return IsNumber;
+   
+}
+
+function trim(sInString) {
+  sInString = sInString.replace( /^\s+/g, "" );// strip leading
+  return sInString.replace( /\s+$/g, "" );// strip trailing
+}
+
+function numbersonly(e){
+/*
+46- .dot key for decimalvalues
+8--backspace
+9 tabkey
+17 -ctl key
+*/
+
+var unicode=e.charCode? e.charCode : e.keyCode;
+
+if (unicode==46 || unicode==8 || unicode==9|| unicode==17) 
+ return true;
+ 
+if (unicode<48||unicode>57){ //if not a number
+ return false; //disable key press
+}
+}
+
+function close_win(){
+if(confirm('Are you sure u want to continue ?')){
+ window.close();
+}
+}
+

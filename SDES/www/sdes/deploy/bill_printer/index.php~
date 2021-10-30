@@ -1,0 +1,33 @@
+<?php 
+$inv_no='';
+$inv_dt='';
+$inv_cmp_name='';
+$inv_cmp_code ='';
+$inv_total_rs ='';
+
+include("../common/php/lib.php") ;
+
+$REPORT_SERVER_PATH=$REPORT_SERVER_PATH."rep_src=bill_printer_invoice";
+
+include("functions.php") ;
+
+connect_db();
+echo " aaaaaa ";
+
+ $inv_no = clean_form_data($_REQUEST["inv_no"]);
+
+if($_REQUEST["operation"]=="save"){
+  save_inv_data();
+ }
+
+//if($_REQUEST["operation"]=="load"){
+  load_inv_data();
+// }
+
+include("bill.html") ;
+
+close_db();
+
+?>
+
+

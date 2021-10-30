@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="fst3_subreport0"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="535"
+		 pageHeight="802"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+	<import value="it.businesslogic.ireport.IReportScriptlet" />
+
+	<parameter name="fin_year" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["xxx"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fin_period_cd" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["xxx"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT
+     rfsc_fin_yr,
+     gm.`answ1` AS rfsc_fin_period,
+     rfsc_desc,
+     rfsc_order_no,
+     rfsc_fin_period_cd
+FROM
+     `ret_filed_srvs_cat` ret_filed_srvs_cat,
+     `generic_master` gm
+WHERE
+     rfsc_fin_period_cd = gm.code1
+ AND gm.mastercode = 'FINANCIAL_PERIOD'
+ AND rfsc_fin_yr = $P{fin_year}
+ AND rfsc_fin_period_cd = $P{fin_period_cd}]]></queryString>
+
+	<field name="rfsc_fin_yr" class="java.lang.String"/>
+	<field name="rfsc_fin_period" class="java.lang.String"/>
+	<field name="rfsc_desc" class="java.lang.String"/>
+	<field name="rfsc_order_no" class="java.lang.Integer"/>
+	<field name="rfsc_fin_period_cd" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="33"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="476"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="" size="10"/>
+					</textElement>
+				<text><![CDATA[Category of taxable services for which return is being filed]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="18"
+						width="476"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[(Mention all the taxable services provided/ received)]]></text>
+				</staticText>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="21"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="11"
+						y="2"
+						width="387"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="" size="10" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="CP1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{rfsc_desc}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

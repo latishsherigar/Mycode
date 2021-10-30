@@ -1,0 +1,119 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|shtweavng]
+Icon1=sheetweaving.exe
+Title1=shtweavng
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=c:\Documents and Settings\web\Desktop\code\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Program Files\Microsoft Office\Office10\EXCEL.EXE=
+C:\Program Files\Microsoft Office\Office10\MSWORD.OLB=
+C:\Program Files\Microsoft Office\Office\MSWORD9.OLB=
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\Comdlg32.ocx=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\web\Desktop\code\sheetweaving.exe=Yes
+C:\WINNT\system32\MSVBVM60.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=Yes
+C:\Program Files\Microsoft Office\Office\MSWORD9.OLB=Yes
+C:\WINNT\system32\COMDLG32.OCX=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\LATISH\programming\VB\projects\gwhandley\code\sheetweaving.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Office\Office10\MSWORD.OLB=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office10\EXCEL.EXE=$(AppPath)
+C:\WINDOWS\system32\Comdlg32.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\web\Desktop\code\sheetweaving.exe=$(AppPath)
+C:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\MSWORD9.OLB=$(WinSysPath)
+C:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\LATISH\programming\VB\projects\gwhandley\code\sheetweaving.exe=No
+C:\Program Files\Microsoft Office\Office10\EXCEL.EXE=No
+C:\Documents and Settings\web\Desktop\code\sheetweaving.exe=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=multi
+Size=1.2 MB
+Title=sheetweaving
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=sheetweavng
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|sheetweavng]
+Icon1=sheetweaving.exe
+Title1=sheetweavingspecs
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=c:\Documents and Settings\web\Desktop\code\Package
+ProjectFolder=C:\Documents and Settings\web\Desktop\code
+ServerSideCab=
+File1=c:\Documents and Settings\web\Desktop\code\Package\setup.exe
+File2=c:\Documents and Settings\web\Desktop\code\Package\Setup.Lst
+File3=c:\Documents and Settings\web\Desktop\code\Package\sheetw1.CAB
+File4=c:\Documents and Settings\web\Desktop\code\Package\sheetw2.CAB
+Handler1=PDWizard.FloppyDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+Handler3=PDWizard.WebPostDplySubWiz

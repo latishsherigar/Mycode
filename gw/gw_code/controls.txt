@@ -1,0 +1,17 @@
+txtqualityname
+cmbcolored
+mskwarp
+mskweft
+mskwarpkilos
+mskweftkilos
+mskgreasylength
+mskweavinglength
+mskPPI
+mskkiolsperpiece
+mskcostofquality
+mskpickingandmendinghrs
+mskpickingandmendingmetres
+txtscouringandmillingfinish
+mskedgridcell (0-19)
+cmdsave
+cmdcancel

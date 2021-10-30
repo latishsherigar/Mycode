@@ -1,0 +1,20 @@
+MARGINS
+
+top 2.1
+bottom 0.7
+left 0.7
+right 0.7
+gutter 0
+gutter pos left
+orientation potrait
+multiple pages  normal
+applyto wholedocument
+
+-------------------------------
+
+Paper
+
+Papersize  Letter
+Width 8.5
+height 11
+papersource  1stpage- defaulttray,Otherpage- defaulttray

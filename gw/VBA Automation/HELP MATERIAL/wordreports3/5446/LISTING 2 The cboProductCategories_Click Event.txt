@@ -1,0 +1,11 @@
+LISTING 2: The cboProductCategories_Click Event
+
+	i = InStr(cboProductCategories.Text, "(")
+	IF i > 0 THEN
+		sCategoryID = Mid(cboProductCategories.Text, i + 1, _
+		Len(cboProductCategories.Text) - (i + 1))
+		mCategory = Left(cboProductCategories.Text, i - 1)
+		sCategory = GetProductsByCategory(sCategoryID)
+		IF sCategory(0) > "" Then
+			CreateDocument (sCategory)
+		END IF

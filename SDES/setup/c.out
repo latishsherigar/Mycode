@@ -1,0 +1,653 @@
+INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','101/04 ','BEING BUSINESS DEVELOPMENT & MARKETING CHARGES FOR THE MONTH OF APRIL, 2004 ','60069') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','101/04 ','SERVICE TAX @ 8% ','4806') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','102/04 ','BEING BUSINESS DEVELOPMENT & MARKETING CHARGES FOR THE MONTH OF MAY, 2004 ','69142') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','102/04 ','SERVICE TAX @ 8% ','5531') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','103/04 ','BEING BUSINESS DEVELOPMENT & MARKETING CHARGES FOR THE MONTH OF JUNE, 2004 ','59102') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','103/04 ','SERVICE TAX @ 8% ','4728') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','104/04 ','BEING BUSINESS DEVELOPMENT & MARKETING CHARGES FOR THE MONTH OF JULY, 2004 ','50935') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','104/04 ','SERVICE TAX @ 8% ','4075') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','105/04 ','BEING BUSINESS DEVELOPMENT & MARKETING CHARGES FOR THE MONTH OF AUGUST 2004 ','74593') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','105/04 ','SERVICE TAX @ 8% ','5967') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','106/04 ','BEING BUSINESS DEVELOPMENT & MARKETING CHARGES FOR THE MONTH OF SEPTEMBER, 2004 ','63326') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','106/04 ','SERVICE TAX @ 10.2% ','6459') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','123/04 ','BEING BUSINESS DEVELOPMENT & MARKETING CHARGES FOR THE MONTH OF MARCH, 2005 ','62785.84') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','123/04 ','SERVICE TAX @ 10% ','6278.58') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','123/04 ','E. CESS @ 2% ON S.T. ','125.58') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','201/05 ','Being business development & marketing charges for the month of April 2005 ','86887.47') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','201/05 ','Service Tax @ 10% ','8688.74') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','201/05 ','Education Cess @ 2% on S.T. ','173.79') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','202/05 ','Being business development & marketing charges for the month of May 2005 ','76451.9') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','202/05 ','Service Tax @ 10% ','7645.19') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','202/05 ','Education Cess @ 2% on S.T. ','152.91') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','203/05 ','Being business development & marketing charges for the month of May 2005 ','27150.64') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','203/05 ','Service Tax @ 10% ','2715.06') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','203/05 ','Education Cess @ 2% on S.T. ','54.3') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','204/05 ','Being business development & marketing charges for the period 15.6.05 to 30.6.05 ','74664.25') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','204/05 ','Service Tax @ 10% ','7466.43') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','204/05 ','Education Cess @ 2% on S.T. ','149.32') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','205/05 ','Being business development & marketing charges for the period 1.7.05 to 15.7.05 ','63017.24') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','205/05 ','Service Tax @ 10% ','6301.73') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','205/05 ','Education Cess @ 2% on S.T. ','126.03') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','206/05 ','Being business development & marketing charges for the period 1/6/05 to 30/7/2005 ','86660.62') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','206/05 ','Service Tax @ 10% ','8666.06') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','206/05 ','Education Cess @ 2% on S.T. ','173.32') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','207-05 ','Being business development & marketing charges for the period 15/7/05 to 30/7/05. ','33552.63') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','207-05 ','Service Tax @ 10% ','3355.26') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','207-05 ','Education Cess @ 2% on S.T. ','67.11') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','208/05 ','Being business development & marketing charges for the month August 05 ','61088.93') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','208/05 ','Service Tax @ 10% ','6108.89') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','208/05 ','Education Cess @ 2% on S.T. ','122.18') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','209-05 ','Being business development & marketing charges for the month of August 2005 ','52631.58') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','209-05 ','Service Tax @ 10% ','5263.15') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','209-05 ','Education Cess @ 2% on S.T. ','105.27') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','210-05 ','Being business development & marketing charges for the month of September 2005 ','65789') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','210-05 ','Service Tax @ 10% ','6578.9') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','210-05 ','Education Cess @ 2% on S.T. ','132.1') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','211-05 ','Being business development & marketing charges for the month of Sept. 05 ','44120') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','211-05 ','Service Tax @ 10% ','4412') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','211-05 ','Education Cess @ 2% on S.T. ','88') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','212-05 ','Being business development & marketing charges for the month of October 05 ','86660.62') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','212-05 ','Service Tax @ 10% ','8666.06') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','212-05 ','Education Cess @ 2% on S.T. ','173.32') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','213-05 ','Being business development & marketing charges for the month of October 05 ','62477.31') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','213-05 ','Service Tax @ 10% ','6247.73') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','213-05 ','Education Cess @ 2% on S.T. ','124.96') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','214-05 ','Being business development & marketing charges for the month of November 2005 ','31932.85') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','214-05 ','Service Tax @ 10% ','3193.29') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','214-05 ','Education Cess @ 2% on S.T. ','63.86') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','215-05 ','Being business development & marketing charges for the month of November 2005 ','61252.27') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','215-05 ','Service Tax @ 10% ','6125.23') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','215-05 ','Education Cess @ 2% on S.T. ','122.5') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','216-05 ','Being business development & marketing charges for the month of November, 2005 ','94147') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','216-05 ','Service Tax @ 10% ','9414.7') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','216-05 ','Education Cess @ 2% on S.T. ','188.3') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','217-05 ','Being business development & marketing charges for the month of December, 2005 ','88022') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','217-05 ','Service Tax @ 10% ','8802') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','217-05 ','Education Cess @ 2% on S.T. ','176') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','218-05 ','Being business development & marketing charges for the month of December, 2005 ','60318') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','218-05 ','Service Tax @ 10% ','6031.8') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','218-05 ','Education Cess @ 2% on S.T. ','120.2') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','219-05 ','Being business development & marketing charges for the month of JANUARY, 2006. ','95962') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','219-05 ','Service Tax @ 10% ','9596.2') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','219-05 ','Education Cess @ 2% on S.T. ','191.8') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','220-05 ','Being business development & marketing charges for the month of Janaury, 2006 ','113816') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','220-05 ','Service Tax @ 10% ','11381.6') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','220-05 ','Education Cess @ 2% on S.T. ','227.4') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','221-05 ','Being business development & marketing charges for the month of February, 2006 ','88929') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','221-05 ','Service Tax @ 10% ','8892.9') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','221-05 ','Education Cess @ 2% on S.T. ','178.1') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','222-05 ','Being business development & marketing charges for the month of Febrruary, 2006 ','109279') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','222-05 ','Service Tax @ 10% ','10927.9') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','222-05 ','Education Cess @ 2% on S.T. ','218.1') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','223-05 ','Being business development & marketing charges for the month of March 2006 ','73758') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','223-05 ','Service Tax @ 10% ','7375.8') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','223-05 ','Education Cess @ 2% on S.T. ','147.2') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','224-06 ','Being business development & marketing charges for the month of March, 2006. ','179673') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','224-06 ','Service Tax @ 10% ','17967.3') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','224-06 ','Education Cess @ 2% on S.T. ','359.7') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','301-06 ','Being business development & marketing charges for the month of April, 2006. ','62366') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','301-06 ','Service Tax @ 12% ','7484') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','301-06 ','Education Cess @ 2% on S.T. ','150') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','302','Being business development & marketing charges for the month of April, 2006. ','89456') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','302','Service Tax @ 12% ','10735') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','302','Education Cess @ 2% on S.T. ','215') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','302-06 ','Being business development & marketing charges for the month of April, 2006. ','89457') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','302-06 ','Service Tax @ 12% ','10854') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','302-06 ','','215') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('4','302-06 ','','0') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('5','302-06 ','','0') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','302/06 ','Being business development & marketing charges for the month of April, 2006. ','89456') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','302/06 ','Service Tax @ 12% ','10735') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','302/06 ','Education Cess @ 2% on S.T. ','215') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','303-06 ','Being business development & marketing charges for the month of May 2006 ','90451') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','303-06 ','Service Tax @ 12% ','10854') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','303-06 ','Education Cess @ 2% on S.T. ','217') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','304-06 ','Being business development & marketing charges for the month of May, 2006. ','82413') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','304-06 ','Service Tax @ 12% ','9889.56') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','304-06 ','Education Cess @ 2% on S.T. ','197.44') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','305-06 ','Being business development & marketing charges for the month of June 2006 ','121926') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','305-06 ','Service Tax @ 12% ','14631.15') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','305-06 ','Education Cess @ 2% on S.T. ','292.85') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','306-06 ','Education Cess 2% on S.T. ','245.9') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','306-06 ','Being business development & marketing charges for the month of June 2006 ','102459') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','306-06 ','Service Tax @ 12% ','12295.1') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','307-06 ','Being business development & marketing charges for the month of July 2006 ','101242') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','307-06 ','Service Tax @ 12% ','12149') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','307-06 ','Education Cess @ 2% on S.T. ','243') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','308-06 ','Being business development & marketing charges for the month of July 2006 ','45215.61') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','308-06 ','Service Tax @ 12% ','5425.87') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','308-06 ','Education Cess @ 2% on S.T. ','108.52') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','309-06 ','Being business development & marketing charges for the month of August 2006 ','81967') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','309-06 ','Service Tax @ 12% ','9836') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','309-06 ','Education Cess @ 2% on S.T ','197') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','310-06 ','Being business development & marketing charges for the month of August 2006 ','111230') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','310-06 ','Service Tax @ 12% ','13348') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','310-06 ','Education Cess @ 2% on S.T. ','267') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','311-06 ','Being business development & marketing charges for the month of Sept. 2006 ','68158') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','311-06 ','Service Tax @ 12% ','8179') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','311-06 ','Education Cess @ 2% on S.T. ','163') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','312-06 ','Being business development & marketing charges for the month of Sept., 2006. ','111229') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','312-06 ','Service Tax @ 12% ','13347') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','312-06 ','Education Cess @ 2% on S.T. ','267') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','313-06 ','Being business development & marketing charges for the month of October 2006 ','80085.53') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','313-06 ','Service Tax @ 12% ','9610.26') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','313-06 ','Education Cess @ 2% on S.T. ','192.21') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','314-06 ','Being business development & marketing charges for the month of October 2006 ','112036.71') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','314-06 ','Service Tax @ 12% ','13444.4') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','314-06 ','Education Cess @ 2% on S.T. ','268.89') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','315-06 ','Being business development & marketing charges for the month of November 2006 ','88983.43') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','315-06 ','Service Tax @ 12% ','10678.01') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','315-06 ','Education Cess @ 2% on S.T. ','213.56') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','316-06 ','Being business development & marketing charges for the month of November 2006 ','117159.66') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','316-06 ','Service Tax @ 12% ','14059.16') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','316-06 ','Education Cess @ 2% on S.T. ','281.18') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','317-06 ','Being business development & marketing charges for the month of December, 2006. ','93433') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','317-06 ','Service Tax @ 12% ','11212') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','317-06 ','Education Cess @ 2% on S.T. ','224') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','318-06 ','Being business development & marketing charges for the month of December, 2006. ','149234') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','318-06 ','Service Tax @ 12% ','17908') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','318-06 ','Education Cess @ 2% on S.T. ','358') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','319-07 ','Being business development & marketing charges for the month of Janaury, 2007 ','110255') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','319-07 ','Service Tax @ 12% ','13230.6') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','319-07 ','Education Cess @ 2% on S.T. ','264.4') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','320-07 ','Being business development & marketing charges for the month of Janaury, 2007. ','46859') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','320-07 ','Service Tax @ 12% ','5623') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','320-07 ','Education Cess @ 2% on S.T. ','112') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','321-06 ','Being business development & marketing charges for the month of February 2007 ','138765') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','321-06 ','Service Tax @ 12% ','16652') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','321-06 ','Education Cess @ 2% on S.T. ','333') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('1','322-06 ','Being business development & marketing charges for the month of February 2007 ','67400') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('2','322-06 ','Service Tax @ 12% ','8088') 
+                    <br>INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('3','322-06 ','Education Cess @ 2% on S.T. ','162') 
+                    <br>DELETE FROM invoices<br>SELECT field1 ,
+                    field2 ,
+                    field3   
+             FROM   tmp_stag_invoice
+            <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('103/04 ','2004-06-30<br>','1',63830,'Sixty Three Thousand Eight Hundred Thirty Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('104/04 ','2004-07-30<br>','1',55010,'Fifty Five Thousand  Ten Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('105/04 ','2004-08-31<br>','1',80560,'Eigthy Thousand Five Hundred Sixty Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('106/04 ','2004-09-30<br>','1',69785,'Sixty Nine Thousand Seven Hundred Eigthy Five Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('101/04 ','2004-04-30<br>','1',64875,'Sixty Four Thousand Eight Hundred Seventy Five Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('102/04 ','2004-05-31<br>','1',74673,'Seventy Four Thousand Six Hundred Seventy Three Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('210-05 ','2005-09-30<br>','4',72499,'Seventy Two Thousand Four Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('216-05 ','2005-11-30<br>','2',103749,'One Lakh Three Thousand Seven Hundred Fourty Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('213-05 ','2005-10-31<br>','3',68848,'Sixty Eight Thousand Eight Hundred Fourty Eight Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('209-05 ','2005-08-31<br>','2',57999,'Fifty Seven Thousand Nine Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('207-05 ','2005-07-30<br>','3',36974,'Thirty Six Thousand Nine Hundred Seventy Four Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('202/05 ','2005-05-30<br>','2',84248,'Eigthy Four Thousand Two Hundred Fourty Eight Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('203/05 ','2005-06-28<br>','1',29919,'Twenty Nine Thousand Nine Hundred  Nineteen Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('204/05 ','2005-06-30<br>','1',82279,'Eigthy Two Thousand Two Hundred Seventy Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('205/05 ','2005-07-15<br>','1',69444,'Sixty Nine Thousand Four Hundred Fourty Four Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('206/05 ','2005-07-27<br>','2',95499,'Ninety Five Thousand Four Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('208/05 ','2005-08-31<br>','3',67318,'Sixty Seven Thousand Three Hundred  Eightteen Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('212-05 ','2005-10-31<br>','2',95499,'Ninety Five Thousand Four Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('215-05 ','2005-11-30<br>','4',67499,'Sixty Seven Thousand Four Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('211-05 ','2005-09-30<br>','3',48620,'Fourty Eight Thousand Six Hundred Twenty Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('214-05 ','2005-11-30<br>','3',35188,'Thirty Five Thousand One Hundred Eigthy Eight Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('218-05 ','2005-12-31<br>','3',66469,'Sixty Six Thousand Four Hundred Sixty Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('217-05 ','2005-12-31<br>','2',97000,'Ninety Seven Thousand Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('219-05 ','2006-01-31<br>','2',105749,'One Lakh Five Thousand Seven Hundred Fourty Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('201/05 ','2005-04-30<br>','2',95748,'Ninety Five Thousand Seven Hundred Fourty Eight Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('220-05 ','2006-01-31<br>','3',125424,'One Lakh Twenty Five Thousand Four Hundred Twenty Four Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('222-05 ','2006-02-28<br>','3',120424,'One Lakh Twenty Thousand Four Hundred Twenty Four Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('221-05 ','2006-02-28<br>','4',97999,'Ninety Seven Thousand Nine Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('123/04 ','2005-04-01<br>','3',69188,'Sixty Nine Thousand One Hundred Eigthy Eight Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('223-05 ','2006-03-31<br>','3',81280,'Eigthy One Thousand Two Hundred Eigthy Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('224-06 ','2006-03-31<br>','2',197999,'One Lakh Ninety Seven Thousand Nine Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('302','2006-04-28<br>','1',100406,'One Lakh Four Hundred  Six Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('302/06 ','2006-04-28<br>','1',100406,'One Lakh Four Hundred  Six Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('303-06 ','2006-05-30<br>','3',101522,'One Lakh One Thousand Five Hundred Twenty Two Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('302-06 ','2006-05-14<br>','1',100526,'One Lakh Five Hundred Twenty Six Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('301-06 ','2006-04-28<br>','2',70000,'Seventy Thousand Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('304-06 ','2006-05-31<br>','2',92499,'Ninety Two Thousand Four Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('305-06 ','2006-06-30<br>','3',136849,'One Lakh Thirty Six Thousand Eight Hundred Fourty Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('306-06 ','2006-06-30<br>','2',114999,'One Lakh Fourteen Thousand Nine Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('307-06 ','2006-07-31<br>','3',113634,'One Lakh Thirteen Thousand Six Hundred Thirty Four Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('308-06 ','2006-07-31<br>','2',50748,'Fifty Thousand Seven Hundred Fourty Eight Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('309-06 ','2006-08-31<br>','2',92000,'Ninety Two Thousand Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('310-06 ','2006-08-31<br>','3',124845,'One Lakh Twenty Four Thousand Eight Hundred Fourty Five Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('312-06 ','2006-09-30<br>','1',124843,'One Lakh Twenty Four Thousand Eight Hundred Fourty Three Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('311-06 ','2006-09-30<br>','2',76500,'Seventy Six Thousand Five Hundred Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('315-06 ','2006-11-30<br>','3',99874,'Ninety Nine Thousand Eight Hundred Seventy Four Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('316-06 ','2006-11-30<br>','2',131499,'One Lakh Thirty One Thousand Four Hundred Ninety Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('318-06 ','2006-12-30<br>','2',167500,'One Lakh Sixty Seven Thousand Five Hundred Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('319-07 ','2007-01-31<br>','2',123749,'One Lakh Twenty Three Thousand Seven Hundred Fourty Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('320-07 ','2007-01-31<br>','3',52594,'Fifty Two Thousand Five Hundred Ninety Four Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('313-06 ','2006-10-31<br>','3',89887,'Eigthy Nine Thousand Eight Hundred Eigthy Seven Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('314-06 ','2006-10-31<br>','2',125748,'One Lakh Twenty Five Thousand Seven Hundred Fourty Eight Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('317-06 ','2006-12-30<br>','3',104869,'One Lakh Four Thousand Eight Hundred Sixty Nine Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('321-06 ','2007-02-28<br>','2',155750,'One Lakh Fifty Five Thousand Seven Hundred Fifty Rupees Only.') 
+                    <br>INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('322-06 ','2007-02-28<br>','3',75650,'Seventy Five Thousand Six Hundred Fifty Rupees Only.') 
+                    <br>after main

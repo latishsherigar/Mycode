@@ -1,0 +1,125 @@
+ {
+	FONT-SIZE: 11px; LINE-HEIGHT: 1.25em; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica
+}
+BODY {
+	MARGIN: 0px; BACKGROUND-COLOR: white
+}
+A {
+	COLOR: blue
+}
+A:active {
+	COLOR: red
+}
+A:hover {
+	COLOR: red
+}
+A:visited {
+	COLOR: purple
+}
+UL {
+	
+}
+.tpl_top_banner {
+	BORDER-RIGHT: #003399 2px solid; BORDER-TOP: #003399 2px solid; BORDER-LEFT: #003399 2px solid; BORDER-BOTTOM: #003399 2px solid; HEIGHT: 20px; BACKGROUND-COLOR: #003399
+}
+.tpl_body {
+	
+}
+.tpl_content {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(/common/resources/leftblueclip.gif); PADDING-BOTTOM: 6px; PADDING-TOP: 6px; BACKGROUND-REPEAT: no-repeat
+}
+.tpl_content_title {
+	FONT-SIZE: 16px; Z-INDEX: 3; BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 90%; POSITION: relative
+}
+.tpl_content_bar {
+	PADDING-LEFT: 12px; FONT-WEIGHT: bold; FONT-SIZE: 16px; PADDING-BOTTOM: 6px; WIDTH: 100%; COLOR: white; PADDING-TOP: 12px; FONT-FAMILY: Tahoma, Arial, Helvetica; HEIGHT: 24px; BACKGROUND-COLOR: #3366cc; TEXT-ALIGN: left
+}
+.tpl_content_bar_bottom {
+	HEIGHT: 8px
+}
+.tpl_footer {
+	HEIGHT: 48px; BACKGROUND-COLOR: #003399
+}
+.tpl_footer_row1 {
+	COLOR: white; MARGIN-RIGHT: 12px; PADDING-TOP: 3px
+}
+.tpl_footer_row1 TD {
+	COLOR: white
+}
+.tpl_footer_row1 DIV {
+	FONT-SIZE: 11px; COLOR: white
+}
+.tpl_footer_row2 {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FONT-SIZE: 10px; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 6px; COLOR: white; PADDING-TOP: 6px
+}
+.tpl_left_nav_cell {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 6px; FONT-FAMILY: inherit; BACKGROUND-COLOR: #3366cc
+}
+.tpl_left_nav_cell A {
+	COLOR: white
+}
+.tpl_left_nav_cell A:visited {
+	COLOR: white
+}
+.tpl_left_nav_cell A:active {
+	COLOR: white
+}
+.tpl_left_nav_cell A:hover {
+	COLOR: red
+}
+.tpl_search_container {
+	MARGIN: 6px 12px 6px 6px; WIDTH: 200px
+}
+.tpl_flyout_container {
+	MARGIN-LEFT: 6px; WIDTH: 200px; MARGIN-RIGHT: 12px
+}
+.tpl_feedback_container {
+	MARGIN-TOP: 6px; DISPLAY: none; MARGIN-LEFT: 6px; WIDTH: 200px; MARGIN-RIGHT: 6px; TEXT-ALIGN: left
+}
+.tpl_feedback_container A:visited {
+	COLOR: purple
+}
+.tpl_leftad_container {
+	MARGIN-TOP: 12px; FONT-WEIGHT: bold; MARGIN-LEFT: 6px; WIDTH: 200px; MARGIN-RIGHT: 6px; TEXT-ALIGN: center
+}
+.tpl_right_nav_cell {
+	
+}
+.tpl_right_nav_container {
+	
+}
+.tpl_header_icon {
+	Z-INDEX: 1; FLOAT: right; MARGIN-BOTTOM: -72px; MARGIN-RIGHT: 2px; POSITION: relative; TOP: -41px
+}
+#TopPanel {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#idToolbar {
+	BACKGROUND-COLOR: #3366cc
+}
+
+@media Print    
+{
+.ftr_copyright_text {
+	FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica
+}
+.tpl_left_nav_cell {
+	DISPLAY: none
+}
+.tpl_top_banner {
+	DISPLAY: none
+}
+.tpl_header_icon {
+	DISPLAY: none
+}
+#idToolbar {
+	DISPLAY: none
+}
+#idICPBanner {
+	DISPLAY: none
+}
+.noprint {
+	DISPLAY: none
+}
+
+}

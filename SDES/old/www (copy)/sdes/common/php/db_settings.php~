@@ -1,0 +1,8 @@
+<?php
+$REPORT_SERVER_APP="report_server_test";
+$REPORT_SERVER_PATH="http://localhost:8080/".$REPORT_SERVER_APP."/ReportEngine?rep_app_name=sdes&";
+$DB_NAME="SDES_TEST";
+$DB_HOST="localhost";
+$DB_USER="root";
+$DB_PASS="";
+?>

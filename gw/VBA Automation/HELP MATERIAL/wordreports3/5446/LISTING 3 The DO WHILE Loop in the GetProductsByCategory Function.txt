@@ -1,0 +1,13 @@
+LISTING 3: The DO WHILE Loop in the GetProductsByCategory Function
+
+Do WHILE NOT envNorthwind.rscmdProductByCategory.EOF
+	sProductList(i) =
+		envNorthwind.rscmdProductByCategory.Fields("ProductName") _
+		&  Chr(9) & _
+		envNorthwind.rscmdProductByCategory.Fields("ProductID") _
+		& Chr(9) & _
+		Format(envNorthwind.rscmdProductByCategory.Fields("UnitPrice"), _
+		"$#,##0.00")
+	envNorthwind.rscmdProductByCategory.MoveNext
+	i = i + 1
+LOOP

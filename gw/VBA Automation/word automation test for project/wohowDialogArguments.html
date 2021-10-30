@@ -1,0 +1,1121 @@
+<HTML>
+<HEAD>
+<META NAME="ProjApp" CONTENT="vbawd10.chm_Wd">
+<META NAME="Filename" CONTENT="wohowDialogArguments.htm">
+<META NAME="Ver" CONTENT="0">
+<META NAME="Tnum" CONTENT="5210109">
+<META NAME="LanguageSpecific" CONTENT="No">
+
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Built-in Dialog Box Argument Lists</TITLE>
+
+<script language="JScript" src="../links/ofvbanl.js"></script>
+<link rel="stylesheet" type="text/css" href="Office10.css"></HEAD>
+
+<body>
+
+<H1><A NAME="wohowdialogarguments">Built-in Dialog Box Argument Lists</A></H1>
+
+<div class="ofvbanav">
+<span class="ofvbanavreuse" id="seealso" onclick="toggleList()">&nbsp;</span> <span class="ofvbanavreuse" id="specifics" onclick="toggleList()">&nbsp;</span> </div>
+
+<p class=T></P>
+<p class=T>Many of the built-in dialog boxes in Microsoft Word have options that you may want to set. To set or return the properties associated with a Word dialog box, use the equivalent Visual Basic properties and methods. For example, if you want to print a document, use the Word Visual Basic for Applications <A href="womthPrintOut.htm"><b>PrintOut</b></A> method. The following code prints the current document using the <b>Print</b> dialog box default settings. However, if you don't want to use the default setting in the print dialog, you can use the arguments associated with the <b>PrintOut</b> method.</p>
+<pre><code>Sub PrintCurrentDocument()
+    ThisDocument.PrintOut
+End Sub</code></pre>
+
+<p>Although you are encouraged to use VBA keywords to get or set the value of dialog box options, many of the built-in Word dialog boxes have arguments that you can also use to set or get values from a dialog box. For more information, see <A HREF="wohowDisplayBuiltInDialogs.htm">Displaying built-in Word dialog boxes</A>.</p>
+<table class=NoBorder cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH>WdWordDialog constant</TH>
+<TH>Argument list(s)</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogConnect</B></TD>
+<TD class=TT><B><I>Drive</I></B>, <B><I>Path</I></B>, <B><I>Password</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogConsistencyChecker</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogControlRun</B></TD>
+<TD class=TT><B><I>Application</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogConvertObject</B></TD>
+<TD class=TT><B><I>IconNumber</I></B>, <B><I>ActivateAs</I></B>, <B><I>IconFileName</I></B>, <B><I>Caption</I></B>, <B><I>Class</I></B>, <B><I>DisplayIcon</I></B>, <B><I>Floating</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogCopyFile</B></TD>
+<TD class=TT><B><I>FileName</I></B>, <B><I>Directory</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogCreateAutoText</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogCSSLinks</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogDocumentStatistics</B></TD>
+<TD class=TT><B><I>FileName</I></B>, <B><I>Directory</I></B>, <B><I>Template</I></B>, <B><I>Title</I></B>, <B><I>Created</I></B>, <B><I>LastSaved</I></B>, <B><I>LastSavedBy</I></B>, <B><I>Revision</I></B>, <B><I>Time</I></B>, <B><I>Printed</I></B>, <B><I>Pages</I></B>, <B><I>Words</I></B>, <B><I>Characters</I></B>, <B><I>Paragraphs</I></B>, <B><I>Lines</I></B>, <B><I>FileSize</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogDrawAlign</B></TD>
+<TD class=TT><B><I>Horizontal</I></B>, <B><I>Vertical</I></B>, <B><I>RelativeTo</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogDrawSnapToGrid</B></TD>
+<TD class=TT><B><I>SnapToGrid</I></B>, <B><I>XGrid</I></B>, <B><I>YGrid</I></B>, <B><I>XOrigin</I></B>, <B><I>YOrigin</I></B>, <B><I>SnapToShapes</I></B>, <B><I>XGridDisplay</I></B>, <B><I>YGridDisplay</I></B>, <B><I>FollowMargins</I></B>, <B><I>ViewGridLines</I></B>, <B><I>DefineLineBasedOnGrid</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditAutoText</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Context</I></B>, <B><I>InsertAs</I></B>, <B><I>Insert</I></B>, <B><I>Add</I></B>, <B><I>Define</I></B>, <B><I>InsertAsText</I></B>, <B><I>Delete</I></B>, <B><I>CompleteAT</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditCreatePublisher</B></TD>
+<TD class=TT>(For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditFind</B></TD>
+<TD class=TT><B><I>Find</I></B>, <B><I>Replace</I></B>, <B><I>Direction</I></B>, <B><I>MatchCase</I></B>, <B><I>WholeWord</I></B>, <B><I>PatternMatch</I></B>, <B><I>SoundsLike</I></B>, <B><I>FindNext</I></B>, <B><I>ReplaceOne</I></B>, <B><I>ReplaceAll</I></B>, <B><I>Format</I></B>, <B><I>Wrap</I></B>, <B><I>FindAllWordForms</I></B>, <B><I>MatchByte</I></B>, <B><I>FuzzyFind</I></B>, <B><I>Destination</I></B>, <B><I>CorrectEnd</I></B>, <B><I>MatchKashida</I></B>, <B><I>MatchDiacritics</I></B>, <B><I>MatchAlefHamza</I></B>, <B><I>MatchControl</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditFrame</B></TD>
+<TD class=TT><i><b>WidthRule</b></i>, <i><b>LockAnchor</b></i>, <i><b>HeightRule</b></i></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditGoTo</B></TD>
+<TD class=TT><B><I>Find</I></B>, <B><I>Replace</I></B>, <B><I>Direction</I></B>, <B><I>MatchCase</I></B>, <B><I>WholeWord</I></B>, <B><I>PatternMatch</I></B>, <B><I>SoundsLike</I></B>, <B><I>FindNext</I></B>, <B><I>ReplaceOne</I></B>, <B><I>ReplaceAll</I></B>, <B><I>Format</I></B>, <B><I>Wrap</I></B>, <B><I>FindAllWordForms</I></B>, <B><I>MatchByte</I></B>, <B><I>FuzzyFind</I></B>, <B><I>Destination</I></B>, <B><I>CorrectEnd</I></B>, <B><I>MatchKashida</I></B>, <B><I>MatchDiacritics</I></B>, <B><I>MatchAlefHamza</I></B>, <B><I>MatchControl</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditGoToOld</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditLinks</B></TD>
+<TD class=TT><B><I>UpdateMode</I></B>, <B><I>Locked</I></B>, <B><I>SavePictureInDoc</I></B>, <B><I>UpdateNow</I></B>, <B><I>OpenSource</I></B>, <B><I>KillLink</I></B>, <B><I>Link</I></B>, <B><I>Application</I></B>, <B><I>Item</I></B>, <B><I>FileName</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditObject</B></TD>
+<TD class=TT><B><I>Verb</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditPasteSpecial</B></TD>
+<TD class=TT><B><I>IconNumber</I></B>, <B><I>Link</I></B>, <B><I>DisplayIcon</I></B>, <B><I>Class</I></B>, <B><I>DataType</I></B>, <B><I>IconFileName</I></B>, <B><I>Caption</I></B>, <B><I>Floating</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditPublishOptions</B></TD>
+<TD class=TT>(For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditReplace</B></TD>
+<TD class=TT><B><I>Find</I></B>, <B><I>Replace</I></B>, <B><I>Direction</I></B>, <B><I>MatchCase</I></B>, <B><I>WholeWord</I></B>, <B><I>PatternMatch</I></B>, <B><I>SoundsLike</I></B>, <B><I>FindNext</I></B>, <B><I>ReplaceOne</I></B>, <B><I>ReplaceAll</I></B>, <B><I>Format</I></B>, <B><I>Wrap</I></B>, <B><I>FindAllWordForms</I></B>, <B><I>MatchByte</I></B>, <B><I>FuzzyFind</I></B>, <B><I>Destination</I></B>, <B><I>CorrectEnd</I></B>, <B><I>MatchKashida</I></B>, <B><I>MatchDiacritics</I></B>, <B><I>MatchAlefHamza</I></B>, <B><I>MatchControl</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogEditStyle</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditSubscribeOptions</B></TD>
+<TD class=TT>(For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditSubscribeTo</B></TD>
+<TD class=TT>(For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEditTOACategory</B></TD>
+<TD class=TT><B><I>Category</I></B>, <B><I>CategoryName</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogEmailOptions</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileDocumentLayout</B></TD>
+<TD class=TT><B><I>Tab</I></B>, <B><I>PaperSize</I></B>, <B><I>TopMargin</I></B>, <B><I>BottomMargin</I></B>, <B><I>LeftMargin</I></B>, <B><I>RightMargin</I></B>, <B><I>Gutter</I></B>, <B><I>PageWidth</I></B>, <B><I>PageHeight</I></B>, <B><I>Orientation</I></B>, <B><I>FirstPage</I></B>, <B><I>OtherPages</I></B>, <B><I>VertAlign</I></B>, <B><I>ApplyPropsTo</I></B>, <B><I>Default</I></B>, <B><I>FacingPages</I></B>, <B><I>HeaderDistance</I></B>, <B><I>FooterDistance</I></B>, <B><I>SectionStart</I></B>, <B><I>OddAndEvenPages</I></B>, <B><I>DifferentFirstPage</I></B>, <B><I>Endnotes</I></B>, <B><I>LineNum</I></B>, <B><I>StartingNum</I></B>, <B><I>FromText</I></B>, <B><I>CountBy</I></B>, <B><I>NumMode</I></B>, <B><I>TwoOnOne</I></B>, <B><I>GutterPosition</I></B>, <B><I>LayoutMode</I></B>, <B><I>CharsLine</I></B>, <B><I>LinesPage</I></B>, <B><I>CharPitch</I></B>, <B><I>LinePitch</I></B>, <B><I>DocFontName</I></B>, <B><I>DocFontSize</I></B>, <B><I>PageColumns</I></B>, <B><I>TextFlow</I></B>, <B><I>FirstPageOnLeft</I></B>, <B><I>SectionType</I></B>, <B><I>RTLAlignment</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileFind</B></TD>
+<TD class=TT><B><I>SearchName</I></B>, <B><I>SearchPath</I></B>, <B><I>Name</I></B>, <B><I>SubDir</I></B>, <B><I>Title</I></B>, <B><I>Author</I></B>, <B><I>Keywords</I></B>, <B><I>Subject</I></B>, <B><I>Options</I></B>, <B><I>MatchCase</I></B>, <B><I>Text</I></B>, <B><I>PatternMatch</I></B>, <B><I>DateSavedFrom</I></B>, <B><I>DateSavedTo</I></B>, <B><I>SavedBy</I></B>, <B><I>DateCreatedFrom</I></B>, <B><I>DateCreatedTo</I></B>, <B><I>View</I></B>, <B><I>SortBy</I></B>, <B><I>ListBy</I></B>, <B><I>SelectedFile</I></B>, <B><I>Add</I></B>, <B><I>Delete</I></B>, <B><I>ShowFolders</I></B>, <B><I>MatchByte</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileMacPageSetup</B></TD>
+<TD class=TT>(For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileNew</B></TD>
+<TD class=TT><B><I>Template</I></B>, <B><I>NewTemplate</I></B>, <B><I>DocumentType</I></B>, <B><I>Visible</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileOpen</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>ConfirmConversions</I></B>, <B><I>ReadOnly</I></B>, <B><I>LinkToSource</I></B>, <B><I>AddToMru</I></B>, <B><I>PasswordDoc</I></B>, <B><I>PasswordDot</I></B>, <B><I>Revert</I></B>, <B><I>WritePasswordDoc</I></B>, <B><I>WritePasswordDot</I></B>, <B><I>Connection</I></B>, <B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B>, <B><I>Format</I></B>, <B><I>Encoding</I></B>, <B><I>Visible</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFilePageSetup</B></TD>
+<TD class=TT><B><I>Tab</I></B>, <B><I>PaperSize</I></B>, <B><I>TopMargin</I></B>, <B><I>BottomMargin</I></B>, <B><I>LeftMargin</I></B>, <B><I>RightMargin</I></B>, <B><I>Gutter</I></B>, <B><I>PageWidth</I></B>, <B><I>PageHeight</I></B>, <B><I>Orientation</I></B>, <B><I>FirstPage</I></B>, <B><I>OtherPages</I></B>, <B><I>VertAlign</I></B>, <B><I>ApplyPropsTo</I></B>, <B><I>Default</I></B>, <B><I>FacingPages</I></B>, <B><I>HeaderDistance</I></B>, <B><I>FooterDistance</I></B>, <B><I>SectionStart</I></B>, <B><I>OddAndEvenPages</I></B>, <B><I>DifferentFirstPage</I></B>, <B><I>Endnotes</I></B>, <B><I>LineNum</I></B>, <B><I>StartingNum</I></B>, <B><I>FromText</I></B>, <B><I>CountBy</I></B>, <B><I>NumMode</I></B>, <B><I>TwoOnOne</I></B>, <B><I>GutterPosition</I></B>, <B><I>LayoutMode</I></B>, <B><I>CharsLine</I></B>, <B><I>LinesPage</I></B>, <B><I>CharPitch</I></B>, <B><I>LinePitch</I></B>, <B><I>DocFontName</I></B>, <B><I>DocFontSize</I></B>, <B><I>PageColumns</I></B>, <B><I>TextFlow</I></B>, <B><I>FirstPageOnLeft</I></B>, <B><I>SectionType</I></B>, <B><I>RTLAlignment</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFilePrint</B></TD>
+<TD class=TT><B><I>Background</I></B>, <B><I>AppendPrFile</I></B>, <B><I>Range</I></B>, <B><I>PrToFileName</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>Type</I></B>, <B><I>NumCopies</I></B>, <B><I>Pages</I></B>, <B><I>Order</I></B>, <B><I>PrintToFile</I></B>, <B><I>Collate</I></B>, <B><I>FileName</I></B>, <B><I>Printer</I></B>, <B><I>OutputPrinter</I></B>, <B><I>DuplexPrint</I></B>, <B><I>PrintZoomColumn</I></B>, <B><I>PrintZoomRow</I></B>, <B><I>PrintZoomPaperWidth</I></B>, <B><I>PrintZoomPaperHeight</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFilePrintOneCopy</B></TD>
+<TD class=TT>(For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFilePrintSetup</B></TD>
+<TD class=TT><B><I>Printer</I></B>, <B><I>Options</I></B>, <B><I>Network</I></B>, <B><I>DoNotSetAsSysDefault</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileRoutingSlip</B></TD>
+<TD class=TT><B><I>Subject</I></B>, <B><I>Message</I></B>, <B><I>AllAtOnce</I></B>, <B><I>ReturnWhenDone</I></B>, <B><I>TrackStatus</I></B>, <B><I>Protect</I></B>, <B><I>AddSlip</I></B>, <B><I>RouteDocument</I></B>, <B><I>AddRecipient</I></B>, <B><I>OldRecipient</I></B>, <B><I>ResetSlip</I></B>, <B><I>ClearSlip</I></B>, <B><I>ClearRecipients</I></B>, <B><I>Address</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileSaveAs</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Format</I></B>, <B><I>LockAnnot</I></B>, <B><I>Password</I></B>, <B><I>AddToMru</I></B>, <B><I>WritePassword</I></B>, <B><I>RecommendReadOnly</I></B>, <B><I>EmbedFonts</I></B>, <B><I>NativePictureFormat</I></B>, <B><I>FormsData</I></B>, <B><I>SaveAsAOCELetter</I></B>, <B><I>WriteVersion</I></B>, <B><I>VersionDesc</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileSaveVersion</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileSummaryInfo</B></TD>
+<TD class=TT><B><I>Title</I></B>, <B><I>Subject</I></B>, <B><I>Author</I></B>, <B><I>Keywords</I></B>, <B><I>Comments</I></B>, <B><I>FileName</I></B>, <B><I>Directory</I></B>, <B><I>Template</I></B>, <B><I>CreateDate</I></B>, <B><I>LastSavedDate</I></B>, <B><I>LastSavedBy</I></B>, <B><I>RevisionNumber</I></B>, <B><I>EditTime</I></B>, <B><I>LastPrintedDate</I></B>, <B><I>NumPages</I></B>, <B><I>NumWords</I></B>, <B><I>NumChars</I></B>, <B><I>NumParas</I></B>, <B><I>NumLines</I></B>, <B><I>Update</I></B>, <B><I>FileSize</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFileVersions</B></TD>
+<TD class=TT><B><I>AutoVersion</I></B>, <B><I>VersionDesc</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFitText</B></TD>
+<TD class=TT><B><I>FitTextWidth</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFontSubstitution</B></TD>
+<TD class=TT><B><I>UnavailableFont</I></B>, <B><I>SubstituteFont</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatAddrFonts</B></TD>
+<TD class=TT><B><I>Points</I></B>, <B><I>Underline</I></B>, <B><I>Color</I></B>, <B><I>StrikeThrough</I></B>, <B><I>Superscript</I></B>, <B><I>Subscript</I></B>, <B><I>Hidden</I></B>, <B><I>SmallCaps</I></B>, <B><I>AllCaps</I></B>, <B><I>Spacing</I></B>, <B><I>Position</I></B>, <B><I>Kerning</I></B>, <B><I>KerningMin</I></B>, <B><I>Default</I></B>, <B><I>Tab</I></B>, <B><I>Font</I></B>, <B><I>Bold</I></B>, <B><I>Italic</I></B>, <B><I>DoubleStrikeThrough</I></B>, <B><I>Shadow</I></B>, <B><I>Outline</I></B>, <B><I>Emboss</I></B>, <B><I>Engrave</I></B>, <B><I>Scale</I></B>, <B><I>Animations</I></B>, <B><I>CharAccent</I></B>, <B><I>FontMajor</I></B>, <B><I>FontLowAnsi</I></B>, <B><I>FontHighAnsi</I></B>, <B><I>CharacterWidthGrid</I></B>, <B><I>ColorRGB</I></B>, <B><I>UnderlineColor</I></B>, <B><I>PointsBi</I></B>, <B><I>ColorBi</I></B>, <B><I>FontNameBi</I></B>, <B><I>BoldBi</I></B>, <B><I>ItalicBi</I></B>, <B><I>DiacColor</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatBordersAndShading</B></TD>
+<TD class=TT><B><I>ApplyTo</I></B>, <B><I>Shadow</I></B>, <B><I>TopBorder</I></B>, <B><I>LeftBorder</I></B>, <B><I>BottomBorder</I></B>, <B><I>RightBorder</I></B>, <B><I>HorizBorder</I></B>, <B><I>VertBorder</I></B>, <B><I>TopColor</I></B>, <B><I>LeftColor</I></B>, <B><I>BottomColor</I></B>, <B><I>RightColor</I></B>, <B><I>HorizColor</I></B>, <B><I>VertColor</I></B>, <B><I>FromText</I></B>, <B><I>Shading</I></B>, <B><I>Foreground</I></B>, <B><I>Background</I></B>, <B><I>Tab</I></B>, <B><I>FineShading</I></B>, <B><I>TopStyle</I></B>, <B><I>LeftStyle</I></B>, <B><I>BottomStyle</I></B>, <B><I>RightStyle</I></B>, <B><I>HorizStyle</I></B>, <B><I>VertStyle</I></B>, <B><I>TopWeight</I></B>, <B><I>LeftWeight</I></B>, <B><I>BottomWeight</I></B>, <B><I>RightWeight</I></B>, <B><I>HorizWeight</I></B>, <B><I>VertWeight</I></B>, <B><I>BorderObjectType</I></B>, <B><I>BorderArtWeight</I></B>, <B><I>BorderArt</I></B>, <B><I>FromTextTop</I></B>, <B><I>FromTextBottom</I></B>, <B><I>FromTextLeft</I></B>, <B><I>FromTextRight</I></B>, <B><I>OffsetFrom</I></B>, <B><I>InFront</I></B>, <B><I>SurroundHeader</I></B>, <B><I>SurroundFooter</I></B>, <B><I>JoinBorder</I></B>, <B><I>LineColor</I></B>, <B><I>WhichPages</I></B>, <B><I>TL2BRBorder</I></B>, <B><I>TR2BLBorder</I></B>, <B><I>TL2BRColor</I></B>, <B><I>TR2BLColor</I></B>, <B><I>TL2BRStyle</I></B>, <B><I>TR2BLStyle</I></B>, <B><I>TL2BRWeight</I></B>, <B><I>TR2BLWeight</I></B>, <B><I>ForegroundRGB</I></B>, <B><I>BackgroundRGB</I></B>, <B><I>TopColorRGB</I></B>, <B><I>LeftColorRGB</I></B>, <B><I>BottomColorRGB</I></B>, <B><I>RightColorRGB</I></B>, <B><I>HorizColorRGB</I></B>, <B><I>VertColorRGB</I></B>, <B><I>TL2BRColorRGB</I></B>, <B><I>TR2BLColorRGB</I></B>, <B><I>LineColorRGB</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatBulletsAndNumbering</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatCallout</B></TD>
+<TD class=TT><B><I>Type</I></B>, <B><I>Gap</I></B>, <B><I>Angle</I></B>, <B><I>Drop</I></B>, <B><I>Length</I></B>, <B><I>Border</I></B>, <B><I>AutoAttach</I></B>, <B><I>Accent</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatChangeCase</B></TD>
+<TD class=TT><B><I>Type</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatColumns</B></TD>
+<TD class=TT><B><I>Columns</I></B>, <B><I>ColumnNo</I></B>, <B><I>ColumnWidth</I></B>, <B><I>ColumnSpacing</I></B>, <B><I>EvenlySpaced</I></B>, <B><I>ApplyColsTo</I></B>, <B><I>ColLine</I></B>, <B><I>StartNewCol</I></B>, <B><I>FlowColumnsRtl</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDefineStyleBorders</B></TD>
+<TD class=TT><B><I>ApplyTo</I></B>, <B><I>Shadow</I></B>, <B><I>TopBorder</I></B>, <B><I>LeftBorder</I></B>, <B><I>BottomBorder</I></B>, <B><I>RightBorder</I></B>, <B><I>HorizBorder</I></B>, <B><I>VertBorder</I></B>, <B><I>TopColor</I></B>, <B><I>LeftColor</I></B>, <B><I>BottomColor</I></B>, <B><I>RightColor</I></B>, <B><I>HorizColor</I></B>, <B><I>VertColor</I></B>, <B><I>FromText</I></B>, <B><I>Shading</I></B>, <B><I>Foreground</I></B>, <B><I>Background</I></B>, <B><I>Tab</I></B>, <B><I>FineShading</I></B>, <B><I>TopStyle</I></B>, <B><I>LeftStyle</I></B>, <B><I>BottomStyle</I></B>, <B><I>RightStyle</I></B>, <B><I>HorizStyle</I></B>, <B><I>VertStyle</I></B>, <B><I>TopWeight</I></B>, <B><I>LeftWeight</I></B>, <B><I>BottomWeight</I></B>, <B><I>RightWeight</I></B>, <B><I>HorizWeight</I></B>, <B><I>VertWeight</I></B>, <B><I>BorderObjectType</I></B>, <B><I>BorderArtWeight</I></B>, <B><I>BorderArt</I></B>, <B><I>FromTextTop</I></B>, <B><I>FromTextBottom</I></B>, <B><I>FromTextLeft</I></B>, <B><I>FromTextRight</I></B>, <B><I>OffsetFrom</I></B>, <B><I>InFront</I></B>, <B><I>SurroundHeader</I></B>, <B><I>SurroundFooter</I></B>, <B><I>JoinBorder</I></B>, <B><I>LineColor</I></B>, <B><I>WhichPages</I></B>, <B><I>TL2BRBorder</I></B>, <B><I>TR2BLBorder</I></B>, <B><I>TL2BRColor</I></B>, <B><I>TR2BLColor</I></B>, <B><I>TL2BRStyle</I></B>, <B><I>TR2BLStyle</I></B>, <B><I>TL2BRWeight</I></B>, <B><I>TR2BLWeight</I></B>, <B><I>ForegroundRGB</I></B>, <B><I>BackgroundRGB</I></B>, <B><I>TopColorRGB</I></B>, <B><I>LeftColorRGB</I></B>, <B><I>BottomColorRGB</I></B>, <B><I>RightColorRGB</I></B>, <B><I>HorizColorRGB</I></B>, <B><I>VertColorRGB</I></B>, <B><I>TL2BRColorRGB</I></B>, <B><I>TR2BLColorRGB</I></B>, <B><I>LineColorRGB</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDefineStyleFont</B></TD>
+<TD class=TT><B><I>Points</I></B>, <B><I>Underline</I></B>, <B><I>Color</I></B>, <B><I>StrikeThrough</I></B>, <B><I>Superscript</I></B>, <B><I>Subscript</I></B>, <B><I>Hidden</I></B>, <B><I>SmallCaps</I></B>, <B><I>AllCaps</I></B>, <B><I>Spacing</I></B>, <B><I>Position</I></B>, <B><I>Kerning</I></B>, <B><I>KerningMin</I></B>, <B><I>Default</I></B>, <B><I>Tab</I></B>, <B><I>Font</I></B>, <B><I>Bold</I></B>, <B><I>Italic</I></B>, <B><I>DoubleStrikeThrough</I></B>, <B><I>Shadow</I></B>, <B><I>Outline</I></B>, <B><I>Emboss</I></B>, <B><I>Engrave</I></B>, <B><I>Scale</I></B>, <B><I>Animations</I></B>, <B><I>CharAccent</I></B>, <B><I>FontMajor</I></B>, <B><I>FontLowAnsi</I></B>, <B><I>FontHighAnsi</I></B>, <B><I>CharacterWidthGrid</I></B>, <B><I>ColorRGB</I></B>, <B><I>UnderlineColor</I></B>, <B><I>PointsBi</I></B>, <B><I>ColorBi</I></B>, <B><I>FontNameBi</I></B>, <B><I>BoldBi</I></B>, <B><I>ItalicBi</I></B>, <B><I>DiacColor</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDefineStyleFrame</B></TD>
+<TD class=TT><B><I>Wrap</I></B>, <B><I>WidthRule</I></B>, <B><I>FixedWidth</I></B>, <B><I>HeightRule</I></B>, <B><I>FixedHeight</I></B>, <B><I>PositionHorz</I></B>, <B><I>PositionHorzRel</I></B>, <B><I>DistFromText</I></B>, <B><I>PositionVert</I></B>, <B><I>PositionVertRel</I></B>, <B><I>DistVertFromText</I></B>, <B><I>MoveWithText</I></B>, <B><I>LockAnchor</I></B>, <B><I>RemoveFrame</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDefineStyleLang</B></TD>
+<TD class=TT><B><I>Language</I></B>, <B><I>CheckLanguage</I></B>, <B><I>Default</I></B>, <B><I>NoProof</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDefineStylePara</B></TD>
+<TD class=TT><B><I>LeftIndent</I></B>, <B><I>RightIndent</I></B>, <B><I>Before</I></B>, <B><I>After</I></B>, <B><I>LineSpacingRule</I></B>, <B><I>LineSpacing</I></B>, <B><I>Alignment</I></B>, <B><I>WidowControl</I></B>, <B><I>KeepWithNext</I></B>, <B><I>KeepTogether</I></B>, <B><I>PageBreak</I></B>, <B><I>NoLineNum</I></B>, <B><I>DontHyphen</I></B>, <B><I>Tab</I></B>, <B><I>FirstIndent</I></B>, <B><I>OutlineLevel</I></B>, <B><I>Kinsoku</I></B>, <B><I>WordWrap</I></B>, <B><I>OverflowPunct</I></B>, <B><I>TopLinePunct</I></B>, <B><I>AutoSpaceDE</I></B>, <B><I>LineHeightGrid</I></B>, <B><I>AutoSpaceDN</I></B>, <B><I>CharAlign</I></B>, <B><I>CharacterUnitLeftIndent</I></B>, <B><I>AdjustRight</I></B>, <B><I>CharacterUnitFirstIndent</I></B>, <B><I>CharacterUnitRightIndent</I></B>, <B><I>LineUnitBefore</I></B>, <B><I>LineUnitAfter</I></B>, <B><I>OrientationBi</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDefineStyleTabs</B></TD>
+<TD class=TT><B><I>Position</I></B>, <B><I>DefTabs</I></B>, <B><I>Align</I></B>, <B><I>Leader</I></B>, <B><I>Set</I></B>, <B><I>Clear</I></B>, <B><I>ClearAll</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDrawingObject</B></TD>
+<TD class=TT><B><I>Left</I></B>, <B><I>PositionHorzRel</I></B>, <B><I>Top</I></B>, <B><I>PositionVertRel</I></B>, <B><I>LockAnchor</I></B>, <B><I>FloatOverText</I></B>, <B><I>WrapSide</I></B>, <B><I>TopDistanceFromText</I></B>, <B><I>BottomDistanceFromText</I></B>, <B><I>LeftDistanceFromText</I></B>, <B><I>RightDistanceFromText</I></B>, <B><I>Wrap</I></B>, <B><I>HRWidthType</I></B>, <B><I>HRHeight</I></B>, <B><I>HRNoshade</I></B>, <B><I>HRAlign</I></B>, <B><I>Text</I></B>, <B><I>AllowOverlap</I></B>, <B><I>HorizRule</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatDropCap</B></TD>
+<TD class=TT><B><I>Position</I></B>, <B><I>Font</I></B>, <B><I>DropHeight</I></B>, <B><I>DistFromText</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatEncloseCharacters</B></TD>
+<TD class=TT><B><I>Style</I></B>, <B><I>Text</I></B>, <B><I>Enclosure</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatFont</B></TD>
+<TD class=TT><B><I>Points</I></B>, <B><I>Underline</I></B>, <B><I>Color</I></B>, <B><I>StrikeThrough</I></B>, <B><I>Superscript</I></B>, <B><I>Subscript</I></B>, <B><I>Hidden</I></B>, <B><I>SmallCaps</I></B>, <B><I>AllCaps</I></B>, <B><I>Spacing</I></B>, <B><I>Position</I></B>, <B><I>Kerning</I></B>, <B><I>KerningMin</I></B>, <B><I>Default</I></B>, <B><I>Tab</I></B>, <B><I>Font</I></B>, <B><I>Bold</I></B>, <B><I>Italic</I></B>, <B><I>DoubleStrikeThrough</I></B>, <B><I>Shadow</I></B>, <B><I>Outline</I></B>, <B><I>Emboss</I></B>, <B><I>Engrave</I></B>, <B><I>Scale</I></B>, <B><I>Animations</I></B>, <B><I>CharAccent</I></B>, <B><I>FontMajor</I></B>, <B><I>FontLowAnsi</I></B>, <B><I>FontHighAnsi</I></B>, <B><I>CharacterWidthGrid</I></B>, <B><I>ColorRGB</I></B>, <B><I>UnderlineColor</I></B>, <B><I>PointsBi</I></B>, <B><I>ColorBi</I></B>, <B><I>FontNameBi</I></B>, <B><I>BoldBi</I></B>, <B><I>ItalicBi</I></B>, <B><I>DiacColor</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatFrame</B></TD>
+<TD class=TT><B><I>Wrap</I></B>, <B><I>WidthRule</I></B>, <B><I>FixedWidth</I></B>, <B><I>HeightRule</I></B>, <B><I>FixedHeight</I></B>, <B><I>PositionHorz</I></B>, <B><I>PositionHorzRel</I></B>, <B><I>DistFromText</I></B>, <B><I>PositionVert</I></B>, <B><I>PositionVertRel</I></B>, <B><I>DistVertFromText</I></B>, <B><I>MoveWithText</I></B>, <B><I>LockAnchor</I></B>, <B><I>RemoveFrame</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatPageNumber</B></TD>
+<TD class=TT><B><I>ChapterNumber</I></B>, <B><I>NumRestart</I></B>, <B><I>NumFormat</I></B>, <B><I>StartingNum</I></B>, <B><I>Level</I></B>, <B><I>Separator</I></B>, <B><I>DoubleQuote</I></B>, <B><I>PgNumberingStyle</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatParagraph</B></TD>
+<TD class=TT><B><I>LeftIndent</I></B>, <B><I>RightIndent</I></B>, <B><I>Before</I></B>, <B><I>After</I></B>, <B><I>LineSpacingRule</I></B>, <B><I>LineSpacing</I></B>, <B><I>Alignment</I></B>, <B><I>WidowControl</I></B>, <B><I>KeepWithNext</I></B>, <B><I>KeepTogether</I></B>, <B><I>PageBreak</I></B>, <B><I>NoLineNum</I></B>, <B><I>DontHyphen</I></B>, <B><I>Tab</I></B>, <B><I>FirstIndent</I></B>, <B><I>OutlineLevel</I></B>, <B><I>Kinsoku</I></B>, <B><I>WordWrap</I></B>, <B><I>OverflowPunct</I></B>, <B><I>TopLinePunct</I></B>, <B><I>AutoSpaceDE</I></B>, <B><I>LineHeightGrid</I></B>, <B><I>AutoSpaceDN</I></B>, <B><I>CharAlign</I></B>, <B><I>CharacterUnitLeftIndent</I></B>, <B><I>AdjustRight</I></B>, <B><I>CharacterUnitFirstIndent</I></B>, <B><I>CharacterUnitRightIndent</I></B>, <B><I>LineUnitBefore</I></B>, <B><I>LineUnitAfter</I></B>, <B><I>OrientationBi</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatPicture</B></TD>
+<TD class=TT><B><I>SetSize</I></B>, <B><I>CropLeft</I></B>, <B><I>CropRight</I></B>, <B><I>CropTop</I></B>, <B><I>CropBottom</I></B>, <B><I>ScaleX</I></B>, <B><I>ScaleY</I></B>, <B><I>SizeX</I></B>, <B><I>SizeY</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatRetAddrFonts</B></TD>
+<TD class=TT><B><I>Points</I></B>, <B><I>Underline</I></B>, <B><I>Color</I></B>, <B><I>StrikeThrough</I></B>, <B><I>Superscript</I></B>, <B><I>Subscript</I></B>, <B><I>Hidden</I></B>, <B><I>SmallCaps</I></B>, <B><I>AllCaps</I></B>, <B><I>Spacing</I></B>, <B><I>Position</I></B>, <B><I>Kerning</I></B>, <B><I>KerningMin</I></B>, <B><I>Default</I></B>, <B><I>Tab</I></B>, <B><I>Font</I></B>, <B><I>Bold</I></B>, <B><I>Italic</I></B>, <B><I>DoubleStrikeThrough</I></B>, <B><I>Shadow</I></B>, <B><I>Outline</I></B>, <B><I>Emboss</I></B>, <B><I>Engrave</I></B>, <B><I>Scale</I></B>, <B><I>Animations</I></B>, <B><I>CharAccent</I></B>, <B><I>FontMajor</I></B>, <B><I>FontLowAnsi</I></B>, <B><I>FontHighAnsi</I></B>, <B><I>CharacterWidthGrid</I></B>, <B><I>ColorRGB</I></B>, <B><I>UnderlineColor</I></B>, <B><I>PointsBi</I></B>, <B><I>ColorBi</I></B>, <B><I>FontNameBi</I></B>, <B><I>BoldBi</I></B>, <B><I>ItalicBi</I></B>, <B><I>DiacColor</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatSectionLayout</B></TD>
+<TD class=TT><B><I>SectionStart</I></B>, <B><I>VertAlign</I></B>, <B><I>Endnotes</I></B>, <B><I>LineNum</I></B>, <B><I>StartingNum</I></B>, <B><I>FromText</I></B>, <B><I>CountBy</I></B>, <B><I>NumMode</I></B>, <B><I>SectionType</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatStyle</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Delete</I></B>, <B><I>Merge</I></B>, <B><I>NewName</I></B>, <B><I>BasedOn</I></B>, <B><I>NextStyle</I></B>, <B><I>Type</I></B>, <B><I>FileName</I></B>, <B><I>Source</I></B>, <B><I>AddToTemplate</I></B>, <B><I>Define</I></B>, <B><I>Rename</I></B>, <B><I>Apply</I></B>, <B><I>New</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatStyleGallery</B></TD>
+<TD class=TT><B><I>Template</I></B>, <B><I>Preview</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogFormatStylesCustom</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatTabs</B></TD>
+<TD class=TT><B><I>Position</I></B>, <B><I>DefTabs</I></B>, <B><I>Align</I></B>, <B><I>Leader</I></B>, <B><I>Set</I></B>, <B><I>Clear</I></B>, <B><I>ClearAll</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormatTheme</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogFormFieldHelp</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogFormFieldOptions</B></TD>
+<TD class=TT><B><I>Entry</I></B>, <B><I>Exit</I></B>, <B><I>Name</I></B>, <B><I>Enable</I></B>, <B><I>TextType</I></B>, <B><I>TextWidth</I></B>, <B><I>TextDefault</I></B>, <B><I>TextFormat</I></B>, <B><I>CheckSize</I></B>, <B><I>CheckWidth</I></B>, <B><I>CheckDefault</I></B>, <B><I>Type</I></B>, <B><I>OwnHelp</I></B>, <B><I>HelpText</I></B>, <B><I>OwnStat</I></B>, <B><I>StatText</I></B>, <B><I>Calculate</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogFrameSetProperties</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogHelpAbout</B></TD>
+<TD class=TT><B><I>APPNAME</I></B>, <B><I>APPCOPYRIGHT</I></B>, <B><I>APPUSERNAME</I></B>, <B><I>APPORGANIZATION</I></B>, <B><I>APPSERIALNUMBER</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogHelpWordPerfectHelp</B></TD>
+<TD class=TT><B><I>WPCommand</I></B>, <B><I>HelpText</I></B>, <B><I>DemoGuidance</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogHelpWordPerfectHelpOptions</B></TD>
+<TD class=TT><B><I>CommandKeyHelp</I></B>, <B><I>DocNavKeys</I></B>, <B><I>MouseSimulation</I></B>, <B><I>DemoGuidance</I></B>, <B><I>DemoSpeed</I></B>, <B><I>HelpType</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogHorizontalInVertical</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogIMESetDefault</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertAddCaption</B></TD>
+<TD class=TT><B><I>Name</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertAutoCaption</B></TD>
+<TD class=TT><B><I>Clear</I></B>, <B><I>ClearAll</I></B>, <B><I>Object</I></B>, <B><I>Label</I></B>, <B><I>Position</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertBookmark</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>SortBy</I></B>, <B><I>Add</I></B>, <B><I>Delete</I></B>, <B><I>Goto</I></B>, <B><I>Hidden</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertBreak</B></TD>
+<TD class=TT><B><I>Type</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertCaption</B></TD>
+<TD class=TT><B><I>Label</I></B>, <B><I>TitleAutoText</I></B>, <B><I>Title</I></B>, <B><I>Delete</I></B>, <B><I>Position</I></B>, <B><I>AutoCaption</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertCaptionNumbering</B></TD>
+<TD class=TT><B><I>Label</I></B>, <B><I>FormatNumber</I></B>, <B><I>ChapterNumber</I></B>, <B><I>Level</I></B>, <B><I>Separator</I></B>, <B><I>CapNumberingStyle</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertCrossReference</B></TD>
+<TD class=TT><B><I>ReferenceType</I></B>, <B><I>ReferenceKind</I></B>, <B><I>ReferenceItem</I></B>, <B><I>InsertAsHyperLink</I></B>, <B><I>InsertPosition</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertDatabase</B></TD>
+<TD class=TT><B><I>Format</I></B>, <B><I>Style</I></B>, <B><I>LinkToSource</I></B>, <B><I>Connection</I></B>, <B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B>, <B><I>PasswordDoc</I></B>, <B><I>PasswordDot</I></B>, <B><I>DataSource</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>IncludeFields</I></B>, <B><I>WritePasswordDoc</I></B>, <B><I>WritePasswordDot</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertDateTime</B></TD>
+<TD class=TT><B><I>DateTimePic</I></B>, <B><I>InsertAsField</I></B>, <B><I>DbCharField</I></B>, <B><I>DateLanguage</I></B>, <B><I>CalendarType</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertField</B></TD>
+<TD class=TT><B><I>Field</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertFile</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Range</I></B>, <B><I>ConfirmConversions</I></B>, <B><I>Link</I></B>, <B><I>Attachment</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertFootnote</B></TD>
+<TD class=TT><B><I>Reference</I></B>, <B><I>NoteType</I></B>, <B><I>Symbol</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertFormField</B></TD>
+<TD class=TT><B><I>Entry</I></B>, <B><I>Exit</I></B>, <B><I>Name</I></B>, <B><I>Enable</I></B>, <B><I>TextType</I></B>, <B><I>TextWidth</I></B>, <B><I>TextDefault</I></B>, <B><I>TextFormat</I></B>, <B><I>CheckSize</I></B>, <B><I>CheckWidth</I></B>, <B><I>CheckDefault</I></B>, <B><I>Type</I></B>, <B><I>OwnHelp</I></B>, <B><I>HelpText</I></B>, <B><I>OwnStat</I></B>, <B><I>StatText</I></B>, <B><I>Calculate</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertHyperlink</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertIndex</B></TD>
+<TD class=TT><B><I>Outline</I></B>, <B><I>Fields</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>TableId</I></B>, <B><I>AddedStyles</I></B>, <B><I>Caption</I></B>, <B><I>HeadingSeparator</I></B>, <B><I>Replace</I></B>, <B><I>MarkEntry</I></B>, <B><I>AutoMark</I></B>, <B><I>MarkCitation</I></B>, <B><I>Type</I></B>, <B><I>RightAlignPageNumbers</I></B>, <B><I>Passim</I></B>, <B><I>KeepFormatting</I></B>, <B><I>Columns</I></B>, <B><I>Category</I></B>, <B><I>Label</I></B>, <B><I>ShowPageNumbers</I></B>, <B><I>AccentedLetters</I></B>, <B><I>Filter</I></B>, <B><I>SortBy</I></B>, <B><I>Leader</I></B>, <B><I>TOCUseHyperlinks</I></B>, <B><I>TOCHidePageNumInWeb</I></B>, <B><I>IndexLanguage</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertIndexAndTables</B></TD>
+<TD class=TT><B><I>Outline</I></B>, <B><I>Fields</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>TableId</I></B>, <B><I>AddedStyles</I></B>, <B><I>Caption</I></B>, <B><I>HeadingSeparator</I></B>, <B><I>Replace</I></B>, <B><I>MarkEntry</I></B>, <B><I>AutoMark</I></B>, <B><I>MarkCitation</I></B>, <B><I>Type</I></B>, <B><I>RightAlignPageNumbers</I></B>, <B><I>Passim</I></B>, <B><I>KeepFormatting</I></B>, <B><I>Columns</I></B>, <B><I>Category</I></B>, <B><I>Label</I></B>, <B><I>ShowPageNumbers</I></B>, <B><I>AccentedLetters</I></B>, <B><I>Filter</I></B>, <B><I>SortBy</I></B>, <B><I>Leader</I></B>, <B><I>TOCUseHyperlinks</I></B>, <B><I>TOCHidePageNumInWeb</I></B>, <B><I>IndexLanguage</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertMergeField</B></TD>
+<TD class=TT><B><I>MergeField</I></B>, <B><I>WordField</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertNumber</B></TD>
+<TD class=TT><B><I>NumPic</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertObject</B></TD>
+<TD class=TT><B><I>IconNumber</I></B>, <B><I>FileName</I></B>, <B><I>Link</I></B>, <B><I>DisplayIcon</I></B>, <B><I>Tab</I></B>, <B><I>Class</I></B>, <B><I>IconFileName</I></B>, <B><I>Caption</I></B>, <B><I>Floating</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertPageNumbers</B></TD>
+<TD class=TT><B><I>Type</I></B>, <B><I>Position</I></B>, <B><I>FirstPage</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertPicture</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>LinkToFile</I></B>, <B><I>New</I></B>, <B><I>FloatOverText</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertSubdocument</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>ConfirmConversions</I></B>, <B><I>ReadOnly</I></B>, <B><I>LinkToSource</I></B>, <B><I>AddToMru</I></B>, <B><I>PasswordDoc</I></B>, <B><I>PasswordDot</I></B>, <B><I>Revert</I></B>, <B><I>WritePasswordDoc</I></B>, <B><I>WritePasswordDot</I></B>, <B><I>Connection</I></B>, <B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B>, <B><I>Format</I></B>, <B><I>Encoding</I></B>, <B><I>Visible</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertSymbol</B></TD>
+<TD class=TT><B><I>Font</I></B>, <B><I>Tab</I></B>, <B><I>CharNum</I></B>, <B><I>Unicode</I></B>, <B><I>Hint</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertTableOfAuthorities</B></TD>
+<TD class=TT><B><I>Outline</I></B>, <B><I>Fields</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>TableId</I></B>, <B><I>AddedStyles</I></B>, <B><I>Caption</I></B>, <B><I>HeadingSeparator</I></B>, <B><I>Replace</I></B>, <B><I>MarkEntry</I></B>, <B><I>AutoMark</I></B>, <B><I>MarkCitation</I></B>, <B><I>Type</I></B>, <B><I>RightAlignPageNumbers</I></B>, <B><I>Passim</I></B>, <B><I>KeepFormatting</I></B>, <B><I>Columns</I></B>, <B><I>Category</I></B>, <B><I>Label</I></B>, <B><I>ShowPageNumbers</I></B>, <B><I>AccentedLetters</I></B>, <B><I>Filter</I></B>, <B><I>SortBy</I></B>, <B><I>Leader</I></B>, <B><I>TOCUseHyperlinks</I></B>, <B><I>TOCHidePageNumInWeb</I></B>, <B><I>IndexLanguage</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertTableOfContents</B></TD>
+<TD class=TT><B><I>Outline</I></B>, <B><I>Fields</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>TableId</I></B>, <B><I>AddedStyles</I></B>, <B><I>Caption</I></B>, <B><I>HeadingSeparator</I></B>, <B><I>Replace</I></B>, <B><I>MarkEntry</I></B>, <B><I>AutoMark</I></B>, <B><I>MarkCitation</I></B>, <B><I>Type</I></B>, <B><I>RightAlignPageNumbers</I></B>, <B><I>Passim</I></B>, <B><I>KeepFormatting</I></B>, <B><I>Columns</I></B>, <B><I>Category</I></B>, <B><I>Label</I></B>, <B><I>ShowPageNumbers</I></B>, <B><I>AccentedLetters</I></B>, <B><I>Filter</I></B>, <B><I>SortBy</I></B>, <B><I>Leader</I></B>, <B><I>TOCUseHyperlinks</I></B>, <B><I>TOCHidePageNumInWeb</I></B>, <B><I>IndexLanguage</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogInsertTableOfFigures</B></TD>
+<TD class=TT><B><I>Outline</I></B>, <B><I>Fields</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>TableId</I></B>, <B><I>AddedStyles</I></B>, <B><I>Caption</I></B>, <B><I>HeadingSeparator</I></B>, <B><I>Replace</I></B>, <B><I>MarkEntry</I></B>, <B><I>AutoMark</I></B>, <B><I>MarkCitation</I></B>, <B><I>Type</I></B>, <B><I>RightAlignPageNumbers</I></B>, <B><I>Passim</I></B>, <B><I>KeepFormatting</I></B>, <B><I>Columns</I></B>, <B><I>Category</I></B>, <B><I>Label</I></B>, <B><I>ShowPageNumbers</I></B>, <B><I>AccentedLetters</I></B>, <B><I>Filter</I></B>, <B><I>SortBy</I></B>, <B><I>Leader</I></B>, <B><I>TOCUseHyperlinks</I></B>, <B><I>TOCHidePageNumInWeb</I></B>, <B><I>IndexLanguage</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogInsertWebComponent</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogLetterWizard</B></TD>
+<TD class=TT><B><I>SenderCity</I></B>, <B><I>DateFormat</I></B>, <B><I>IncludeHeaderFooter</I></B>, <B><I>LetterStyle</I></B>, <B><I>Letterhead</I></B>, <B><I>LetterheadLocation</I></B>, <B><I>LetterheadSize</I></B>, <B><I>RecipientName</I></B>, <B><I>RecipientAddress</I></B>, <B><I>Salutation</I></B>, <B><I>SalutationType</I></B>, <B><I>RecipientGender</I></B>, <B><I>RecipientReference</I></B>, <B><I>MailingInstructions</I></B>, <B><I>AttentionLine</I></B>, <B><I>LetterSubject</I></B>, <B><I>CCList</I></B>, <B><I>SenderName</I></B>, <B><I>ReturnAddress</I></B>, <B><I>Closing</I></B>, <B><I>SenderJobTitle</I></B>, <B><I>SenderCompany</I></B>, <B><I>SenderInitials</I></B>, <B><I>EnclosureNumber</I></B>, <B><I>PageDesign</I></B>, <B><I>InfoBlock</I></B>, <B><I>SenderGender</I></B>, <B><I>ReturnAddressSF</I></B>, <B><I>RecipientCode</I></B>, <B><I>SenderCode</I></B>, <B><I>SenderReference</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogListCommands</B></TD>
+<TD class=TT><B><I>ListType</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMerge</B></TD>
+<TD class=TT><B><I>CheckErrors</I></B>, <B><I>Destination</I></B>, <B><I>MergeRecords</I></B>, <B><I>From</I></B>, <B><I>To</I></B>, <B><I>Suppression</I></B>, <B><I>MailMerge</I></B>, <B><I>QueryOptions</I></B>, <B><I>MailSubject</I></B>, <B><I>MailAsAttachment</I></B>, <B><I>MailAddress</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeCheck</B></TD>
+<TD class=TT><B><I>CheckErrors</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeCreateDataSource</B></TD>
+<TD class=TT><B><I>FileName</I></B>, <B><I>PasswordDoc</I></B>, <B><I>PasswordDot</I></B>, <B><I>HeaderRecord</I></B>, <B><I>MSQuery</I></B>, <B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B>, <B><I>Connection</I></B>, <B><I>LinkToSource</I></B>, <B><I>WritePasswordDoc</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeCreateHeaderSource</B></TD>
+<TD class=TT><B><I>FileName</I></B>, <B><I>PasswordDoc</I></B>, <B><I>PasswordDot</I></B>, <B><I>HeaderRecord</I></B>, <B><I>MSQuery</I></B>, <B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B>, <B><I>Connection</I></B>, <B><I>LinkToSource</I></B>, <B><I>WritePasswordDoc</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogMailMergeFieldMapping</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogMailMergeFindRecipient</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeFindRecord</B></TD>
+<TD class=TT><B><I>Find</I></B>, <B><I>Field</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeHelper</B></TD>
+<TD class=TT><B><I>Merge</I></B>, <B><I>Options</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogMailMergeInsertAddressBlock</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeInsertAsk</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Prompt</I></B>, <B><I>DefaultBookmarkText</I></B>, <B><I>AskOnce</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogMailMergeInsertFields</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeInsertFillIn</B></TD>
+<TD class=TT><B><I>Prompt</I></B>, <B><I>DefaultFillInText</I></B>, <B><I>AskOnce</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogMailMergeInsertGreetingLine</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeInsertIf</B></TD>
+<TD class=TT><B><I>MergeField</I></B>, <B><I>Comparison</I></B>, <B><I>CompareTo</I></B>, <B><I>TrueAutoText</I></B>, <B><I>TrueText</I></B>, <B><I>FalseAutoText</I></B>, <B><I>FalseText</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeInsertNextIf</B></TD>
+<TD class=TT><B><I>MergeField</I></B>, <B><I>Comparison</I></B>, <B><I>CompareTo</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeInsertSet</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>ValueText</I></B>, <B><I>ValueAutoText</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeInsertSkipIf</B></TD>
+<TD class=TT><B><I>MergeField</I></B>, <B><I>Comparison</I></B>, <B><I>CompareTo</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeOpenDataSource</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>ConfirmConversions</I></B>, <B><I>ReadOnly</I></B>, <B><I>LinkToSource</I></B>, <B><I>AddToMru</I></B>, <B><I>PasswordDoc</I></B>, <B><I>PasswordDot</I></B>, <B><I>Revert</I></B>, <B><I>WritePasswordDoc</I></B>, <B><I>WritePasswordDot</I></B>, <B><I>Connection</I></B>, <B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B>, <B><I>Format</I></B>, <B><I>Encoding</I></B>, <B><I>Visible</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeOpenHeaderSource</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>ConfirmConversions</I></B>, <B><I>ReadOnly</I></B>, <B><I>LinkToSource</I></B>, <B><I>AddToMru</I></B>, <B><I>PasswordDoc</I></B>, <B><I>PasswordDot</I></B>, <B><I>Revert</I></B>, <B><I>WritePasswordDoc</I></B>, <B><I>WritePasswordDot</I></B>, <B><I>Connection</I></B>, <B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B>, <B><I>Format</I></B>, <B><I>Encoding</I></B>, <B><I>Visible</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeQueryOptions</B></TD>
+<TD class=TT><B><I>SQLStatement</I></B>, <B><I>SQLStatement1</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogMailMergeRecipients</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogMailMergeSetDocumentType</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMailMergeUseAddressBook</B></TD>
+<TD class=TT><B><I>AddressBookType</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMarkCitation</B></TD>
+<TD class=TT><B><I>LongCitation</I></B>, <B><I>LongCitationAutoText</I></B>, <B><I>Category</I></B>, <B><I>ShortCitation</I></B>, <B><I>NextCitation</I></B>, <B><I>Mark</I></B>, <B><I>MarkAll</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMarkIndexEntry</B></TD>
+<TD class=TT><B><I>MarkAll</I></B>, <B><I>Entry</I></B>, <B><I>Range</I></B>, <B><I>Bold</I></B>, <B><I>Italic</I></B>, <B><I>CrossReference</I></B>, <B><I>EntryAutoText</I></B>, <B><I>CrossReferenceAutoText</I></B>, <B><I>Yomi</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogMarkTableOfContentsEntry</B></TD>
+<TD class=TT><B><I>Entry</I></B>, <B><I>EntryAutoText</I></B>, <B><I>TableId</I></B>, <B><I>Level</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogNewToolbar</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Context</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogNoteOptions</B></TD>
+<TD class=TT><B><I>FootnotesAt</I></B>, <B><I>FootNumberAs</I></B>, <B><I>FootStartingNum</I></B>, <B><I>FootRestartNum</I></B>, <B><I>EndnotesAt</I></B>, <B><I>EndNumberAs</I></B>, <B><I>EndStartingNum</I></B>, <B><I>EndRestartNum</I></B>, <B><I>FootNumberingStyle</I></B>, <B><I>EndNumberingStyle</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogOrganizer</B></TD>
+<TD class=TT><B><I>Copy</I></B>, <B><I>Delete</I></B>, <B><I>Rename</I></B>, <B><I>Source</I></B>, <B><I>Destination</I></B>, <B><I>Name</I></B>, <B><I>NewName</I></B>, <B><I>Tab</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogPhoneticGuide</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogReviewAfmtRevisions</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogSearch</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogShowRepairs</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableAutoFormat</B></TD>
+<TD class=TT><B><I>HideAutoFit</I></B>, <B><I>Preview</I></B>, <B><I>Format</I></B>, <B><I>Borders</I></B>, <B><I>Shading</I></B>, <B><I>Font</I></B>, <B><I>Color</I></B>, <B><I>AutoFit</I></B>, <B><I>HeadingRows</I></B>, <B><I>FirstColumn</I></B>, <B><I>LastRow</I></B>, <B><I>LastColumn</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableCellOptions</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableColumnWidth</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableDeleteCells</B></TD>
+<TD class=TT><B><I>ShiftCells</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableFormatCell</B></TD>
+<TD class=TT><B><I>Category</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableFormula</B></TD>
+<TD class=TT><B><I>Formula</I></B>, <B><I>NumFormat</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableInsertCells</B></TD>
+<TD class=TT><B><I>ShiftCells</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableInsertRow</B></TD>
+<TD class=TT><B><I>NumRows</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableInsertTable</B></TD>
+<TD class=TT><B><I>ConvertFrom</I></B>, <B><I>NumColumns</I></B>, <B><I>NumRows</I></B>, <B><I>InitialColWidth</I></B>, <B><I>Wizard</I></B>, <B><I>Format</I></B>, <B><I>Apply</I></B>, <B><I>AutoFit</I></B>, <B><I>SetDefault</I></B>, <B><I>Word8</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableOfCaptionsOptions</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableOfContentsOptions</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableProperties</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableRowHeight</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableSort</B></TD>
+<TD class=TT><B><I>DontSortHdr</I></B>, <B><I>FieldNum</I></B>, <B><I>Type</I></B>, <B><I>Order</I></B>, <B><I>FieldNum2</I></B>, <B><I>Type2</I></B>, <B><I>Order2</I></B>, <B><I>FieldNum3</I></B>, <B><I>Type3</I></B>, <B><I>Order3</I></B>, <B><I>Separator</I></B>, <B><I>SortColumn</I></B>, <B><I>CaseSensitive</I></B>, <B><I>SortBiDi</I></B>, <B><I>IgnoreHe</I></B>, <B><I>Diacritics</I></B>, <B><I>IgnoreThe</I></B>, <B><I>Kashida</I></B>, <B><I>Language</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableSplitCells</B></TD>
+<TD class=TT><B><I>NumColumns</I></B>, <B><I>NumRows</I></B>, <B><I>MergeBeforeSplit</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableTableOptions</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTableToText</B></TD>
+<TD class=TT><B><I>ConvertTo</I></B>, <B><I>NestedTables</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogTableWrapping</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTCSCTranslator</B></TD>
+<TD class=TT><B><I>Direction</I></B>, <B><I>Varients</I></B>, <B><I>TranslateCommon</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTextToTable</B></TD>
+<TD class=TT><B><I>ConvertFrom</I></B>, <B><I>NumColumns</I></B>, <B><I>NumRows</I></B>, <B><I>InitialColWidth</I></B>, <B><I>Wizard</I></B>, <B><I>Format</I></B>, <B><I>Apply</I></B>, <B><I>AutoFit</I></B>, <B><I>SetDefault</I></B>, <B><I>Word8</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsAcceptRejectChanges</B></TD>
+<TD class=TT><B><I>ShowMarks</I></B>, <B><I>HideMarks</I></B>, <B><I>Wrap</I></B>, <B><I>FindPrevious</I></B>, <B><I>FindNext</I></B>, <B><I>AcceptRevisions</I></B>, <B><I>RejectRevisions</I></B>, <B><I>AcceptAll</I></B>, <B><I>RejectAll</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsAdvancedSettings</B></TD>
+<TD class=TT><B><I>Application</I></B>, <B><I>Option</I></B>, <B><I>Setting</I></B>, <B><I>Delete</I></B>, <B><I>Set</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsAutoCorrect</B></TD>
+<TD class=TT><B><I>InitialCaps</I></B>, <B><I>SentenceCaps</I></B>, <B><I>Days</I></B>, <B><I>CapsLock</I></B>, <B><I>ReplaceText</I></B>, <B><I>Formatting</I></B>, <B><I>Replace</I></B>, <B><I>With</I></B>, <B><I>Add</I></B>, <B><I>Delete</I></B>, <B><I>SmartQuotes</I></B>, <B><I>CorrectHangulAndAlphabet</I></B>, <B><I>ConvBrackets</I></B>, <B><I>ConvQuotes</I></B>, <B><I>ConvPunct</I></B>, <B><I>ReplaceTextFromSpellingChecker</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsAutoCorrectExceptions</B></TD>
+<TD class=TT><B><I>Tab</I></B>, <B><I>Name</I></B>, <B><I>AutoAdd</I></B>, <B><I>Add</I></B>, <B><I>Delete</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsAutoManager</B></TD>
+<TD class=TT><B><I>Tab</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsAutoSummarize</B></TD>
+<TD class=TT><B><I>TextSize</I></B>, <B><I>Show</I></B>, <B><I>Update</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsBulletsNumbers</B></TD>
+<TD class=TT><B><I>Replace</I></B>, <B><I>Font</I></B>, <B><I>CharNum</I></B>, <B><I>Type</I></B>, <B><I>FormatOutline</I></B>, <B><I>AutoUpdate</I></B>, <B><I>FormatNumber</I></B>, <B><I>Punctuation</I></B>, <B><I>StartAt</I></B>, <B><I>Points</I></B>, <B><I>Hang</I></B>, <B><I>Indent</I></B>, <B><I>Remove</I></B>, <B><I>DoubleQuote</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCompareDocuments</B></TD>
+<TD class=TT><B><I>Name</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCreateDirectory</B></TD>
+<TD class=TT><B><I>Directory</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCreateEnvelope</B></TD>
+<TD class=TT><B><I>ExtractAddress</I></B>, <B><I>LabelListIndex</I></B>, <B><I>LabelIndex</I></B>, <B><I>LabelDotMatrix</I></B>, <B><I>LabelTray</I></B>, <B><I>LabelAcross</I></B>, <B><I>LabelDown</I></B>, <B><I>EnvOmitReturn</I></B>, <B><I>EnvReturn</I></B>, <B><I>PrintBarCode</I></B>, <B><I>SingleLabel</I></B>, <B><I>LabelRow</I></B>, <B><I>LabelColumn</I></B>, <B><I>PrintEnvLabel</I></B>, <B><I>AddToDocument</I></B>, <B><I>EnvWidth</I></B>, <B><I>EnvHeight</I></B>, <B><I>EnvPaperSize</I></B>, <B><I>PrintFIMA</I></B>, <B><I>UseEnvFeeder</I></B>, <B><I>Tab</I></B>, <B><I>AddrAutoText</I></B>, <B><I>AddrText</I></B>, <B><I>AddrFromLeft</I></B>, <B><I>AddrFromTop</I></B>, <B><I>RetAddrFromLeft</I></B>, <B><I>RetAddrFromTop</I></B>, <B><I>LabelTopMargin</I></B>, <B><I>LabelSideMargin</I></B>, <B><I>LabelVertPitch</I></B>, <B><I>LabelHorPitch</I></B>, <B><I>LabelHeight</I></B>, <B><I>LabelWidth</I></B>, <B><I>CustomName</I></B>, <B><I>EnvPaperName</I></B>, <B><I>DefaultFaceUp</I></B>, <B><I>DefaultOrientation</I></B>, <B><I>RetAddrAutoText</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCreateLabels</B></TD>
+<TD class=TT><B><I>ExtractAddress</I></B>, <B><I>LabelListIndex</I></B>, <B><I>LabelIndex</I></B>, <B><I>LabelDotMatrix</I></B>, <B><I>LabelTray</I></B>, <B><I>LabelAcross</I></B>, <B><I>LabelDown</I></B>, <B><I>EnvAddress</I></B>, <B><I>EnvOmitReturn</I></B>, <B><I>EnvReturn</I></B>, <B><I>PrintBarCode</I></B>, <B><I>SingleLabel</I></B>, <B><I>LabelRow</I></B>, <B><I>LabelColumn</I></B>, <B><I>PrintEnvLabel</I></B>, <B><I>AddToDocument</I></B>, <B><I>EnvWidth</I></B>, <B><I>EnvHeight</I></B>, <B><I>EnvPaperSize</I></B>, <B><I>PrintFIMA</I></B>, <B><I>UseEnvFeeder</I></B>, <B><I>Tab</I></B>, <B><I>AddrAutoText</I></B>, <B><I>AddrText</I></B>, <B><I>AddrFromLeft</I></B>, <B><I>AddrFromTop</I></B>, <B><I>RetAddrFromLeft</I></B>, <B><I>RetAddrFromTop</I></B>, <B><I>LabelTopMargin</I></B>, <B><I>LabelSideMargin</I></B>, <B><I>LabelVertPitch</I></B>, <B><I>LabelHorPitch</I></B>, <B><I>LabelHeight</I></B>, <B><I>LabelWidth</I></B>, <B><I>CustomName</I></B>, <B><I>RetAddrText</I></B>, <B><I>EnvPaperName</I></B>, <B><I>DefaultFaceUp</I></B>, <B><I>DefaultOrientation</I></B>, <B><I>RetAddrAutoText</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCustomize</B></TD>
+<TD class=TT><B><I>KeyCode</I></B>, <B><I>KeyCode2</I></B>, <B><I>MenuType</I></B>, <B><I>Position</I></B>, <B><I>AddAll</I></B>, <B><I>Category</I></B>, <B><I>Name</I></B>, <B><I>Menu</I></B>, <B><I>AddBelow</I></B>, <B><I>MenuText</I></B>, <B><I>Rename</I></B>, <B><I>Add</I></B>, <B><I>Remove</I></B>, <B><I>ResetAll</I></B>, <B><I>CommandValue</I></B>, <B><I>Context</I></B>, <B><I>Tab</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCustomizeKeyboard</B></TD>
+<TD class=TT><B><I>KeyCode</I></B>, <B><I>KeyCode2</I></B>, <B><I>MenuType</I></B>, <B><I>Position</I></B>, <B><I>AddAll</I></B>, <B><I>Category</I></B>, <B><I>Name</I></B>, <B><I>Menu</I></B>, <B><I>AddBelow</I></B>, <B><I>MenuText</I></B>, <B><I>Rename</I></B>, <B><I>Add</I></B>, <B><I>Remove</I></B>, <B><I>ResetAll</I></B>, <B><I>CommandValue</I></B>, <B><I>Context</I></B>, <B><I>Tab</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCustomizeMenuBar</B></TD>
+<TD class=TT><B><I>Context</I></B>, <B><I>Position</I></B>, <B><I>MenuType</I></B>, <B><I>MenuText</I></B>, <B><I>Menu</I></B>, <B><I>Add</I></B>, <B><I>Remove</I></B>, <B><I>Rename</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsCustomizeMenus</B></TD>
+<TD class=TT><B><I>KeyCode</I></B>, <B><I>KeyCode2</I></B>, <B><I>MenuType</I></B>, <B><I>Position</I></B>, <B><I>AddAll</I></B>, <B><I>Category</I></B>, <B><I>Name</I></B>, <B><I>Menu</I></B>, <B><I>AddBelow</I></B>, <B><I>MenuText</I></B>, <B><I>Rename</I></B>, <B><I>Add</I></B>, <B><I>Remove</I></B>, <B><I>ResetAll</I></B>, <B><I>CommandValue</I></B>, <B><I>Context</I></B>, <B><I>Tab</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsEnvelopesAndLabels</B></TD>
+<TD class=TT><B><I>ExtractAddress</I></B>, <B><I>LabelListIndex</I></B>, <B><I>LabelIndex</I></B>, <B><I>LabelDotMatrix</I></B>, <B><I>LabelTray</I></B>, <B><I>LabelAcross</I></B>, <B><I>LabelDown</I></B>, <B><I>EnvAddress</I></B>, <B><I>EnvOmitReturn</I></B>, <B><I>EnvReturn</I></B>, <B><I>PrintBarCode</I></B>, <B><I>SingleLabel</I></B>, <B><I>LabelRow</I></B>, <B><I>LabelColumn</I></B>, <B><I>PrintEnvLabel</I></B>, <B><I>AddToDocument</I></B>, <B><I>EnvWidth</I></B>, <B><I>EnvHeight</I></B>, <B><I>EnvPaperSize</I></B>, <B><I>PrintFIMA</I></B>, <B><I>UseEnvFeeder</I></B>, <B><I>Tab</I></B>, <B><I>AddrAutoText</I></B>, <B><I>AddrText</I></B>, <B><I>AddrFromLeft</I></B>, <B><I>AddrFromTop</I></B>, <B><I>RetAddrFromLeft</I></B>, <B><I>RetAddrFromTop</I></B>, <B><I>LabelTopMargin</I></B>, <B><I>LabelSideMargin</I></B>, <B><I>LabelVertPitch</I></B>, <B><I>LabelHorPitch</I></B>, <B><I>LabelHeight</I></B>, <B><I>LabelWidth</I></B>, <B><I>CustomName</I></B>, <B><I>RetAddrText</I></B>, <B><I>EnvPaperName</I></B>, <B><I>DefaultFaceUp</I></B>, <B><I>DefaultOrientation</I></B>, <B><I>RetAddrAutoText</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogToolsGrammarSettings</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogToolsHangulHanjaConversion</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsHighlightChanges</B></TD>
+<TD class=TT><B><I>MarkRevisions</I></B>, <B><I>ViewRevisions</I></B>, <B><I>PrintRevisions</I></B>, <B><I>AcceptAll</I></B>, <B><I>RejectAll</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsHyphenation</B></TD>
+<TD class=TT><B><I>AutoHyphenation</I></B>, <B><I>HyphenateCaps</I></B>, <B><I>HyphenationZone</I></B>, <B><I>LimitConsecutiveHyphens</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsLanguage</B></TD>
+<TD class=TT><B><I>Language</I></B>, <B><I>CheckLanguage</I></B>, <B><I>Default</I></B>, <B><I>NoProof</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsMacro</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Run</I></B>, <B><I>Edit</I></B>, <B><I>Show</I></B>, <B><I>Delete</I></B>, <B><I>Rename</I></B>, <B><I>Description</I></B>, <B><I>NewName</I></B>, <B><I>SetDesc</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsMacroRecord</B></TD>
+<TD class=TT>(This dialog box cannot be called from a macro.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsManageFields</B></TD>
+<TD class=TT><B><I>FieldName</I></B>, <B><I>Add</I></B>, <B><I>Remove</I></B>, <B><I>Rename</I></B>, <B><I>NewName</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsMergeDocuments</B></TD>
+<TD class=TT><B><I>Name</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptions</B></TD>
+<TD class=TT><B><I>Tab</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsAutoFormat</B></TD>
+<TD class=TT><B><I>ApplyStylesHeadings</I></B>, <B><I>ApplyStylesLists</I></B>, <B><I>ApplyBulletedLists</I></B>, <B><I>ApplyStylesOtherParas</I></B>, <B><I>ReplaceQuotes</I></B>, <B><I>ReplaceOrdinals</I></B>, <B><I>ReplaceFractions</I></B>, <B><I>ReplaceSymbols</I></B>, <B><I>ReplacePlainTextEmphasis</I></B>, <B><I>ReplaceHyperlinks</I></B>, <B><I>PreserveStyles</I></B>, <B><I>PlainTextWordMail</I></B>, <B><I>ApplyFirstIndent</I></B>, <B><I>MatchParentheses</I></B>, <B><I>ReplaceDbDashes</I></B>, <B><I>ReplaceAutoSpaces</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsAutoFormatAsYouType</B></TD>
+<TD class=TT><B><I>ApplyStylesHeadings</I></B>, <B><I>ApplyBorders</I></B>, <B><I>ApplyTables</I></B>, <B><I>ApplyDates</I></B>, <B><I>ApplyBulletedLists</I></B>, <B><I>ApplyNumberedLists</I></B>, <B><I>ApplyFirstIndent</I></B>, <B><I>ApplyClosings</I></B>, <B><I>ReplaceQuotes</I></B>, <B><I>ReplaceOrdinals</I></B>, <B><I>ReplaceFractions</I></B>, <B><I>ReplaceSymbols</I></B>, <B><I>ReplacePlainTextEmphasis</I></B>, <B><I>ReplaceHyperlinks</I></B>, <B><I>MatchParentheses</I></B>, <B><I>ReplaceAutoSpaces</I></B>, <B><I>ReplaceDbDashes</I></B>, <B><I>FormatListItemBeginning</I></B>, <B><I>DefineStyles</I></B>, <B><I>InsertOvers</I></B>, <B><I>InsertClosings</I></B>, <B><I>AutoLetterWizard</I></B>, <B><I>ShowOptionsFor</I></B>, <B><I>ApplyStylesLists</I></B>, <B><I>ApplySkipList</I></B>, <B><I>ApplyStylesOtherParas</I></B>, <B><I>ReplaceBullets</I></B>, <B><I>AdjustParaMarks</I></B>, <B><I>AdjustTabsSpaces</I></B>, <B><I>AdjustEmptyParas</I></B>, <B><I>PreserveStyles</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsBidi</B></TD>
+<TD class=TT><B><I>DocViewDir</I></B>, <B><I>AddCtrlCopy</I></B>, <B><I>HebDoubleQuote</I></B>, <B><I>Numbers</I></B>, <B><I>Move</I></B>, <B><I>Sel</I></B>, <B><I>BiDirectional</I></B>, <B><I>ShowDiac</I></B>, <B><I>DiffDiacColor</I></B>, <B><I>Date</I></B>, <B><I>AdvanceHijri</I></B>, <B><I>MasterDocDir</I></B>, <B><I>OutlineDir</I></B>, <B><I>DiacriticColorVal</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsCompatibility</B></TD>
+<TD class=TT><B><I>Product</I></B>, <B><I>Default</I></B>, <B><I>NoTabHangIndent</I></B>, <B><I>NoSpaceRaiseLower</I></B>, <B><I>PrintColBlack</I></B>, <B><I>WrapTrailSpaces</I></B>, <B><I>NoColumnBalance</I></B>, <B><I>ConvMailMergeEsc</I></B>, <B><I>SuppressSpBfAfterPgBrk</I></B>, <B><I>SuppressTopSpacing</I></B>, <B><I>OrigWordTableRules</I></B>, <B><I>TransparentMetafiles</I></B>, <B><I>ShowBreaksInFrames</I></B>, <B><I>SwapBordersFacingPages</I></B>, <B><I>LeaveBackslashAlone</I></B>, <B><I>ExpandShiftReturn</I></B>, <B><I>DontULTrailSpace</I></B>, <B><I>DontBalanceSbDbWidth</I></B>, <B><I>SuppressTopSpacingMac5</I></B>, <B><I>SpacingInWholePoints</I></B>, <B><I>PrintBodyTextBeforeHeader</I></B>, <B><I>NoLeading</I></B>, <B><I>NoSpaceForUL</I></B>, <B><I>MWSmallCaps</I></B>, <B><I>NoExtraLineSpacing</I></B>, <B><I>TruncateFontHeight</I></B>, <B><I>SubFontBySize</I></B>, <B><I>UsePrinterMetrics</I></B>, <B><I>WW6BorderRules</I></B>, <B><I>ExactOnTop</I></B>, <B><I>SuppressBottomSpacing</I></B>, <B><I>WPSpaceWidth</I></B>, <B><I>WPJustification</I></B>, <B><I>LineWrapLikeWord6</I></B>, <B><I>SpLayoutLikeWW8</I></B>, <B><I>FtnLayoutLikeWW8</I></B>, <B><I>DontUseHTMLParagraphAutoSpacing</I></B>, <B><I>DontAdjustLineHeightInTable</I></B>, <B><I>ForgetLastTabAlignment</I></B>, <B><I>UseAutospaceForFullWidthAlpha</I></B>, <B><I>AlignTablesRowByRow</I></B>, <B><I>LayoutRawTableWidth</I></B>, <B><I>LayoutTableRowsApart</I></B>, <B><I>UseWord97LineBreakingRules</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsEdit</B></TD>
+<TD class=TT><B><I>ReplaceSelection</I></B>, <B><I>DragAndDrop</I></B>, <B><I>AutoWordSelection</I></B>, <B><I>InsForPaste</I></B>, <B><I>Overtype</I></B>, <B><I>SmartCutPaste</I></B>, <B><I>AllowAccentedUppercase</I></B>, <B><I>PictureEditor</I></B>, <B><I>TabIndent</I></B>, <B><I>BsParaAlign</I></B>, <B><I>InlineConversion</I></B>, <B><I>IMELosingFocus</I></B>, <B><I>AllowClickAndTypeMouse</I></B>, <B><I>ClickAndTypeParagraphStyle</I></B>, <B><I>AutoKeyBi</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogToolsOptionsEditCopyPaste</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsFileLocations</B></TD>
+<TD class=TT><B><I>Path</I></B>, <B><I>Setting</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsFuzzy</B></TD>
+<TD class=TT><B><I>FuzzyCase</I></B>, <B><I>FuzzyByte</I></B>, <B><I>FuzzyHira</I></B>, <B><I>FuzzySmKana</I></B>, <B><I>FuzzyMinus</I></B>, <B><I>FuzzyRepSymbol</I></B>, <B><I>FuzzyKanji</I></B>, <B><I>FuzzyOldKana</I></B>, <B><I>FuzzyLongVowel</I></B>, <B><I>FuzzyDZ</I></B>, <B><I>FuzzyBV</I></B>, <B><I>FuzzyTC</I></B>, <B><I>FuzzyHF</I></B>, <B><I>FuzzyZJ</I></B>, <B><I>FuzzyAY</I></B>, <B><I>FuzzyKIKU</I></B>, <B><I>FuzzyPunct</I></B>, <B><I>FuzzySpace</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsGeneral</B></TD>
+<TD class=TT><B><I>Pagination</I></B>, <B><I>WPHelp</I></B>, <B><I>WPDocNavKeys</I></B>, <B><I>BlueScreen</I></B>, <B><I>ErrorBeeps</I></B>, <B><I>Effects3d</I></B>, <B><I>UpdateLinks</I></B>, <B><I>SendMailAttach</I></B>, <B><I>RecentFiles</I></B>, <B><I>RecentFileCount</I></B>, <B><I>Units</I></B>, <B><I>ButtonFieldClicks</I></B>, <B><I>ShortMenuNames</I></B>, <B><I>RTFInClipboard</I></B>, <B><I>ConfirmConversions</I></B>, <B><I>TipWizardActive</I></B>, <B><I>AnimatedCursors</I></B>, <B><I>VirusProtection</I></B>, <B><I>SeparateFont</I></B>, <B><I>InterpretHIANSIToDBC</I></B>, <B><I>ExitWithRestoreSession</I></B>, <B><I>AsianText</I></B>, <B><I>PixelsInDialogs</I></B>, <B><I>UseCharacterUnit</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsPrint</B></TD>
+<TD class=TT><B><I>Draft</I></B>, <B><I>Reverse</I></B>, <B><I>UpdateFields</I></B>, <B><I>Summary</I></B>, <B><I>ShowCodes</I></B>, <B><I>Annotations</I></B>, <B><I>ShowHidden</I></B>, <B><I>EnvFeederInstalled</I></B>, <B><I>WidowControl</I></B>, <B><I>DfltTrueType</I></B>, <B><I>UpdateLinks</I></B>, <B><I>Background</I></B>, <B><I>DrawingObjects</I></B>, <B><I>FormsData</I></B>, <B><I>DefaultTray</I></B>, <B><I>PSOverText</I></B>, <B><I>MapPaperSize</I></B>, <B><I>FractionalWidths</I></B>, <B><I>PrOrder1</I></B>, <B><I>PrOrder2</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsSave</B></TD>
+<TD class=TT><B><I>CreateBackup</I></B>, <B><I>FastSaves</I></B>, <B><I>SummaryPrompt</I></B>, <B><I>GlobalDotPrompt</I></B>, <B><I>NativePictureFormat</I></B>, <B><I>EmbedFonts</I></B>, <B><I>FormsData</I></B>, <B><I>AutoSave</I></B>, <B><I>SaveInterval</I></B>, <B><I>Password</I></B>, <B><I>WritePassword</I></B>, <B><I>RecommendReadOnly</I></B>, <B><I>SubsetFonts</I></B>, <B><I>BackgroundSave</I></B>, <B><I>DefaultSaveFormat</I></B>, <B><I>AddCtrlSave</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogToolsOptionsSecurity</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><b>wdDialogToolsOptionsSmartTag</b></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsSpellingAndGrammar</B></TD>
+<TD class=TT><B><I>AlwaysSuggest</I></B>, <B><I>SuggestFromMainDictOnly</I></B>, <B><I>IgnoreAllCaps</I></B>, <B><I>IgnoreMixedDigits</I></B>, <B><I>ResetIgnoreAll</I></B>, <B><I>Type</I></B>, <B><I>CustomDict1</I></B>, <B><I>CustomDict2</I></B>, <B><I>CustomDict3</I></B>, <B><I>CustomDict4</I></B>, <B><I>CustomDict5</I></B>, <B><I>CustomDict6</I></B>, <B><I>CustomDict7</I></B>, <B><I>CustomDict8</I></B>, <B><I>CustomDict9</I></B>, <B><I>CustomDict10</I></B>, <B><I>AutomaticSpellChecking</I></B>, <B><I>FilenamesEmailAliases</I></B>, <B><I>UserDict1</I></B>, <B><I>AutomaticGrammarChecking</I></B>, <B><I>ForegroundGrammar</I></B>, <B><I>ShowStatistics</I></B>, <B><I>Options</I></B>, <B><I>RecheckDocument</I></B>, <B><I>IgnoreAuxFind</I></B>, <B><I>IgnoreMissDictSearch</I></B>, <B><I>HideGrammarErrors</I></B>, <B><I>CheckSpelling</I></B>, <B><I>GrLidUI</I></B>, <B><I>SpLidUI</I></B>, <B><I>DictLang1</I></B>, <B><I>DictLang2</I></B>, <B><I>DictLang3</I></B>, <B><I>DictLang4</I></B>, <B><I>DictLang5</I></B>, <B><I>DictLang6</I></B>, <B><I>DictLang7</I></B>, <B><I>DictLang8</I></B>, <B><I>DictLang9</I></B>, <B><I>DictLang10</I></B>, <B><I>HideSpellingErrors</I></B>, <B><I>HebSpellStart</I></B>, <B><I>InitialAlefHamza</I></B>, <B><I>FinalYaa</I></B>, <B><I>GermanPostReformSpell</I></B>, <B><I>AraSpeller</I></B>, <B><I>ProcessCompoundNoun</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsTrackChanges</B></TD>
+<TD class=TT><B><I>InsertedTextMark</I></B>, <B><I>InsertedTextColor</I></B>, <B><I>DeletedTextMark</I></B>, <B><I>DeletedTextColor</I></B>, <B><I>RevisedLinesMark</I></B>, <B><I>RevisedLinesColor</I></B>, <B><I>HighlightColor</I></B>, <B><I>RevisedPropertiesMark</I></B>, <B><I>RevisedPropertiesColor</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsTypography</B></TD>
+<TD class=TT><B><I>KerningPairs</I></B>, <B><I>Justification</I></B>, <B><I>PunctLevel</I></B>, <B><I>FollowingPunct</I></B>, <B><I>LeadingPunct</I></B>, <B><I>ApplyToTemplate</I></B>, <B><I>JapaneseKinsokuStrict</I></B>, <B><I>FarEastLineBreakLanguage</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsUserInfo</B></TD>
+<TD class=TT><B><I>Name</I></B>, <B><I>Initials</I></B>, <B><I>Address</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsOptionsView</B></TD>
+<TD class=TT><B><I>DraftFont</I></B>, <B><I>WrapToWindow</I></B>, <B><I>PicturePlaceHolders</I></B>, <B><I>FieldCodes</I></B>, <B><I>BookMarks</I></B>, <B><I>FieldShading</I></B>, <B><I>StatusBar</I></B>, <B><I>HScroll</I></B>, <B><I>VScroll</I></B>, <B><I>StyleAreaWidth</I></B>, <B><I>Tabs</I></B>, <B><I>Spaces</I></B>, <B><I>Paras</I></B>, <B><I>Hyphens</I></B>, <B><I>Hidden</I></B>, <B><I>ShowAll</I></B>, <B><I>Drawings</I></B>, <B><I>Anchors</I></B>, <B><I>TextBoundaries</I></B>, <B><I>VRuler</I></B>, <B><I>Highlight</I></B>, <B><I>ShowAnimation</I></B>, <B><I>ScrnTp</I></B>, <B><I>LeftScroll</I></B>, <B><I>RRuler</I></B>, <B><I>OptionalBreak</I></B>, <B><I>EnlargeFontsLessThan</I></B>, <B><I>BrowseToWindow</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsProtectDocument</B></TD>
+<TD class=TT><B><I>DocumentPassword</I></B>, <B><I>NoReset</I></B>, <B><I>Type</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsProtectSection</B></TD>
+<TD class=TT><B><I>Protect</I></B>, <B><I>Section</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsRevisions</B></TD>
+<TD class=TT><B><I>MarkRevisions</I></B>, <B><I>ViewRevisions</I></B>, <B><I>PrintRevisions</I></B>, <B><I>AcceptAll</I></B>, <B><I>RejectAll</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsSpellingAndGrammar</B></TD>
+<TD class=TT><B><I>SuggestionListBox</I></B>, <B><I>ForegroundGrammar</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsTemplates</B></TD>
+<TD class=TT><B><I>Store</I></B>, <B><I>Template</I></B>, <B><I>LinkStyles</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsThesaurus</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsUnprotectDocument</B></TD>
+<TD class=TT><B><I>DocumentPassword</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogToolsWordCount</B></TD>
+<TD class=TT><B><I>CountFootnotes</I></B>, <B><I>Pages</I></B>, <B><I>Words</I></B>, <B><I>Characters</I></B>, <B><I>DBCs</I></B>, <B><I>SBCs</I></B>, <B><I>CharactersIncludingSpaces</I></B>, <B><I>Paragraphs</I></B>, <B><I>Lines</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogTwoLinesInOne</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogUpdateTOC</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogViewZoom</B></TD>
+<TD class=TT><B><I>AutoFit</I></B>, <B><I>TwoPages</I></B>, <B><I>FullPage</I></B>, <B><I>NumColumns</I></B>, <B><I>NumRows</I></B>, <B><I>ZoomPercent</I></B>, <B><I>TextFit</I></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogWebOptions</B></TD>
+<TD class=TT>(none)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT><B>wdDialogWindowActivate</B></TD>
+<TD class=TT><B><I>Window</I></B></TD>
+</TR>
+</table><BR>
+
+<SPAN id="ofVBAISpan" class="ofvbaispan"><IFRAME id="ofVBAIFrame" src="../links/wohowDialogArguments_L.htm" frameborder=0 marginheight=0 marginwidth=4 scrolling="auto" width=100%></IFRAME></SPAN>
+</BODY>
+</HTML>
+

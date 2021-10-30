@@ -1,0 +1,234 @@
+.kbRightNav {
+	MARGIN-TOP: 12px; FONT-SIZE: 11px; MARGIN-LEFT: 8px; MARGIN-RIGHT: 12px
+}
+.kbRightNav A {
+	FONT-WEIGHT: normal
+}
+.kbRightNav A:visited {
+	COLOR: purple
+}
+.KBFeedbackTable TD {
+	PADDING-BOTTOM: 6px; PADDING-TOP: 0px
+}
+.KBPUBV2 {
+	FONT-SIZE: 11px; Z-INDEX: 2; MARGIN-LEFT: 24px; WIDTH: 95%; MARGIN-RIGHT: 24px; FONT-FAMILY: verdana, arial, helvetica, sans-serif; POSITION: relative; BACKGROUND-COLOR: transparent
+}
+.KBPUBV2 OL .dec {
+	LIST-STYLE-TYPE: decimal
+}
+.KBPUBV2 OL .alpha {
+	LIST-STYLE-TYPE: lower-alpha
+}
+.KBPUBV2 UL {
+	
+}
+.KBPUBV2 LI {
+	MARGIN-LEFT: -0.5em
+}
+.KBPUBV2 OL LI {
+	MARGIN-BOTTOM: 1%; MARGIN-LEFT: -0.2em; LINE-HEIGHT: 120%
+}
+.KBPUBV2 UL LI {
+	MARGIN-BOTTOM: 1%; MARGIN-LEFT: -0.5em; LINE-HEIGHT: 120%
+}
+.KBPUBV2 UL UL LI {
+	FONT-SIZE: 90%
+}
+.KBPUBV2 UL UL {
+	FONT-SIZE: 90%
+}
+.KBPUBV2 .appliesto {
+	MARGIN-BOTTOM: -1em; WIDTH: 90%; BORDER-BOTTOM: #cccccc 1px solid
+}
+.KBPUBV2 .appliesto UL {
+	MARGIN-TOP: 0.5em
+}
+.KBPUBV2 .appliesto UL UL {
+	MARGIN-TOP: 0em; FONT-SIZE: 97%; MARGIN-BOTTOM: 0.5em
+}
+.KBPUBV2 .appliesto UL LI {
+	MARGIN-TOP: 0em; MARGIN-BOTTOM: 0em
+}
+.KBPUBV2 .notice {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 1.4em; PADDING-LEFT: 0px; FONT-SIZE: 97%; MARGIN-BOTTOM: 0em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.KBPUBV2 .indent {
+	MARGIN-TOP: 0.2em; DISPLAY: block; MARGIN-BOTTOM: 0.3em; MARGIN-LEFT: 2em
+}
+.KBPUBV2 UL .indent {
+	MARGIN-BOTTOM: 0em; TOP: 0em
+}
+.KBPUBV2 .copyright {
+	
+}
+.KBPUBV2 .disclaimer {
+	POSITION: relative
+}
+.KBPUBV2 TABLE {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 1em; WIDTH: 95%
+}
+.KBPUBV2 TH {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: white 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 11px; PADDING-BOTTOM: 4px; BORDER-LEFT: white 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: white 1px solid; BACKGROUND-COLOR: #cccccc; TEXT-ALIGN: center
+}
+.KBPUBV2 TR {
+	
+}
+.KBPUBV2 TD {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: white 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 11px; PADDING-BOTTOM: 4px; BORDER-LEFT: white 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: white 1px solid; BACKGROUND-COLOR: #f4f4fc
+}
+.KBPUBV2 TABLE.docinfo {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; WIDTH: 99%; BORDER-BOTTOM: medium none
+}
+.KBPUBV2 TABLE.docinfo TD {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.KBPUBV2 .docinfo {
+	MARGIN-TOP: 48px
+}
+.KBPUBV2 .docinfo TD.data {
+	FONT-SIZE: 11px
+}
+.KBPUBV2 .docinfo TD.label {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND-COLOR: #cccccc
+}
+.KBPUBV2 IMG.graphic {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.KBPUBV2 .E {
+	MARGIN-TOP: 0.5em; DISPLAY: block; MARGIN-BOTTOM: 0.3em
+}
+.KBPUBV2 KBD {
+	FONT-WEIGHT: bold
+}
+.KBPUBV2 .weboutput {
+	
+}
+.KBPUBV2 .weboutput TABLE OBJECT {
+	POSITION: static
+}
+.KBPUBV2 SAMP {
+	
+}
+.KBPUBV2 VAR {
+	
+}
+.KBPUBV2 STRONG.uiterm {
+	
+}
+.KBPUBV2 .URLLink:hover {
+	CURSOR: hand; COLOR: #ff9900
+}
+.KBPUBV2 .kblink:hover {
+	CURSOR: hand; COLOR: #ff9900
+}
+.KBPUBV2 .URLLink:link {
+	COLOR: #0000ff
+}
+.KBPUBV2 .kblink:link {
+	COLOR: #0000ff
+}
+.KBPUBV2 .URLLink:visited {
+	COLOR: #800080
+}
+.KBPUBV2 .kblink:visited {
+	COLOR: #800080
+}
+.KBPUBV2 .URLLink:active {
+	COLOR: red
+}
+.KBPUBV2 .kblink:active {
+	COLOR: red
+}
+.KBPUBV2 .bookmark:hover {
+	
+}
+.KBPUBV2 .bookmark:link {
+	
+}
+.KBPUBV2 .bookmark:visited {
+	
+}
+.KBPUBV2 .bookmark:active {
+	
+}
+.KBPUBV2 .errormessage {
+	MARGIN-TOP: 12px; DISPLAY: block; FONT-WEIGHT: normal; MARGIN-BOTTOM: 12px; MARGIN-LEFT: 24px; COLOR: red
+}
+.KBPUBV2 PRE {
+	PADDING-RIGHT: 0.5em; MARGIN-TOP: 1em; PADDING-LEFT: 0.5em; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 0.5em; MARGIN-LEFT: 24px; COLOR: black; PADDING-TOP: 0.5em; FONT-FAMILY: "Courier New", courier, monospace; BACKGROUND-COLOR: #eeeeee
+}
+.KBPUBV2 PRE.in_text {
+	COLOR: black; FONT-FAMILY: "Courier New", courier, monospace
+}
+.KBPUBV2 H1 {
+	MARGIN-TOP: 6px; FONT-WEIGHT: bold; FONT-SIZE: 18px; MARGIN-LEFT: 0px; TEXT-DECORATION: none
+}
+.KBPUBV2 H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; MARGIN-BOTTOM: 12px; MARGIN-LEFT: 0px; TEXT-DECORATION: none
+}
+.KBPUBV2 H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; MARGIN-LEFT: 0px; TEXT-DECORATION: none
+}
+.KBPUBV2 H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; MARGIN-LEFT: 0px; TEXT-DECORATION: none
+}
+.KBPUBV2 H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 4px; MARGIN-LEFT: -12px; COLOR: black; MARGIN-RIGHT: 12px; PADDING-TOP: 1em; FONT-FAMILY: Verdana, Helvetica
+}
+.disclaimer {
+	FONT-WEIGHT: 100; FONT-SIZE: 10px
+}
+.KBPUBV2 .NOTICE {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .SUMMARY {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .MOREINFORMATION {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .SYMPTOMS {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .CAUSE {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .RESOLUTION {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .STATUS {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .WORKAROUND {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .REFERENCES {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .CAUSE {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .WHATTOTRY {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .ERRORMESSAGE {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 12px
+}
+.KBPUBV2 .internal .head {
+	FONT-WEIGHT: bold; COLOR: red; BORDER-TOP-STYLE: solid; BACKGROUND-COLOR: white; TEXT-ALIGN: center
+}
+.KBPUBV2 P.internal {
+	MARGIN-LEFT: 5%; MARGIN-RIGHT: 5%
+}
+.KBPUBV2 .internal .tail {
+	COLOR: red; BACKGROUND-COLOR: white; BORDER-BOTTOM-STYLE: solid
+}
+.KBPUBV2 .partner .head {
+	FONT-WEIGHT: bold; COLOR: #ffaa00; BORDER-TOP-STYLE: solid; BACKGROUND-COLOR: white; TEXT-ALIGN: center
+}
+.KBPUBV2 P.partner {
+	MARGIN-LEFT: 5%; MARGIN-RIGHT: 5%
+}
+.KBPUBV2 .partner .tail {
+	COLOR: #ffaa00; BACKGROUND-COLOR: white; BORDER-BOTTOM-STYLE: solid
+}

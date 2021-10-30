@@ -1,0 +1,55 @@
+Below is a To Do list of items required to complete the testing, debugging, and bullet-proofing of your UserControl.
+
+A) Create a test program for your UserControl
+
+There are two ways to set up a test program for your UserControl, depending on whether you inserted the control in a Standard EXE, or created an ActiveX Control project for it.
+
+If you created an ActiveX Control project, the following steps will set up a test program:
+
+1)  Save your UserControl.
+2)  Close your UserControl's designer, to put the control in run mode.
+3)  If you haven't already created a test project, add a Standard EXE project by selecting Add Project from the File menu.
+4)  In the Toolbox, double-click your UserControl's icon to place an instance of your UserControl on Form1, in the Standard EXE project.  You can move and resize the control as needed.
+5)  Save the project group. In later development and test sessions, you can open both projects at once by opening the project group. 
+
+If you inserted the UserControl in an existing Standard EXE project, follow these steps:
+
+1)  Save your UserControl.
+2)  Close your UserControl's designer, to put the control in run mode.
+3)  In the Project window, double-click Form1 in the Standard EXE project, to open its designer.
+4)  In the Toolbox, double-click your UserControl's icon to place an instance of your UserControl on Form1.  You can move and resize the control as needed.
+
+B) Test your control's behavior at design time, and at run time.
+
+1)  Select the control you placed on Form1 in the test project, and press F4 to open the Properties window. Verify that you can see and change the properties you added to your control.
+2)  Close Form1 and reopen it, and verify that the property values for your control were correctly saved and retrieved.
+3)  Double-click the control you placed on Form1, and verify that the appropriate events appear in the right-hand (Procedure) drop down of the code window.
+4)  Add test code to the event procedures for your control.
+5)  Add other controls, and put code in their event procedures to test the run-time behavior of your control's properties and methods.
+6)  Press F5 to run the test project, and test your control's run-time behavior.
+
+C) Making a Bullet-Proof, Full-Featured Control (Adding code details the Wizard doesn't provide)
+
+1)  If you have constituent controls on your form, some events and properties may need to be mapped to multiple constituent controls.  For example, a BackColor property probably should map to the BackColor properties of the UserControl AND any label controls.  The MouseMove event needs to map to the MouseMove events of ALL constituent controls.
+2)  Add coordinate translation to all events (such as MouseMove) that specify X and Y coordinates.
+3)  For all properties that have enumerations (for example, MousePointer and BorderStyle), change the data type of the property to the appropriate enumeration name (in this case, MousePointerConstants and BorderStyleConstants) so that enumeration elements will show up in the Properties window.
+4)  Add any custom enumerations you need for your own properties, plus code to validate them.
+5)  Add error trapping to the ReadProperties event, to protect against invalid values or bad data types that might be manually edited into an .frm file.  For each property, add code to switch to the default setting when such an error occurs.  (See "Saving the Properties of Your Control" and "Creating Design-Time-Only, Run-Time-Only, or Read-Only Run-Time Properties" in Books Online.)
+6)  If you have constituent controls, add code to UserControl_Resize to resize them when the control is resized.
+7)  Set the Procedure ID for the Enabled property, so your control will behave the same as other ActiveX controls when enabled and disabled.
+8)  The wizard maps properties of your control to constituent control (or UserControl) properties of like name.  In some cases, you may want to map a property to a property with a different name (for example, ShapeLabel maps its BackColor to the constituent Shape control's FillColor); this remapping must be done manually.
+9)  Any properties that might affect the size of your control (such as font size, in a control that has an AutoSize property) should call your resize code from the Property Let.
+10) For user-drawn controls, add code to the UserControl's Paint event to paint your control's appearance.  (See "User-Drawn Controls" and "How to Handle Focus in Your Control" in Books Online.)
+11)  If one or more properties of your control will be data-bound, see "Binding a Control to a Data Source," in Books Online.
+12)  Add additional features to your control.  You may find it useful to peruse the topics in "Visual Basic ActiveX Control Features," in Books Online.
+
+(See the CtlPlus.vbg sample application for examples of these work items.)
+
+You can modify your control by running the Wizard again, and selecting your UserControl.
+
+Use the Property Page Wizard to create Property Pages for your UserControls.
+
+For more information on creating and testing ActiveX Controls, please read Chapter 4, "Creating an ActiveX Control," and Chapter 9, "Building ActiveX Controls."
+
+Chapter 6, "General Principles of Component Design," and Chapter 7, "Debugging, Testing, and Deploying ActiveX Components," contain additional information you may find useful.
+

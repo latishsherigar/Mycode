@@ -1,0 +1,31 @@
+.OPTION EXPLICIT
+.Set Cabinet=off
+.Set Compress=off
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=6144
+.Set DiskDirectoryTemplate=".."
+.Set CompressionType=MSZIP
+.Set CompressionLevel=7
+.Set CompressionMemory=21
+.Set CabinetNameTemplate="datadistrib.CAB"
+"Setup.Lst"
+"setup.exe"
+.Set Cabinet=on
+.Set Compress=on
+"datadistrib.exe"
+"MSVBVM60.DLL"
+"OLEAUT32.DLL"
+"OLEPRO32.DLL"
+"ASYCFILT.DLL"
+"STDOLE2.TLB"
+"COMCAT.DLL"
+"MSSTDFMT.DLL"
+"scrrun.dll"
+"MSVCRT.DLL"
+"EXCEL9.OLB"
+"MSFLXGRD.OCX"
+"MSMASK32.OCX"
+"MSCOMCTL.OCX"
+"SETUP1.EXE"
+"VB6STKIT.DLL"
+"ST6UNST.EXE"

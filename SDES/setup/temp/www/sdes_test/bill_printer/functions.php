@@ -1,0 +1,143 @@
+<?php
+
+function load_inv_data(){
+ global $inv_no,$inv_dt,$inv_cmp_code,$inv_cmp_name,$inv_ms,
+        $inv_total_rs;
+
+   $str_query="
+   SELECT DATE_FORMAT(inv_date,'%d-%m-%Y') as inv_date,
+          inv_cmp_code,inv_total_rs,
+          ed_name as inv_cmp_name
+   FROM  invoices,entity_details
+   WHERE inv_no ='".$inv_no ."'
+   AND   inv_cmp_code = ed_code
+   AND   ed_entity_type = 'COMPANY'
+   " ;
+  
+ // echo $str_query;
+  //return;
+  
+   $rs = execute_query($str_query);
+
+   while($vrow=mysql_fetch_array($rs)){
+        $inv_dt = $vrow["inv_date"] ;
+        $inv_cmp_code = $vrow["inv_cmp_code"] ;
+        $inv_cmp_name = $vrow["inv_cmp_name"] ;        
+        $inv_total_rs = $vrow["inv_total_rs"] ;
+     }
+
+}
+
+function load_inv_part_details(){
+ global $inv_no;
+
+echo '<table border="1" align="center" cellspacing="4">';
+echo ' <tr>';
+echo '  <th>PARTICULARS</th>';
+echo '  <th>RUPEES</th>';
+echo ' </tr>';
+
+   $str_query="
+   SELECT * 
+   FROM  invoice_details
+   WHERE invd_inv_no ='".$inv_no ."'
+   AND   invd_sno <> 99
+   ORDER BY invd_sno
+   " ;
+  
+   $rs = execute_query($str_query);
+
+   $i=1;
+   while($vrow=mysql_fetch_array($rs)){
+        echo ' <tr>'; 
+        echo '  <td align="center"><textarea rows="2" cols="50" name="inv_det_part'.$i.'">'.$vrow["invd_part_desc"].'</textarea></td>';
+        echo '  <td align="center"><input type="text" name="inv_det_rs'.$i.'" value="'.$vrow["invd_part_rs"].'" onkeypress="return numbersonly(event)" onblur="cal_total_rs()"></textarea></td>';
+        echo ' </tr>';
+    ++$i;     
+   }
+
+//empty rows
+    while($i<6){
+        echo ' <tr>'; 
+        echo '  <td align="center"><textarea rows="2" cols="50" name="inv_det_part'.$i.'" value=""></textarea></td>';
+        echo '  <td align="center"><input type="text" name="inv_det_rs'.$i.'" value="" onkeypress="return numbersonly(event)" onblur="cal_total_rs()"></textarea></td>';
+        echo ' </tr>';
+        ++$i;
+     }
+     
+    echo '</table>';
+}
+
+
+function save_inv_data(){
+ global $inv_no;
+
+  $inv_no = clean_form_data($_REQUEST["inv_no"]);
+  $inv_dt = format_inv_date(clean_form_data($_REQUEST["inv_dt"]));
+  $inv_cmp_code = clean_form_data($_REQUEST["inv_cmp_code"]);
+  $inv_ms = clean_form_data($_REQUEST["inv_ms"]);
+  $inv_total_rs = clean_form_data($_REQUEST["inv_total_rs"]);
+  $inv_total_rs_words = number2words($inv_total_rs)." Rupees Only.";
+
+ $str_query="SELECT *
+             FROM   invoices
+             WHERE  inv_no = '". $inv_no."'  
+            ";
+
+  $rs = execute_query($str_query);
+  
+  if(mysql_num_rows($rs)==0){
+      $str_query="
+       INSERT INTO invoices
+       (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+       VALUES('". $inv_no."','".$inv_dt."','".$inv_cmp_code."','"
+       .$inv_total_rs."','".$inv_total_rs_words."')                
+       ";
+   }
+  else{
+      $str_query="
+       UPDATE invoices
+       SET inv_date='".$inv_dt."',inv_cmp_code='".$inv_cmp_code."',
+           inv_total_rs='".$inv_total_rs."',
+           inv_total_rs_text='".$inv_total_rs_words."'
+       WHERE inv_no ='". $inv_no."'";    
+   }
+   
+   execute_query($str_query);
+
+   $str_query="
+   DELETE FROM invoice_details
+   WHERE invd_inv_no ='". $inv_no."'                
+   ";
+  
+   execute_query($str_query);
+
+  for($i=1;$i<6;++$i)
+  {
+    $inv_det_part=clean_form_data($_REQUEST["inv_det_part".$i]);
+    $inv_det_rs=clean_form_data($_REQUEST["inv_det_rs".$i]);
+    
+    if($inv_det_part <> ""){
+       $str_query="
+       INSERT INTO invoice_details
+       (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+       VALUES('".$i."','". $inv_no."','".$inv_det_part."','".$inv_det_rs."')                
+       ";
+  
+       execute_query($str_query);
+       
+    }
+  }
+}
+
+
+function format_inv_date($strdate){
+
+  $arr_inv_date=explode("-",$strdate);   
+  
+  $str_new_date = $arr_inv_date[2]. "-".str_pad($arr_inv_date[1],2,"0",STR_PAD_LEFT)."-".str_pad($arr_inv_date[0],2,"0",STR_PAD_LEFT);
+
+  return $str_new_date ; 
+
+}
+?>

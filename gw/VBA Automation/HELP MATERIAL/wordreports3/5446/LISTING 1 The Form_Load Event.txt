@@ -1,0 +1,7 @@
+LISTING 1: The Form_Load Event
+
+PRIVATE Sub Form_Load()
+	SET oWordApp = New Application
+	LoadCustomerList
+	LoadCategoryList
+END Sub

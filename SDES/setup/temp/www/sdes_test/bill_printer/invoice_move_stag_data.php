@@ -1,0 +1,130 @@
+<?php
+
+function ins_inv_details(){
+
+$str_query="DELETE FROM invoice_details
+            ";
+
+ execute_query($str_query);
+
+
+ $str_query="SELECT field1 as invd_inv_no,
+                    field2 as invd_part_desc,
+                    field3 as invd_part_rs   
+             FROM   tmp_stag_invoice_details
+             ORDER BY invd_inv_no
+            ";
+
+  $rs = execute_query($str_query);
+
+   while($vrow=mysql_fetch_array($rs))
+     {
+        if(($vrow["invd_inv_no"] != $old_inv_no) )
+        {
+           $i=1;
+        }
+        
+        $str_query="INSERT INTO invoice_details
+                   (invd_sno,invd_inv_no,invd_part_desc,invd_part_rs)
+                    VALUES('".$i."','".$vrow["invd_inv_no"]."','"
+                    .$vrow["invd_part_desc"]."','".$vrow["invd_part_rs"]."') 
+                    ";
+        execute_query($str_query);
+        echo $str_query.'<br>';
+                       
+        ++$i;
+        $old_inv_no=$vrow["invd_inv_no"];
+     }
+            
+
+} //ins_inv_details
+
+function ins_inv_main(){
+
+ $str_query="DELETE FROM invoices";
+ echo $str_query.'<br>';
+
+ execute_query($str_query);
+
+ $str_query="SELECT field1 ,
+                    field2 ,
+                    field3   
+             FROM   tmp_stag_invoice
+            ";
+echo $str_query.'<br>';
+
+  $rs = execute_query($str_query);
+
+   while($vrow=mysql_fetch_array($rs))
+     {
+     
+       $inv_dt =  format_inv_date(trim($vrow["field2"])) .'<br>';
+       $inv_cmp_code =  get_cmp_code(trim($vrow["field3"])) ;
+       $inv_total_rs = get_total_rs(trim($vrow["field1"])) ;
+        $inv_total_rs_words = number2words($inv_total_rs)." Rupees Only.";
+     
+     
+       $str_query="INSERT INTO invoices
+                   (inv_no,inv_date,inv_cmp_code,inv_total_rs,inv_total_rs_text)
+                    VALUES('".$vrow["field1"]."','".$inv_dt."','".$inv_cmp_code.
+                    "',".$inv_total_rs.",'".$inv_total_rs_words."') 
+                    ";
+        execute_query($str_query);
+        echo $str_query.'<br>';
+                       
+     }
+
+}// ins_inv_main
+
+
+
+function get_cmp_code($str_cmp_text){
+  if(stristr($str_cmp_text,"PEARL")){
+    return "1";
+  }
+  
+  if(stristr($str_cmp_text,"MSK")){
+    return "2";
+  }
+
+  if(stristr($str_cmp_text,"TRANSCON")){
+    return "3";
+  }
+
+  if(stristr($str_cmp_text,"Freight")){
+    return "4";
+  }
+
+}
+
+
+
+function get_total_rs($inv_no){
+
+  $str_query="SELECT IFNULL(SUM(invd_part_rs),0) as rs_sum
+              FROM   invoice_details
+              WHERE  invd_inv_no = '".$inv_no."'        
+             ";
+             
+  $rs = execute_query($str_query);   
+  
+  $vrow=mysql_fetch_array($rs);
+  
+  return $vrow[0];        
+
+}
+
+
+
+
+include("../common/php/lib.php") ;
+
+include("functions.php") ;
+
+connect_db();
+ins_inv_details();
+ins_inv_main();
+echo 'after main';
+close_db();
+
+?>

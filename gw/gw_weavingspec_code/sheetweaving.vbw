@@ -1,0 +1,4 @@
+frmmain = 66, 66, 508, 412, , 88, 88, 532, 434, C
+frmabout = 0, 0, 0, 0, C, 132, 132, 576, 478, C
+globfunctions = 22, 22, 464, 368, Z
+clsCommonDialog = 44, 44, 486, 390, 

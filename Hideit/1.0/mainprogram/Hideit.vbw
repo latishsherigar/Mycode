@@ -1,0 +1,17 @@
+frmmain = 88, 116, 501, 432, , 66, 87, 479, 403, C
+frmabout = 66, 66, 450, 386, C, 88, 116, 501, 432, C
+declarations = 44, 58, 457, 374, 
+frmpassword = 66, 87, 479, 403, , 44, 44, 459, 474, C
+addimg2menu = 66, 66, 503, 386, C
+frmnewarchivedialog = 22, 29, 435, 345, , 110, 145, 523, 461, C
+functions = 44, 58, 457, 374, Z
+showfileproperty = 44, 58, 524, 374, C
+frmpasswordopen = 22, 29, 502, 345, C, 22, 22, 429, 342, C
+clszip = 22, 22, 459, 342, C
+clsSystem_Image_List = 110, 145, 590, 461, C
+clsUnzip = 88, 116, 568, 432, 
+zipunzipmodule = 0, 0, 437, 320, C
+frmextractarchivedialog = 0, 0, 413, 316, , 0, 0, 413, 316, C
+frmpasswordwarning = 22, 29, 502, 345, C, 22, 29, 490, 345, C
+frmTip = 0, 0, 480, 316, C, 88, 88, 418, 408, C
+frmconfiguration = 66, 87, 530, 403, C, 22, 29, 435, 345, C

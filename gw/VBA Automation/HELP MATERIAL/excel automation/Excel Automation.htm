@@ -1,0 +1,916 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0075)http://www.msofficemag.net/features/2001/06/vba200106wf_f/vba200106wf_f.asp -->
+<HTML><HEAD><TITLE>Excel Automation</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<SCRIPT language=JavaScript>
+<!--
+   if (self != top) { top.location.href = self.location.href }
+
+   var IsDOM = (document.getElementById) ? true : false;
+   var IsNS4 = (document.layers) ? true : false;
+   var IsIE = (document.all) ? true : false;
+   var IsIE4 = IsIE && !IsDOM;
+   var IsMac = (navigator.appVersion.indexOf("Mac") != -1);
+   var IsIE4M = IsIE4 && IsMac;
+   var IsSupported = (IsDOM || IsNS4 || (IsIE4 && !IsIE4M));
+
+   var Browser = IsNS4 ? "_ns" : IsDOM ? "_dom" : "";
+
+   if(IsSupported)
+   {
+     document.write('<LINK REL="stylesheet" TYPE="text/css" HREF="/include/style'+ Browser +'.css">');
+   }
+//-->
+</SCRIPT>
+
+<META 
+content="Using&#13;&#10;Visual Basic as the client, Wayne S. Freeze shares a sample application that&#13;&#10;shows you how to put Excel through its paces as an Automation server - step by&#13;&#10;step. " 
+name=DESCRIPTION><!-- INCLUDE VIRTUAL="/members/subscribe/include/inc_js_popup.asp" -->
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY bgColor=white leftMargin=0 topMargin=0 MARGINWIDTH="0" MARGINHEIGHT="0"><!-- START TOP -->
+<TABLE cellSpacing=0 cellPadding=0 width=770 bgColor=#333399 
+background="Excel Automation_files/headbg.gif" border=0>
+  <TBODY>
+  <TR vAlign=center>
+    <TD align=left width=130><A 
+      href="http://www.msofficemag.net/default.asp"><IMG height=60 
+      alt="Microsoft Office Solutions" hspace=0 
+      src="Excel Automation_files/OfficePro04.gif" width=156 vspace=10 
+      border=0></A> </TD>
+    <TD align=middle width="100%"><!-- DISPLAY THE PREMIUM AD --><A 
+      href="http://www.msofficemag.net/adredir.asp?url=http://www.aspnetpro.com/Members/Subscribe/TrialOffer.asp&amp;image=/bannerads/aspFreeIssue_468x60.gif" 
+      target=target=_blank><IMG id=BannerImg height=60 alt="asp.netPRO Magazine" 
+      src="Excel Automation_files/aspFreeIssue_468x60.gif" width=468 
+      border=0></A> </TD></TR></TBODY></TABLE><!-- END TOP -->
+<TABLE cellSpacing=0 cellPadding=0 width=770 border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD align=middle width=150 bgColor=#6666cc><!-- 8/10 --><!-- START LEFT MENU --><IMG height=1 
+      src="Excel Automation_files/space10.gif" width=150 border=0><BR>
+      <TABLE cellSpacing=0 cellPadding=0 width=140 bgColor=#6666cc border=0>
+        <TBODY>
+        <TR>
+          <TD noWrap><IMG height=5 src="Excel Automation_files/space10.gif" 
+            width=10 border=0><BR></TD></TR>
+        <TR>
+          <TD align=middle bgColor=#333399><SPAN class=menu>Subscription 
+            Services</SPAN> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/members/subscribe/pubdetail.asp">Subscribe</A> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/members/subscribe/TrialOffer.asp">Trial 
+            Offer</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/members/subscribe/customerpage.asp">Renew 
+            Subscription</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/ealerts/default.asp">E-Alerts</A> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/members/subscribe/editcustomer.asp">Change 
+            of Address</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/members/subscribe/MakePayment.asp">Pay 
+            An Invoice</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/members/subscribe/default.asp">Subscription 
+            Packages</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/contact/default.asp">Contact Us</A> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><IMG height=5 src="Excel Automation_files/space10.gif" 
+            width=10 border=0><BR></TD></TR>
+        <TR>
+          <TD align=middle bgColor=#333399><SPAN class=menu>msOfficeMag</SPAN> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/features/default.asp">Features</A> 
+          </TD></TR><!-- TR>
+    <TD NOWRAP class=menu >
+      <A class=menu HREF="http://careers.informant.com" target="_blank">Career Center</A>
+    </TD>
+  </TR -->
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/forums/default.asp">Forums</A></FONT> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/news/default.asp">News</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/tools/default.asp">New Products</A> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/bookreviews/default.asp">Book 
+            Reviews</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/productreviews/default.asp">Product 
+            Reviews</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/opinion/default.asp">Opinion</A> 
+        </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/solutions/default.asp">Solutions</A> 
+          </TD></TR><!--
+  <TR>
+    <TD NOWRAP>
+      <A class=menu HREF="/casestudies/default.asp">Case Studies</A>
+    </TD>
+  </TR>
+-->
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/backissues/default.asp">Back 
+            Issues</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/search/default.asp">Search</A> 
+        </TD></TR>
+        <TR>
+          <TD noWrap><IMG height=5 src="Excel Automation_files/space10.gif" 
+            width=10 border=0><BR></TD></TR>
+        <TR>
+          <TD align=middle bgColor=#333399><SPAN class=menu>Downloads</SPAN> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/download/default.asp">Premium 
+            Downloads</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/vbapowertools/default.asp">MS 
+            Office Tools</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/upload/default.asp">Upload A 
+            File</A> </TD></TR>
+        <TR>
+          <TD noWrap><IMG height=5 src="Excel Automation_files/space10.gif" 
+            width=10 border=0><BR></TD></TR><!--
+  <TR>
+    <TD ALIGN=Center BGCOLOR="#6666cc">
+      <IMG SRC="/images/space10.gif" WIDTH=120 HEIGHT=3 BORDER=0><br>
+    </TD>
+  </TR>
+  <TR>
+    <TD align=middle bgColor="#333399">
+      <span class=menu>Customer Service</span>
+    </TD>
+  </TR>
+  <TR>
+    <TD NOWRAP>
+      <A class=menu HREF="https://secure.informant.com/mod/modpurchasebackissues.asp">Purchase Back Issues</A>
+    </TD>
+  </TR>
+  <TR>
+    <TD NOWRAP>
+      <A class=menu HREF="mailto:customerservice@msOfficeMag.net">Report Problems</A>
+    </TD>
+  </TR>
+  --><!--
+  <TR>
+    <TD NOWRAP>
+      <A class=menu HREF="/advertising/printadv.asp">Print Advertisers</A>
+    </TD>
+  </TR>
+  -->
+        <TR>
+          <TD noWrap><IMG height=5 src="Excel Automation_files/space10.gif" 
+            width=10 border=0><BR></TD></TR>
+        <TR>
+          <TD align=middle bgColor=#333399><SPAN class=menu>Informant</SPAN> 
+          </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/icg/default.asp">ICG News</A> 
+</TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/advertising/default.asp">Advertise 
+            With Us</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.msofficemag.net/WriteForUs/modstyle.asp">Write For 
+            Us</A> </TD></TR>
+        <TR>
+          <TD noWrap><A class=menu 
+            href="http://www.informant.com/events/">Events</A> </TD></TR>
+        <TR>
+          <TD noWrap><IMG height=3 src="Excel Automation_files/space10.gif" 
+            width=10 border=0><BR></TD></TR></TBODY></TABLE><!--INCLUDE VIRTUAL="/include/leftad.asp"--><!-- END LEFT MENU --></TD>
+    <TD width=10><!-- Left side spacer --><IMG height=5 
+      src="Excel Automation_files/space10.gif" width=10 border=0><BR></TD>
+    <TD width=770>
+      <TABLE width=130 align=right border=0>
+        <TBODY>
+        <TR>
+          <TD width=10><IMG height=5 
+            src="C:\Documents and Settings\ignou.000\Desktop\pro\excel automation\Excel Automation_files\space10(1).gif" 
+            width=10 border=0> </TD>
+          <TD vAlign=top align=middle width=120>
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD align=middle><!-- DISPLAY THE MENU AD --><A 
+                  href="http://www.aspnetpro.com/Members/Subscribe/TrialOffer.asp" 
+                  target=newwindow><IMG height=65 
+                  alt="Click here for trial issue" hspace=0 
+                  src="Excel Automation_files/FreeIssue_asp.gif" width=120 
+                  border=0></A><BR><!-- A HREF="/ballot2002/default.asp" TARGET="newwindow"><IMG SRC="/Images/SOL_RCA2002_vote.gif" ALT="Microsoft Office Solutions Reader Choice Awards - Vote Now!" BORDER=0 VSPACE=0 HSPACE=0></A><BR --><!-- IMG SRC="/images/space10.GIF" WIDTH=10 HEIGHT=5 BORDER=0><br --><! br></TD></TR></TBODY></TABLE><!-- IMG SRC="/images/space10.GIF" WIDTH=10 HEIGHT=5 BORDER=0><br --><!--INCLUDE VIRTUAL="/include/RightSideAlert.asp"--><!-- INCLUDE VIRTUAL="/include/TEHotJobs.asp" -->
+            <TABLE cellSpacing=0 cellPadding=1 width=130 bgColor=#6666cc 
+            border=0>
+              <TBODY>
+              <TR bgColor=#333399>
+                <TD align=middle>
+                  <P class=menu>Got A Hot Tip?</P></TD></TR>
+              <TR>
+                <TD height=5><IMG height=5 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR>
+                <TD align=middle>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/tips/gettip.asp"><IMG 
+                  src="Excel Automation_files/tip_icon.gif" 
+              border=0></A></P></TD></TR>
+              <TR>
+                <TD align=middle>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/tips/gettip.asp">Share your 
+                  Office/VBA tip, get a FREE T-shirt!</A></P></TD></TR>
+              <TR>
+                <TD height=5><IMG height=5 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD>
+              <TR bgColor=white>
+                <TD height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR></TBODY></TABLE><!-- BEGIN FEATURES BY THIS AUTHOR-->
+            <TABLE cellSpacing=0 cellPadding=1 width=130 bgColor=#6666cc 
+            border=0>
+              <TBODY>
+              <TR bgColor=#333399>
+                <TD align=middle colSpan=2>
+                  <P class=menu>More By This Author </P></TD></TR>
+              <TR vAlign=top>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/08/vba200208wf_f/vba200208wf_f.asp"><SPAN 
+                  class=small>Connecting with Word : Making Word Documents 
+                  Public Using ASP.NET </SPAN></A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/opinion/2002/06/vba200206wf_o/vba200206wf_o.asp"><SPAN 
+                  class=small>Wishing on Office .NET </SPAN></A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/03/vba200203wf_f/vba200203wf_f.asp"><SPAN 
+                  class=small>The Words that Count </SPAN></A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/02/vba200202wf_f/vba200202wf_f.asp"><SPAN 
+                  class=small>Abnormal Databases : Knowing When to Break the 
+                  Rules Can Improve Database Performance </SPAN></A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/01/vba200201wf_f/vba200201wf_f.asp"><SPAN 
+                  class=small>By All Reports : Generating Reports with Word and 
+                  Visual Basic .NET </SPAN></A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=1 width=130 border=0>
+              <TBODY>
+              <TR bgColor=white>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR></TBODY></TABLE><!-- BEGIN RECENT FEATURES -->
+            <TABLE cellSpacing=0 cellPadding=1 width=130 bgColor=#6666cc 
+            border=0>
+              <TBODY>
+              <TR bgColor=#333399>
+                <TD align=middle colSpan=2>
+                  <P class=menu>Recent Features </P></TD></TR>
+              <TR vAlign=top bgColor=#6666cc>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/06/vba200206pa_f/vba200206pa_f.asp">Get 
+                  Productive</A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top bgColor=#6666cc>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/08/vba200208pa_f/vba200208pa_f.asp">Hybrid 
+                  Vigor</A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top bgColor=#6666cc>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/08/vba200208lb_f/vba200208lb_f.asp">No 
+                  App Is an Island</A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top bgColor=#6666cc>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/08/vba200208wf_f/vba200208wf_f.asp">Connecting 
+                  with Word</A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR vAlign=top bgColor=#6666cc>
+                <TD><FONT color=white>&nbsp;•</FONT></TD>
+                <TD>
+                  <P><A class=menu 
+                  href="http://www.msofficemag.net/features/2002/08/vba200208pr_f/vba200208pr_f.asp">PowerPoint 
+                  Pizzazz</A></P></TD>
+              <TR>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR bgColor=white>
+                <TD colSpan=2 height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=1 width=130 bgColor=#6666cc 
+            border=0>
+              <TBODY>
+              <TR bgColor=#333399>
+                <TD align=middle>
+                  <P class=menu>Article Rating</P></TD></TR>
+              <TR>
+                <TD class=menu>
+                  <CENTER>
+                  <TABLE cellSpacing=0 border=0 cellpading="0">
+                    <TBODY>
+                    <TR>
+                      <TD class=menu align=middle colSpan=3>Rate this article 
+                        on a scale from 0 to 5</TD></TR>
+                    <TR>
+                      <FORM 
+                      action=/features/2001/06/vba200106wf_f/vba200106wf_f.asp 
+                      method=post>
+                    <TR>
+                      <TD align=right><INPUT type=radio value=5 
+                        name=RatingRate></TD>
+                      <TD class=smallwht align=left>5</TD>
+                      <TD class=smallwht>Best</TD></TR>
+                    <TR>
+                      <TD align=right><INPUT type=radio value=4 
+                        name=RatingRate></TD>
+                      <TD class=smallwht align=left>4</TD>
+                      <TD class=smallwht>&nbsp;</TD></TR>
+                    <TR>
+                      <TD align=right><INPUT type=radio value=3 
+                        name=RatingRate></TD>
+                      <TD class=smallwht align=left>3</TD>
+                      <TD class=smallwht>&nbsp;</TD></TR>
+                    <TR>
+                      <TD align=right><INPUT type=radio value=2 
+                        name=RatingRate></TD>
+                      <TD class=smallwht align=left>2</TD>
+                      <TD class=smallwht>&nbsp;</TD></TR>
+                    <TR>
+                      <TD align=right><INPUT type=radio value=1 
+                        name=RatingRate></TD>
+                      <TD class=smallwht align=left>1</TD>
+                      <TD class=smallwht>&nbsp;</TD></TR>
+                    <TR>
+                      <TD align=right><INPUT type=radio value=0 
+                        name=RatingRate></TD>
+                      <TD class=smallwht align=left>0</TD>
+                      <TD class=smallwht>Worst</TD></TR>
+                    <TR>
+                      <TD height=5><IMG height=5 
+                        src="C:\Documents and Settings\ignou.000\Desktop\pro\excel automation\Excel Automation_files\space10(1).gif" 
+                        width=10 border=0><BR></TD></TR>
+                    <TR>
+                      <TD vAlign=center align=middle colSpan=3><INPUT type=submit value=Submit name=RatingAction></TD></FORM></TR>
+                    <TR>
+                      <TD height=5><IMG height=5 
+                        src="C:\Documents and Settings\ignou.000\Desktop\pro\excel automation\Excel Automation_files\space10(1).gif" 
+                        width=10 border=0><BR></TD></TR></TBODY></TABLE></CENTER></TD>
+              <TR bgColor=white>
+                <TD height=3><IMG height=3 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR></TBODY></TABLE>
+            <SCRIPT language=JAVASCRIPT>
+function OpenWindow(){
+    var InfoWindow=window.open("/mail.asp","Mail","height = 300,width = 300,directories = no,location = no,menubar = no,resizable = yes,scrollbars = no,status = no,toolbar = no");
+}
+
+function SendMail(){
+
+var strFromName=document.forms["ArticleForm"].fromName.value;
+var strFromAddress=document.forms["ArticleForm"].fromAddress.value;
+var strRecipient=document.forms["ArticleForm"].recipient.value;
+
+if ((!strFromName)||(!strFromAddress)||(!strRecipient)) return;
+
+document.forms["ArticleForm"].mode.value="send";
+document.forms["ArticleForm"].submit();
+}
+
+</SCRIPT>
+
+            <TABLE cellSpacing=0 cellPadding=1 width=130 bgColor=#6666cc 
+            border=0>
+              <FORM name=ArticleForm 
+              action=/features/2001/06/vba200106wf_f/vba200106wf_f.asp 
+              method=post>
+              <TBODY>
+              <TR bgColor=#333399>
+                <TD align=middle colSpan=2>
+                  <P class=menu>Email</P></TD></TR>
+              <TR>
+                <TD height=5><IMG height=5 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                border=0><BR></TD></TR>
+              <TR>
+                <TD align=middle>
+                  <P><A class=menu href="javascript:OpenWindow()"><IMG 
+                  src="Excel Automation_files/mail_article.gif" 
+                  border=none></A></P></TD></TR>
+              <TR>
+                <TD align=middle>
+                  <P><A class=menu href="javascript:OpenWindow()">Tell a 
+                  friend<BR>about this article!</A></P></TD></TR>
+              <TR>
+                <TD height=5><IMG height=5 alt="" 
+                  src="Excel Automation_files/space10.gif" width=10 
+                  border=0><BR><INPUT type=hidden 
+                  value=http://www.msOfficeMag.net/features/2001/06/vba200106wf_f/vba200106wf_f.asp 
+                  name=link> <INPUT type=hidden name=mode> <INPUT type=hidden 
+                  value=vba200106wf_f name=id> <INPUT type=hidden 
+                  value=/features/2001/06/vba200106wf_f/ name=path> <INPUT 
+                  type=hidden name=fromName> <INPUT type=hidden 
+                  name=fromAddress> <INPUT type=hidden name=recipient> 
+              </TD></FORM></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><!-- IMG SRC="/Images/space10.GIF" ALT="" WIDTH=10 HEIGHT=5 BORDER=0 VSPACE=0 HSPACE=0><BR>
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH=476 BGCOLOR="#6666cc" BORDERCOLOR="#A52A2A" BORDERCOLORLIGHT="#A52A2A" BORDERCOLORDARK="#A52A2A">
+  <TR BGCOLOR="#333399">
+    <TD COLSPAN=2>
+      &nbsp;&nbsp;<FONT COLOR="White"><B><A HREF="/members/logout.asp?/features/2001/06/vba200106wf_f/vba200106wf_f.asp"><FONT COLOR="White">Log Out</FONT></A></B></FONT>
+    </TD>
+  </TR>
+</TABLE --><BR>
+      <P class=ColumnTitle>MAXIMIZINGoffice</P>
+      <P class=ColumnSubtitle>New Programmer | Visual Basic | Excel | Automation 
+      </P>
+      <P class=BodyText> </P>
+      <P class=StoryTitle>Excel Automation</P>
+      <P class=StorySubtitle>Controlling Excel from a Visual Basic 
+      Application</P>
+      <P class=BodyText> </P>
+      <P class=Byline>By Wayne S. Freeze</P>
+      <P class=BodyText> </P>
+      <P class=BodyText>I receive a lot of e-mail from my readers, and one of 
+      the more frequent questions I get is "How can I use Excel from a Visual 
+      Basic (VB) program?" The reasons vary, but most readers want to update the 
+      data in an existing worksheet, or create a complex chart they can display 
+      in the VB application. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Using Excel from a VB program is relatively easy. The 
+      same set of objects you access from Visual Basic for Applications (VBA) 
+      can be used from a VB program. The only difference between accessing the 
+      objects from Excel VBA and a VB program is that the VB program needs to 
+      start Excel in order to use it. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>It's important to remember that you must have Excel 
+      installed on your machine when using it from a VB program. This may seem 
+      obvious, but it's easily forgotten when it's time to distribute the 
+      program. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>To illustrate how to use Excel from VB, I've built a 
+      sample program (see FIGURE 1) that steps you through a number of common 
+      operations you might perform with Excel to create a simple chart. (The 
+      demonstration program is available; see end of article for download 
+      details). Pressing each button performs a single task. When the task is 
+      completed, a check mark appears in the checkbox next to the button. When 
+      all tasks have been completed, pressing the Exit Excel Demo button ends 
+      the program. </P>
+      <P class=BodyText> </P>
+      <P class=Captions><IMG height=242 
+      src="Excel Automation_files/vba200106wf_f_image002.jpg" width=333> 
+      <BR>FIGURE 1: The demonstration program in action. </P>
+      <P class=BodyText> </P>
+      <P class=Subheads>Running Excel</P>
+      <P class=BodyText>You must first create an object reference to the Excel 
+      application. This will start the Excel program. Don't be surprised if it 
+      takes a few seconds to create the <B>Application</B> object, it takes time 
+      to start a program as large as Excel. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>The four main objects used in this sample program are 
+      listed in FIGURE 2. All are defined at the module level so they can be 
+      accessed anywhere in the module. <B 
+      style="mso-bidi-font-weight: normal">ExcelApp</B> defines a reference to 
+      the <B style="mso-bidi-font-weight: normal">Excel.Application</B> object, 
+      which represents the Excel application itself. The other variables defined 
+      here represent an Excel <B>Chart</B>, <B>Worksheet</B>, and 
+      <B>Workbook</B>. The <B>MyExcel</B> variable indicates when the Excel 
+      application is running. </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Dim</SPAN> ExcelApp 
+      <SPAN class=CodeBlue>As</SPAN> Excel.Application</SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Dim</SPAN> ExcelCht 
+      <SPAN class=CodeBlue>As</SPAN> Excel.Chart</SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Dim</SPAN> ExcelSht 
+      <SPAN class=CodeBlue>As</SPAN> Excel.Worksheet</SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Dim</SPAN> ExcelWkb 
+      <SPAN class=CodeBlue>As</SPAN> Excel.Workbook</SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Dim</SPAN> MyExcel 
+      <SPAN class=CodeBlue>As</SPAN> <SPAN 
+      class=CodeBlue>Boolean</SPAN></SPAN></P>
+      <P class=Captions>FIGURE 2: Objects used in the sample program. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Pressing the Run Excel button calls the 
+      <B>Command1_Click</B> event handler, as shown in FIGURE 3. This routine 
+      initializes the <B style="mso-bidi-font-weight: normal">ExcelApp</B> 
+      object by calling the <B 
+      style="mso-bidi-font-weight: normal">GetObject</B> function. <B 
+      style="mso-bidi-font-weight: normal">GetObject</B> takes two parameters: 
+      the name of a document, and the name of the object associated with the 
+      document. If the document parameter is omitted, then the function will 
+      return an object reference to a running Excel session. If Excel isn't 
+      running, an error will be returned. </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Private</SPAN> <SPAN 
+      class=CodeBlue>Sub</SPAN> Command1_Click()</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;<SPAN class=CodeBlue> On</SPAN> 
+      <SPAN class=CodeBlue>Error</SPAN> <SPAN class=CodeBlue>Resume</SPAN> <SPAN 
+      class=CodeBlue>Next</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;Err.Clear</SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>&nbsp;&nbsp;Set</SPAN> 
+      ExcelApp = GetObject(, "Excel.Application") </SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>&nbsp; 
+      </SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>&nbsp;&nbsp;If</SPAN> 
+      Err.Number &lt;&gt; 0 <SPAN class=CodeBlue>Then</SPAN></SPAN></P>
+      <P class=Code><SPAN 
+class=Code>&nbsp;&nbsp;&nbsp;&nbsp;Err.Clear</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      class=CodeBlue> Set</SPAN> ExcelApp = CreateObject("Excel.Application") 
+      </SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      class=CodeBlue> If</SPAN> Err.Number &lt;&gt; 0 <SPAN 
+      class=CodeBlue>Then</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox 
+      "Error: " &amp; Err.Description</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      class=CodeBlue> Else</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyExcel 
+      = <SPAN class=CodeBlue>True</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+      class=CodeBlue> End</SPAN> <SPAN class=CodeBlue>If</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN 
+      class=CodeBlue>&nbsp;&nbsp;Else</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;MyExcel = <SPAN 
+      class=CodeBlue>False</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>&nbsp;&nbsp;End</SPAN> 
+      <SPAN class=CodeBlue>If</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp; </SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;Check1.Value = 
+      vbChecked</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;Command2.SetFocus</SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>End</SPAN> <SPAN 
+      class=CodeBlue>Sub</SPAN></SPAN></P>
+      <P class=Captions>FIGURE 3: <B>Command1_Click</B> event handler. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>The most likely reason for an error occurring when you 
+      call <B>GetObject</B> is that Excel isn't running. So, in case of an 
+      error, you should try to start the Excel program by calling the 
+      <B>CreateObject</B> function. Unlike the <B>GetObject</B> function, 
+      <B>CreateObject</B> will start a new Excel session. While I could have 
+      just called the <B style="mso-bidi-font-weight: normal">CreateObject</B> 
+      function originally, this approach has the advantage of sharing one copy 
+      of Excel rather than using a new copy for each application. The little 
+      extra code here can have a big impact regarding your system's overall 
+      performance. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>If you started Excel using the <B>CreateObject</B> 
+      function, then the Excel program is hidden from view. This is a useful 
+      technique if you want to manipulate Excel objects in your program without 
+      showing the intermediate steps to the user. Excel also runs faster when 
+      it's hidden, because it doesn't have to update its display with changes. 
+      Of course, hiding Excel makes it harder to debug your application, since 
+      you can't see the result of intermediate steps. You can make Excel visible 
+      by setting the <B 
+      style="mso-bidi-font-weight: normal">ExcelApp.Visible</B> to <B>True</B>. 
+      In the sample program, pressing the Make Excel Visible button merely 
+      toggles the state of the <B>Visible</B> property using the following 
+      assignment statement: </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code>ExcelApp.Visible = <SPAN 
+      class=CodeBlue>Not</SPAN> ExcelApp.Visible</SPAN></P>
+      <P class=BodyText> </P>
+      <P class=Subheads>Populating a Worksheet</P>
+      <P class=BodyText>You now have a running Excel application, but you're not 
+      yet ready to populate the worksheet. You need to create a workbook before 
+      you can do anything else. This is accomplished by the following statement: 
+      </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Set</SPAN> ExcelWkb = 
+      ExcelApp.Workbooks.Add</SPAN></P>
+      <P class=BodyText> </P>
+      <P class=BodyText>The <B>Workbooks.Add</B> method creates a new workbook, 
+      just as if you had selected File | New in Excel. Once the new workbook is 
+      created, there are three empty worksheets available for use. The following 
+      statement provides a quick reference for the first worksheet in the 
+      workbook: </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Set</SPAN> ExcelSht = 
+      ExcelWkb.Worksheets(1) </SPAN></P>
+      <P class=BodyText> </P>
+      <P class=BodyText>While this statement isn't strictly necessary, typing 
+      ExcelSht is much easier than typing ExcelWkb.Worksheets(1) anywhere you 
+      need to reference the worksheet. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Since a worksheet without data isn't useful, the code in 
+      FIGURE 4 can be used to generate some random values. It creates four 
+      columns of data with 10 cells in each column, placing a random number 
+      between 0 and 100 in each cell. The <B>Cell</B> property takes two 
+      parameters: the row (<B>j</B>) position and the column (<B>i</B>) 
+      position. Note that the column position is a numeric value rather than the 
+      alphabetic value displayed in Excel. This makes it easier to access a 
+      range of cells. </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Dim</SPAN> i <SPAN 
+      class=CodeBlue>As</SPAN> <SPAN class=CodeBlue>Integer</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Dim</SPAN> j <SPAN 
+      class=CodeBlue>As</SPAN> <SPAN class=CodeBlue>Integer</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp; </SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>For</SPAN> i = 1 <SPAN 
+      class=CodeBlue>To</SPAN> 4</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;<SPAN class=CodeBlue> 
+      For</SPAN> j = 1 <SPAN class=CodeBlue>To</SPAN> 10</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;&nbsp;&nbsp;ExcelSht.Cells(j, 
+      i) = Rnd() * 100</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;<SPAN class=CodeBlue> 
+      Next</SPAN> j</SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Next</SPAN> 
+      i</SPAN></P>
+      <P class=Captions>FIGURE 4: Loading 40 cells with random values. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Finally, with the following statement, you can format 
+      the cells you just added by specifying the range of cells and a format 
+      string: </P>
+      <P class=Code><SPAN class=Code>&nbsp; </SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelSht.Range("A1:D10").NumberFormat = 
+      "0.00" </SPAN></P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Note that the <B>Range</B> method takes a string that 
+      identifies the cells using the normal Excel notation. Setting the 
+      <B>NumberFormat </B>property to "0.00" instructs Excel to display the 
+      values using only two decimal digits. Since Excel is visible, you can see 
+      the formatted data, as shown in FIGURE 5, which can be very helpful when 
+      debugging your application. </P>
+      <P class=BodyText> </P>
+      <P class=Captions><IMG height=398 
+      src="Excel Automation_files/vba200106wf_f_image004.jpg" width=333> 
+      <BR>FIGURE 5: Viewing the data in the visible Excel window. </P>
+      <P class=BodyText> </P>
+      <P class=Subheads>Creating a Chart</P>
+      <P class=BodyText>The most complex part of the demonstration program is 
+      creating a chart with the code in FIGURE 6. The code begins by creating a 
+      new <B>Chart</B> object with the <B>ExcelWkb.Charts.Add</B> method; then 
+      it sets the various properties for the chart. In this case, the 
+      <B>ChartType</B> is set to a line marker chart, and the source of data is 
+      the range of cells that were just created. </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>Set</SPAN> ExcelCht = 
+      ExcelWkb.Charts.Add</SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.ChartType = 
+      xlLineMarkers</SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.SetSourceData 
+      ExcelSht.Range("A1:D10"), xlColumns</SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.HasTitle = <SPAN 
+      class=CodeBlue>True</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.ChartTitle.Characters.Text = "My 
+      Data" </SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.Axes(xlCategory, 
+      xlPrimary).HasTitle = <SPAN class=CodeBlue>True</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.Axes(xlCategory, 
+      xlPrimary).AxisTitle. _</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;Characters.Text = "X-Axis" 
+      </SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.Axes(xlValue, xlPrimary).HasTitle 
+      = <SPAN class=CodeBlue>True</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.Axes(xlValue, 
+      xlPrimary).AxisTitle. _</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;Characters.Text = "Data Series" 
+      </SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelApp.Height = 420</SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelApp.Width = 350</SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.SizeWithWindow = <SPAN 
+      class=CodeBlue>True</SPAN></SPAN></P>
+      <P class=Captions>FIGURE 6: Creating a chart. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>To set the various chart titles, you must set the 
+      <B>HasTitle</B> property to <B>True</B> before setting the 
+      <B>Characters.Text</B> property. Next, the <B 
+      style="mso-bidi-font-weight: normal">ExcelApp</B>'s <B>Height</B> and 
+      <B>Width</B> properties are set to values that create a window similar in 
+      size to the <B>Image</B> control on the form. Then the routine sets the 
+      <B>SizeWithWindow</B> property to <B>True</B> to change the size of the 
+      chart to fit Excel's newly resized window. This means you don't have to 
+      stretch the chart to fit the size of the <B>Image</B> control. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Note that you could easily paste this block of code into 
+      an Excel VBA routine, and use it to create the chart. This is one of the 
+      advantages of using the Office object model with VBA. The same code you 
+      use in your VB application is the same code you would use in VBA. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Copying a chart to your program is also easy: </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code>ExcelCht.ChartArea.Select</SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelCht.ChartArea.Copy</SPAN></P>
+      <P class=Code><SPAN class=Code>Image1.Picture = 
+      Clipboard.GetData(vbCFBitmap) </SPAN></P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Simply select the entire chart area by using the 
+      <B>ChartArea.Select</B> method, and use the <B>ChartArea.Copy</B> method 
+      to copy the image to the Clipboard. Then, use the <B>Clipboard.GetData</B> 
+      method to extract the bitmap image, and save it as the <B>Picture</B> 
+      property of the <B>Image</B> control. </P>
+      <P class=BodyText> </P>
+      <P class=Subheads>Cleaning Up</P>
+      <P class=BodyText>It isn't necessary, but you may want to save the Excel 
+      workbook you just created, including the worksheet and chart. This 
+      requires a two-step process: </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>If</SPAN> 
+      Len(Dir(App.Path &amp; "\test.xls")) &lt;&gt; 0 <SPAN 
+      class=CodeBlue>Then</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;Kill App.Path &amp; "\test.xls" 
+      </SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>End</SPAN> <SPAN 
+      class=CodeBlue>If</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp; </SPAN></P>
+      <P class=Code><SPAN class=Code>ExcelWkb.SaveAs App.Path &amp; "\test.xls" 
+      </SPAN></P>
+      <P class=BodyText> </P>
+      <P class=BodyText>First, call the <B>Dir</B> function to determine if the 
+      file exists, then delete it with the <B>Kill</B> statement if it does. 
+      Second, the workbook's <B>SaveAs</B> method is used to save the file with 
+      the specified file name. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>Ending the program is merely a matter of closing the 
+      workbook using the <B>Close</B> method, and ending the Excel application 
+      with the <B>Quit</B> method: </P>
+      <P class=BodyText> </P>
+      <P class=Code><SPAN class=Code>ExcelWkb.Close <SPAN 
+      class=CodeBlue>False</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp; </SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>If</SPAN> MyExcel 
+      <SPAN class=CodeBlue>Then</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;ExcelApp.Quit</SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;<SPAN class=CodeBlue> 
+      Set</SPAN> ExcelApp = <SPAN class=CodeBlue>Nothing</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code>&nbsp;&nbsp;MyExcel = <SPAN 
+      class=CodeBlue>False</SPAN></SPAN></P>
+      <P class=Code><SPAN class=Code><SPAN class=CodeBlue>End</SPAN> <SPAN 
+      class=CodeBlue>If</SPAN></SPAN></P>
+      <P class=BodyText> </P>
+      <P class=BodyText>While it's nice to set the <B>ExcelApp</B> object to 
+      <B>Nothing</B> to reclaim the space, it isn't necessary because the next 
+      step is to end the program where the object's resources are automatically 
+      reclaimed. </P>
+      <P class=BodyText> </P>
+      <P class=Subheads>Conclusion</P>
+      <P class=BodyText>Using a tool like Excel can make your life easier. While 
+      VB includes the <B>MSChart</B> control, it's one of the most difficult 
+      controls to use. It's much more straightforward to create your chart in 
+      Excel, then copy the result to your application. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText>And while I used Excel in this article, you could easily 
+      substitute Word, PowerPoint, or any other application that exposes a COM 
+      object model. For example, you might want to use Word to generate a letter 
+      or report directly from VB, rather than creating the necessary printer 
+      commands yourself. The key is knowing the underlying object model. As long 
+      as you know how to use the objects, building this type of application is 
+      simple. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText><I>The demonstration program referenced in this article 
+      is available for <A 
+      href="http://www.msofficemag.net/features/2001/06/vba200106wf_f/vba200106wf_d.asp">download</A>. 
+      </I></P>
+      <P class=BodyText> </P>
+      <P class=Biotext>Wayne S. Freeze is a full-time computer book author with 
+      over a dozen titles to his credit, including Peter Norton's Complete Guide 
+      to Office 2000 [SAMS, 1999], Unlocking OLAP with SQL Server and Excel 2000 
+      [Hungry Minds, 2000], and Visual Basic 6 Database Programming Bible 
+      [Hungry Minds, 2000]. He has nearly 25 years of experience using all types 
+      of computers, from small, embedded microprocessor control systems to 
+      large-scale IBM mainframes. Wayne has a Master's degree in Management 
+      Information Systems as well as degrees in Computer Science and 
+      Engineering. You can visit Wayne's Web site at <SPAN class=CodeBlue><A 
+      href="http://www.justpc.com/">http://www.justpc.com/</A></SPAN>, and send 
+      him e-mail at <A 
+      href="mailto:WFreeze@JustPC.com">mailto:WFreeze@JustPC.com</A>. He loves 
+      reading e-mail from his readers whose ideas, questions, and insights often 
+      provide inspiration for future books and articles. </P>
+      <P class=BodyText> </P>
+      <P class=BodyText> </P>
+      <P class=BodyText> </P></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=770 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=bottom noWrap align=middle width=150 bgColor=#6666cc>
+      <P><A href="http://www.microsoft.com/ie/" target=newwindow><IMG height=31 
+      alt="Microsoft Internet Explorer" 
+      src="Excel Automation_files/ie4get_animated.gif" width=88 vspace=5 
+      border=0></A> <BR><A 
+      href="http://www.msofficemag.net/features/2001/06/vba200106wf_f/vba200106wf_f.asp#top"><IMG 
+      alt="Top of page" src="Excel Automation_files/to_top.gif" width=29 
+      align=HEIGHT=50 vspace=5 border=0></A> </P></TD>
+    <TD width="100%">
+      <TABLE cellSpacing=0 cellPadding=15 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle><!-- DISPLAY THE PREMIUM AD --><A 
+            href="http://www.msofficemag.net/adredir.asp?url=http://www.aspnetpro.com/Members/Subscribe/TrialOffer.asp&amp;image=/bannerads/aspFreeIssue_468x60.gif" 
+            target=target=_blank><IMG id=BannerImg height=60 
+            alt="asp.netPRO Magazine" 
+            src="Excel Automation_files/aspFreeIssue_468x60.gif" width=468 
+            border=0></A> </TD></TR></TBODY></TABLE>
+      <HR width="97%" color=#333399>
+
+      <TABLE cellSpacing=0 cellPadding=5 width="97%" align=center border=0>
+        <TBODY>
+        <TR vAlign=center>
+          <TD><A href="http://www.informant.com/" target=newwindow><IMG 
+            height=46 alt="Informant Communications Group" 
+            src="Excel Automation_files/Icg_horiz_logo.gif" width=215 
+            border=0></A> </TD>
+          <TD>
+            <P class=small>Informant Communications Group,&nbsp;Inc. <BR>10519 
+            E. Stockton Blvd., Suite&nbsp;100 <BR>Elk Grove, CA&nbsp;95624-9703 
+            <BR>Phone: (916) 686-6610 • Fax:&nbsp;(916) 686-8497 
+        </FONT></P></TD></TR>
+        <TR>
+          <TD colSpan=3>
+            <P class=small><A 
+            href="http://www.msofficemag.net/copyright.asp"><FONT 
+            class=small>Copyright</FONT></A> © 2002 Informant Communications 
+            Group. All Rights Reserved. • <A 
+            href="http://www.msofficemag.net/siteuse.asp"><FONT class=small>Site 
+            Use Agreement</FONT></A> • Send feedback to the <A 
+            href="mailto:webmaster@msOfficeMag.net"><FONT 
+            class=small>Webmaster</FONT></A> • Important&nbsp;information about 
+            <A href="http://www.msofficemag.net/privacy.asp"><FONT 
+            class=small>privacy</FONT></A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- <PubToken>vba</PubToken> --></BODY></HTML>

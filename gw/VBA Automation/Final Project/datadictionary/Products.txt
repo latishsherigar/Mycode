@@ -1,0 +1,3 @@
+ProductID
+Name
+Description

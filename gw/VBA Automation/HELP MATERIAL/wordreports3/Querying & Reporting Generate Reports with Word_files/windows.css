@@ -1,0 +1,207 @@
+BODY {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif
+}
+DIV {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif
+}
+P {
+	FONT-SIZE: x-small
+}
+A:hover {
+	COLOR: #000000; BACKGROUND-COLOR: #dcdcdc
+}
+.body {
+	COLOR: #000000
+}
+.bold {
+	FONT-WEIGHT: bold; COLOR: #000000
+}
+.body10 {
+	FONT-SIZE: 10px; COLOR: #000000
+}
+.body11 {
+	FONT-SIZE: 11px; COLOR: #000000
+}
+.Byline {
+	FONT-SIZE: 11px; COLOR: #000000
+}
+.body12 {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+.body14 {
+	FONT-SIZE: 14px
+}
+.body16 {
+	FONT-SIZE: 16px
+}
+.body18 {
+	FONT-SIZE: 18px
+}
+.body20 {
+	FONT-SIZE: 20px
+}
+.body22 {
+	FONT-SIZE: 22px
+}
+.body24 {
+	FONT-SIZE: 24px
+}
+.white {
+	COLOR: #ffffff
+}
+.whitebold {
+	FONT-WEIGHT: bold; COLOR: #ffffff
+}
+.red {
+	COLOR: #802833
+}
+.blue {
+	COLOR: #003366
+}
+.green {
+	COLOR: #576b14
+}
+.ltgreen {
+	COLOR: #d5dac4
+}
+.yellow {
+	COLOR: #a78700
+}
+.gray {
+	COLOR: #666666
+}
+.exchange {
+	COLOR: #009933
+}
+.security {
+	COLOR: #cc0031
+}
+.scripting {
+	COLOR: #e87b00
+}
+.websolutions {
+	COLOR: #9c6362
+}
+.sql {
+	COLOR: #990033
+}
+.nav {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.kicker {
+	FONT-SIZE: 11px; COLOR: #802833; TEXT-DECORATION: none
+}
+.kicker2 {
+	FONT-SIZE: 11px; COLOR: #000000; LETTER-SPACING: 2px; TEXT-DECORATION: none
+}
+.link {
+	COLOR: #003366
+}
+.highlight {
+	FONT-WEIGHT: bold; COLOR: #802833
+}
+.head10 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.head11 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000000
+}
+.head12 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000
+}
+.head14 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000
+}
+.head16 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #000000
+}
+.head18 {
+	FONT-SIZE: 18px; COLOR: #000000
+}
+.head20 {
+	FONT-SIZE: 20px; COLOR: #000000
+}
+.bg-black {
+	BACKGROUND-COLOR: #000000
+}
+.bg-white {
+	BACKGROUND-COLOR: #ffffff
+}
+.bg-gray {
+	BACKGROUND-COLOR: #999999
+}
+.bg-ltgray {
+	BACKGROUND-COLOR: #dcdcdc
+}
+.bg-red {
+	BACKGROUND-COLOR: #802833
+}
+.bg-security {
+	BACKGROUND-COLOR: #cc0031
+}
+.bg-scripting {
+	BACKGROUND-COLOR: #e87b00
+}
+.bg-websolutions {
+	BACKGROUND-COLOR: #9c6362
+}
+.bg-exchange {
+	BACKGROUND-COLOR: #009933
+}
+.bg-sql {
+	BACKGROUND-COLOR: #990033
+}
+.bg-blue {
+	BACKGROUND-COLOR: #003366
+}
+.bg-green {
+	BACKGROUND-COLOR: #576b14
+}
+.bg-ltgreen {
+	BACKGROUND-COLOR: #d5dac4
+}
+.bg-yellow {
+	BACKGROUND-COLOR: #a78700
+}
+.head {
+	FONT-SIZE: 20px; COLOR: #802833
+}
+.deck {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000
+}
+.subhead {
+	FONT-WEIGHT: bold; FONT-SIZE: small; COLOR: #802833; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.richlinkstyle6 {
+	FONT-SIZE: x-small; COLOR: #990000; BORDER-BOTTOM: #990000 1pt dotted; TEXT-DECORATION: none
+}
+PRE {
+	FONT-SIZE: 14px
+}
+.q {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #802833
+}
+.contactbox {
+	BACKGROUND: #dcdcdc; COLOR: #000000
+}
+DL {
+	FONT-SIZE: x-small
+}
+DT {
+	FONT-SIZE: x-small
+}
+DD {
+	FONT-SIZE: x-small
+}
+LI {
+	FONT-SIZE: x-small
+}
+UL {
+	FONT-SIZE: x-small
+}
+OL {
+	FONT-SIZE: x-small
+}

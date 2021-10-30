@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0053)http://216.26.168.92/articles/wordreports/index2.html -->
+<HTML><HEAD><TITLE>VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="reports, word, ole, automation,visual basic,vb,visual,basic,win32,vb4,vb5,vb6" 
+name=keywords>
+<META 
+content="ActiveXpert Neil Avent shows you how to create catchy reports with only MS Word and OLE automation." 
+name=description>
+<STYLE type=text/css>.blfont {
+	COLOR: #99ccff
+}
+.redfont {
+	COLOR: #cc0033
+}
+.yllwfont {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffff33; FONT-FAMILY: Verdana, Arial
+}
+.bluefont {
+	FONT-SIZE: 11px; COLOR: #99ccff; FONT-FAMILY: Verdana, Arial
+}
+.navbit {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Geneva, Lucida, Arial
+}
+.whitefont {
+	COLOR: #ffffff
+}
+.blackfont {
+	COLOR: #000000
+}
+A:hover {
+	COLOR: #ff0000
+}
+A:link {
+	COLOR: #333399
+}
+TABLE.zzzzlunatable {
+	BACKGROUND-COLOR: #ffffff
+}
+TR.zzzzlunatoprow {
+	BACKGROUND-COLOR: #ffffff
+}
+</STYLE>
+<!-- <SCRIPT LANGUAGE="JavaScript" SRC="http://a1028.g.akamai.net/6/1028/968/444516c765e1c0/lunafetch.about.com/cgi/luna/lunaD.js?vpn=000177"></SCRIPT> -->
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT>
+
+	alert('VB-World has changed! The network is now more interactive and features dozens of fresh articles. This page is now officially archived. To visit the updated site, click the logo or visit www.vbworld.com')
+
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="73%" bgColor=#4a558c><A href="http://www.vbworld.com/"><IMG 
+      height=41 
+      src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/vbworld.gif" 
+      width=182 border=0></A></TD>
+    <TD align=right width="27%" bgColor=#4a558c><A 
+      href="http://www.vbworld.com/"><IMG height=41 
+      src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/globe.gif" 
+      width=103 border=0></A></TD></TR>
+  <TR>
+    <TD width="100%" colSpan=2><!-- breadcrumb table -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="100%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#003399 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD width="100%" bgColor=#000060 height=2><IMG height=2 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD noWrap width="100%" bgColor=#000060><B><FONT 
+                  face="Verdana, Arial, Helvetica" size=2>&nbsp;&nbsp;<A 
+                  href="http://216.26.168.92/"><FONT class=whitefont 
+                  color=#ffffff>Home</FONT></A> <FONT 
+                  color=#ffffff>&nbsp;&gt;</FONT> <A 
+                  href="http://216.26.168.92/articles/"><FONT class=whitefont 
+                  color=#ffffff>Articles</FONT></A> </B></FONT></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#000060 height=2><IMG height=2 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#22246f height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#494b88 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#6e70a0 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#9295b6 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#b2b4c9 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+                  width=1 border=0></TD></TR></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- /breadcrumb table --><!-- content table -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=10 bgColor=#ffffff><IMG height=10 
+            src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+            width=10 border=0></TD>
+          <TD vAlign=top width="100%"><!-- padding table -->
+            <TABLE cellSpacing=0 cellPadding=4 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width="100%">
+                  <TABLE width=125 align=right>
+                    <TBODY>
+                    <TR>
+                      <TD><!-- Start Options --><!-- <TABLE border=0 cellPadding=2 cellSpacing=0 width=125 bgcolor="#99CCFF"><TBODY>
+<TR>
+<TD vAlign=middle width=16><img src="/images/email_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/sendtofriend.php?subject=Creating+Reports+with+Microsoft+Word">Email this page</A></font></TD>
+</TR><TR>
+<TD vAlign=middle width=16><img src="/images/print_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/printfriendly.php?articlepageid=165">Printer Friendly</A></font></TD>
+</TR>
+<TR>
+<TD vAlign=middle width=16><img src="/images/more_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/authorbio.php?authorid=27&associd=36&assoctype=2">More From Neil</A></font></TD>
+</TR>
+<TR>
+<TD vAlign=middle width=16><img src="/images/feedback_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/feedback.php?action=viewtopics&associd=36&assoctype=2">Post Feedback</A></font></TD>
+</TR>
+</TBODY></TABLE> --><!-- End Options --><BR><!-- Start More Articles -->
+                        <TABLE cellSpacing=0 cellPadding=0 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=top width=125 bgColor=#99ccff>
+                              <CENTER><FONT face=arial,helvetica size=2><B>More 
+                              Articles</B> </FONT></CENTER></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=2 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/lander3/">Lander 
+                              3: Adding a touch of Class</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/caret/">Using 
+                              Carets</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/console/">Writing 
+                              Console-Mode Applications in Visual 
+                              Basic</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/dbtutorial/">Visual 
+                              Basic Database Tutorial - Part 
+                          1</A></FONT></TD></TR></TBODY></TABLE><!-- End More Articles --><BR><!-- Start Hot Picks -->
+                        <TABLE cellSpacing=0 cellPadding=0 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=top width=125 bgColor=#99ccff>
+                              <CENTER><FONT face=arial,helvetica size=2><B>Hot 
+                              Picks</B> </FONT></CENTER></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=2 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/dbtutorial7/">Visual 
+                              Basic Database Tutorial - Part 7</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/dbtutorial6/">Visual 
+                              Basic Database Tutorial - Part 6</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/tips/tip464.html">Adding 
+                              a Related Document to a project</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/demos/opendemo/">Open 
+                              Statement</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/books/learnvb6/">Learn 
+                              to Program with Visual Basic 
+                          6</A></FONT></TD></TR></TBODY></TABLE><!-- End Hot Picks -->
+                        <HR>
+                      </TD></TR></TBODY></TABLE><FONT 
+                  face="verdana, arial, helvetica" size=-1>
+                  <P><FONT face="Arial, Helvetica" color=#003399 
+                  size=+1><B>Creating Reports with Microsoft Word</B></FONT></P>
+                  <P><I>By Neil Avent</I></P>
+                  <P><FONT face="Arial, Helvetica" color=#003399 
+                  size=+1><B>Producing the user interface</B></FONT></P>
+                  <P>Now we have decided to use Word to handle the reporting for 
+                  us we need to take a look at what it will need to do before we 
+                  get coding. I appreciate that this is a lot of waffle before 
+                  we get to the nitty-gritty of programming, but a clear idea of 
+                  what the program will do beforehand can prevent so much 
+                  hassle, especially on larger projects.</P>
+                  <P>We can either have your program create a new Word document 
+                  from scratch each time a report is generated, or modify a 
+                  template document to give the correct information. For this 
+                  scenario we will use a template so we can have a look at other 
+                  Word functions than just typing text into it.</P>
+                  <P>I have included a word document for you to <A 
+                  href="http://216.26.168.92/demos/wordreportsdemo/Report.doc">download</A>. 
+                  It is called Report.doc and is very basic but gives us 
+                  something to work on at the moment. If you load it up and take 
+                  a look you will spot references throughout it: e.g. USERID01 
+                  and Q23. These will be used by our project as pointers to 
+                  amend the corresponding text for each question we ask. Before 
+                  the values are inputted into the template you can do whatever 
+                  you want to the document, feel free to make the text bold, 
+                  italic or colored. Styling can be applied to the pointers as 
+                  well.</P>
+                  <P>When you have finished spicing up the template we can start 
+                  creating the code to input the values. Create a new Standard 
+                  EXE project and add these controls to the form. I know there 
+                  is a lot to input so you are probably better off downloading 
+                  the example than creating it yourself. For those who want to 
+                  create them though here is a list:</P>
+                  <TABLE cellPadding=2 border=1>
+                    <TBODY>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1><B>Control</B></FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1><B>Control Properties</B></FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Form</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption = Report Generator</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Frame</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>&gt;Name = FRMA</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>OptionButton</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Name 
+                        = OptA, Caption = Option A</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>OptionButton</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Name 
+                        = OptB, Caption = Option B</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>OptionButton</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Name 
+                        = OptNone, Caption = Neither A or B</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Check 
+                        Box Name = ChkC</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption = C</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Check 
+                        Box Name = ChkD</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption = D</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Check 
+                        Box Name = ChkE</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption = E</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Check 
+                        Box Name = ChkF</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption = F</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Check 
+                        Box Name = ChkG</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption = G</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>TextBox</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Name 
+                        = txtName</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>TextBox</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Name 
+                        = txtDept</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Horizontal Scroll bar</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" size=-1>Max = 
+                        10</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Label</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption= "Name:"</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Label</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption= "Dept:"</FONT></TD></TR>
+                    <TR>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Label</FONT></TD>
+                      <TD><FONT face="verdana, arial, helvetica" 
+                        size=-1>Caption= "10", Name = 
+                    lblscroll</FONT></TD></TR></TBODY></TABLE>
+                  <P>Hopefully you should end up with something like this:</P>
+                  <P align=center><IMG height=350 alt="" 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/formlayout.gif" 
+                  width=349 border=1></P>
+                  <P>Now let's start adding code!</P></FONT><PRE><FONT color=#00007f>Private</FONT> <FONT color=#00007f>Sub</FONT> Form_Load()
+    HScroll1_Change
+<FONT color=#00007f>End</FONT> <FONT color=#00007f>Sub</FONT>
+
+<FONT color=#00007f>Private</FONT> <FONT color=#00007f>Sub</FONT> HScroll1_Change()
+    lblScroll = HScroll1.Value
+<FONT color=#00007f>End</FONT> <FONT color=#00007f>Sub</FONT>
+
+<FONT color=#00007f>Private</FONT> <FONT color=#00007f>Sub</FONT> HScroll1_Scroll()
+    HScroll1_Change
+<FONT color=#00007f>End</FONT> Sub</PRE><FONT 
+                  face="verdana, arial, helvetica" size=-1>
+                  <P>Now that is done let's get Word to do the work for 
+                  us.</P></FONT>
+                  <CENTER>
+                  <TABLE cellSpacing=0 cellPadding=2 width="60%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=center noWrap width="50%"><FONT 
+                        face="Verdana, Arial, Helvetica" size=-1>
+                        <P align=left><IMG height=12 
+                        src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/prev.gif" 
+                        width=12> <A 
+                        href="http://216.26.168.92/articles/wordreports/index.html">Introduction</A></P></FONT></TD>
+                      <TD vAlign=center noWrap align=right width="50%"><FONT 
+                        face="Verdana, Arial, Helvetica" size=-1>
+                        <P align=right><A 
+                        href="http://216.26.168.92/articles/wordreports/index3.html">Creating 
+                        our report in Word</A> <IMG height=12 
+                        src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/next.gif" 
+                        width=12></P></FONT></TD></TR></TBODY></TABLE></CENTER></TD></TR></TBODY></TABLE><!-- /padding table --></TD>
+          <TD width=10 bgColor=#ffffff><IMG height=10 
+            src="VB-World - Articles - Creating Reports with Microsoft Word - Producing the user interface_files/clear.gif" 
+            width=10 border=0></TD></TR></TBODY></TABLE><!-- /content table --><!-- copyright table -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#003399 
+        border=0></TD></TR>
+        <TBODY></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD 
+          style="FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: Tahoma, Verdana" 
+          width="100%" bgColor=#4a558c colSpan=2>
+            <P align=center><BR>Copyright 1997 - 2002 VB-World Network. All 
+            rights reserved. <A 
+            style="COLOR: #ffffff; TEXT-DECORATION: underline" 
+            href="http://www.vbworld.com/vbworld/privacy.aspx">Privacy 
+            policy</A>.<BR>Hosted by <A 
+            style="COLOR: #ffffff; TEXT-DECORATION: underline" 
+            href="http://www.maximumasp.com/">MaximumASP.com<BR><BR></A></P></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY></TBODY></TABLE></TR></TBODY></TABLE></BODY></HTML>

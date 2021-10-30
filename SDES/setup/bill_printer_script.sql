@@ -1,0 +1,129 @@
+drop table invoices;
+drop table invoice_details;
+drop table entity_details;
+drop table dummy_invd_count;
+drop table tmp_stag_invoice;
+drop table tmp_stag_invoice_details;
+
+
+create table invoices
+( inv_no varchar(10),
+  inv_date DATE,
+  inv_cmp_code  TINYINT,
+  inv_total_rs INT,
+  inv_total_rs_text varchar(500),
+  inv_entry_date TIMESTAMP 
+);
+
+create table invoice_details
+(
+ invd_sno    TINYINT,
+ invd_inv_no varchar(10),
+ invd_part_desc varchar(1000),
+ invd_part_rs INT
+);
+
+create table entity_details
+(
+ ed_code int primary key auto_increment,
+ ed_entity_type varchar(20),
+ ed_name varchar(50) unique,
+ ed_address_line1 varchar(50),
+ ed_address_line2 varchar(50),
+ ed_address_line3 varchar(50),
+ ed_city varchar(20),
+ ed_pincode varchar(20),
+ ed_status varchar(1)
+);
+
+insert into entity_details(ed_entity_type,ed_name,ed_address_line1,
+ed_address_line2,ed_address_line3,ed_city,ed_pincode)
+values('COMPANY','Pearl Shipping Pvt. Ltd.','306 3rd Floor, "KUNTAL",',
+'Modi Estate, L.B.S Marg','Ghatkopar West','MUMBAI','400 086'
+);
+
+insert into entity_details(ed_entity_type,ed_name,ed_address_line1,
+ed_address_line2,ed_address_line3,ed_city,ed_pincode)
+values('COMPANY','MSK INTERNATIONAL','53-55 MODI STREET,',
+'DHANRAJ NIWAS,','2nd FLOOR,FORT,','MUMBAI','400 001'
+);
+
+insert into entity_details(ed_entity_type,ed_name,ed_address_line1,
+ed_address_line2,ed_address_line3,ed_city,ed_pincode)
+values('COMPANY','Transcon Freight System Pvt. Ltd.','306 3rd Floor, "KUNTAL",',
+'Modi Estate, L.B.S Marg','Ghatkopar West','MUMBAI','400 086'
+);
+
+insert into entity_details(ed_entity_type,ed_name,ed_address_line1,
+ed_address_line2,ed_address_line3,ed_city,ed_pincode)
+values('COMPANY','M/s. Freight Logestic','53-55 MODI STREET,',
+'DHANRAJ NIWAS,','2nd FLOOR,FORT,','MUMBAI','400 001'
+);
+
+create table dummy_invd_count
+(
+ field1 varchar(10)
+);
+
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+INSERT INTO dummy_invd_count
+values('99');
+
+
+create table tmp_stag_invoice
+(
+ field1 varchar(1000),
+ field2 varchar(1000),
+ field3 varchar(1000),
+ field4 varchar(1000),
+ field5 varchar(1000),
+ field6 varchar(1000)
+);
+
+create table tmp_stag_invoice_details
+(
+ field1 varchar(1000),
+ field2 varchar(1000),
+ field3 varchar(1000),
+ field4 varchar(1000),
+ field5 varchar(1000),
+ field6 varchar(1000)
+);
+
+truncate table tmp_stag_invoice;
+truncate table tmp_stag_invoice_details;
+
+
+    LOAD DATA LOCAL INFILE 'invoice.csv'
+    INTO TABLE tmp_stag_invoice
+    FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+    LINES TERMINATED BY '\r\n'
+    (field1, field2, field3); 
+
+
+    LOAD DATA LOCAL INFILE 'invoice_details.csv'
+    INTO TABLE tmp_stag_invoice_details
+    FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\r\n'
+    (field1, field2, field3); 
+    
+    

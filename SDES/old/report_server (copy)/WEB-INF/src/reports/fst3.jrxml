@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="fst3"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="567"
+		 columnSpacing="0"
+		 leftMargin="14"
+		 rightMargin="14"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["/home/latish/i_report_data/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fin_year" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[Financial Year]]></parameterDescription>
+		<defaultValueExpression ><![CDATA["xxx"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fin_period_cd" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[Financial Period]]></parameterDescription>
+		<defaultValueExpression ><![CDATA["xxx"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT fst3_fin_yr,fst3_assessee_name ,
+       fst3_premises_reg_no,fst3_lastday_amt_payable,
+       gm.answ1 as fst3_fin_period,fst3_fin_period_cd,
+       fst3_fin_period_text1 
+FROM form_st3,generic_master gm
+WHERE fst3_fin_period_cd = code1
+AND   mastercode='FINANCIAL_PERIOD' 
+AND   fst3_fin_yr=$P{fin_year}
+AND   fst3_fin_period_cd =$P{fin_period_cd}]]></queryString>
+
+	<field name="fst3_fin_yr" class="java.lang.String"/>
+	<field name="fst3_assessee_name" class="java.lang.String"/>
+	<field name="fst3_premises_reg_no" class="java.lang.String"/>
+	<field name="fst3_lastday_amt_payable" class="java.lang.String"/>
+	<field name="fst3_fin_period" class="java.lang.String"/>
+	<field name="fst3_fin_period_cd" class="java.lang.String"/>
+	<field name="fst3_fin_period_text1" class="java.lang.String"/>
+
+
+		<group  name="test" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="17"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="5"
+						y="2"
+						width="472"
+						height="11"
+						key="subreport-1"
+						stretchType="RelativeToBandHeight"
+						isPrintInFirstWholeBand="true"/>
+					<subreportParameter  name="fin_year">
+						<subreportParameterExpression><![CDATA[$F{fst3_fin_yr}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="fin_period_cd">
+						<subreportParameterExpression><![CDATA[$F{fst3_fin_period_cd}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "fst3_subreport0.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="test2" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="17"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="3"
+						y="3"
+						width="529"
+						height="11"
+						key="subreport-2"/>
+					<subreportParameter  name="fin_year">
+						<subreportParameterExpression><![CDATA[$P{fin_year}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="fin_period_cd">
+						<subreportParameterExpression><![CDATA[$P{fin_period_cd}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "fst3_subreport1.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="test3" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="244"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="8"
+						y="21"
+						width="555"
+						height="16"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Helvetica" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fst3_lastday_amt_payable}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="8"
+						y="5"
+						width="556"
+						height="15"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[Details of amount payable but not paid as on the last day of the period for which the Return is filed]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="43"
+						width="556"
+						height="15"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[Self Assessment memorandum -]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="52"
+						y="67"
+						width="511"
+						height="26"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[I /We declare that the above particulars are in accordance with the records and books maintained by me/us and are correctly stated.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="51"
+						y="97"
+						width="512"
+						height="26"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[I /We have assessed and paid the service tax and/or availed and distributed CENVAT credit correctly as per the provisions of the Finance Act, 1994 and the rules made thereunder.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="50"
+						y="126"
+						width="513"
+						height="26"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[I /We have paid duty within the specified time limit and in case of delay, I/We have deposited the interest leviable thereon. ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="185"
+						width="37"
+						height="15"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[Place :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="9"
+						y="215"
+						width="34"
+						height="15"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[Date:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="354"
+						y="213"
+						width="205"
+						height="26"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[(Name and Signature of Assessee or Authorized Signatory)]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="50"
+						y="198"
+						width="153"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="49"
+						y="229"
+						width="153"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="355"
+						y="206"
+						width="201"
+						height="0"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="24"
+						y="67"
+						width="20"
+						height="21"
+						key="staticText-17"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[(a)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="25"
+						y="96"
+						width="20"
+						height="21"
+						key="staticText-18"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[(b)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="24"
+						y="126"
+						width="20"
+						height="21"
+						key="staticText-19"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[(c)]]></text>
+				</staticText>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="153"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="10"
+						y="6"
+						width="517"
+						height="21"
+						forecolor="#000000"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[FORM ST -3]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="11"
+						y="30"
+						width="517"
+						height="17"
+						forecolor="#000000"
+						key="staticText-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[(Return under Section 70 of the Finance Act, 1994]]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="166"
+						y="53"
+						width="112"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[FINANCIAL YEAR]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="277"
+						y="53"
+						width="98"
+						height="16"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Helvetica" size="12" isUnderline="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fst3_fin_yr}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="148"
+						y="96"
+						width="375"
+						height="16"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="10" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fst3_assessee_name}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="8"
+						y="96"
+						width="137"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="" size="10"/>
+					</textElement>
+				<text><![CDATA[Name of the Assessee]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="136"
+						width="514"
+						height="16"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fst3_premises_reg_no}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="116"
+						width="515"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="" size="10"/>
+					</textElement>
+				<text><![CDATA[Registration Numbers of premises for which return is being filed ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="148"
+						y="75"
+						width="98"
+						height="16"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Helvetica" size="10" isUnderline="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fst3_fin_period}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="9"
+						y="76"
+						width="127"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="" pdfFontName="Helvetica" size="10" isBold="false"/>
+					</textElement>
+				<text><![CDATA[For the Period: ]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="261"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="203"
+						y="17"
+						width="160"
+						height="17"
+						key="staticText-13"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ACKNOWLEDGEMENT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="59"
+						width="343"
+						height="17"
+						key="staticText-14"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[I hereby acknowledge the receipt of your S T- 3 return for the period]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="338"
+						y="76"
+						width="219"
+						height="0"
+						key="line-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="234"
+						y="192"
+						width="316"
+						height="17"
+						key="staticText-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[(Signature of the Officer of Central Excise & Service Tax)]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="268"
+						y="187"
+						width="280"
+						height="0"
+						key="line-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="237"
+						y="209"
+						width="311"
+						height="18"
+						key="staticText-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[(With Name & Official Seal)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="348"
+						y="58"
+						width="207"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{fst3_fin_period_text1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

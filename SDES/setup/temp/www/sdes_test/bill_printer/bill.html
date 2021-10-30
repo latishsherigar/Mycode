@@ -1,0 +1,82 @@
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../common/calendar/calendar.css">
+<script src="../common/js/lib.js"></script>
+<script src="functions.js"></script>
+<script src="../common/calendar/calendar.js"></script>
+
+
+</head>
+<body>
+<center><h3>Bill Printer</h3></center>
+<form name="frm_bill" method="post">
+<input type="hidden" name="inv_cmp_code" id="inv_cmp_code"  value="<?php echo $inv_cmp_code ?>">
+<input type="hidden" name="operation" id="operation">
+
+<table border="1" align="center">
+<tr><td>
+<table border="0" align="center">
+<tr>
+ <td>Invoice No :</td> 
+ <td><input type="text" name="inv_no"   value="<?php echo $inv_no ?>" onblur="return inv_no_blur(this);"></td>
+ <td>Date :</td> 
+ <td><input type="text" name="inv_dt" id="inv_dt" readonly value="<?php echo $inv_dt ?>"></td>
+ <td><input type="button" value="..." onclick="displayDatePicker('inv_dt', false, 'dmy', '-');">
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td >
+<table border="0" align="center" >
+<tr>
+ <td>M/s :</td> 
+ <td><textarea rows="1" cols="50" name="inv_ms" id="inv_ms" readonly ><?php echo $inv_cmp_name ?></textarea></td>
+ <td><input type="button" value="Search" onclick="show_company_search('inv_ms','inv_cmp_code')"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<b>Details</b>
+
+
+<table align="center">
+ <tr>
+  <td><?php load_inv_part_details(); ?></td>
+ </tr>
+ <tr>
+  <td>
+   <table border="1" align="right">
+    <tr>
+     <td>Total :</td> 
+     <td><input type="text" name="inv_total_rs" value="<?php echo $inv_total_rs ?>"></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" align="center">
+<tr>
+<td><input type="button" value="SAVE" onclick="save_click();"></td>
+<td><input type="button" value="PREVIEW" 
+ onclick=location.href="<?php echo $REPORT_SERVER_PATH."&INVOICE_NO=".$inv_no ?>" >
+</td>
+<td><input type="button" value="CLOSE" onclick="close_win();"></td>
+</tr>
+</table>
+</form>
+<script>
+<?php
+if($inv_no == ""){
+ echo 'document.frm_bill.inv_no.focus();';
+}
+else{
+ echo 'document.frm_bill.inv_dt.focus();';
+}
+?>
+
+</script>
+</body>

@@ -1,0 +1,116 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+[Package|Standard Setup Package 1|weavingdata]
+Icon1=datadistrib.exe
+Title1=weavingdata
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Standard Setup Package 1|prjweavingdata]
+Icon1=datadistrib.exe
+Title1=prjweavingdata
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=G:\gw\gw_code\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+G:\gw\gw_code\datadistrib.exe=Yes
+C:\WINNT\system32\MSVBVM60.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\system32\MSSTDFMT.DLL=Yes
+C:\WINNT\system32\scrrun.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=Yes
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=Yes
+C:\WINNT\system32\MSFLXGRD.OCX=Yes
+C:\WINNT\system32\MSMASK32.OCX=Yes
+C:\WINNT\system32\MSCOMCTL.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+G:\gw\gw_code\datadistrib.exe=$(AppPath)
+C:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=$(WinSysPath)
+C:\WINNT\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+G:\gw\gw_code\datadistrib.exe=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=1.44 MB
+Title=DataDistrib
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=DataDistrib
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|DataDistrib]
+Icon1=datadistrib.exe
+Title1=DataDistrib
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=G:\gw\gw_code\Package
+ProjectFolder=G:\gw\gw_code
+ServerSideCab=
+File1=G:\gw\gw_code\Package\setup.exe
+File2=G:\gw\gw_code\Package\Setup.Lst
+File3=G:\gw\gw_code\Package\datadistrib.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

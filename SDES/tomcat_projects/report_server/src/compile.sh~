@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo 'Compiling Java files...' 
+javac -d ../deploy/WEB-INF/classes ReportEngine.java 
+echo 'done.' 
+
+echo 'Compiling Jasper files...' 
+./reports/compile_jrxml.sh
+echo 'done.' 
+

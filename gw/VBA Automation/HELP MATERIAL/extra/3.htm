@@ -1,0 +1,573 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0063)http://support.microsoft.com/default.aspx?scid=KB;en-us;q237337 -->
+<!-- CONTENT NAMESPACE:  http://support.microsoft.com/common/schemas/kbpub/2/kbpubv2.dtd --><!-- CONTENT CLASS:  MS.Support.GSFx.Web.KBArticle CREATION OK --><HTML><HEAD><TITLE>237337 - WD2000: How to Use (OLE) Automation with Word</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved --><!-- CPMSFTWBSU02 ASM: GSS, Version=3.3.3.4, Culture=neutral, PublicKeyToken=null FW: 1.0.3705.0 --><!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 11/23/2002 10:19:16 PM RESX: 1/1/0001 12:00:00 AM -->
+<META content="kbinfo kbProgramming KB237337 " name=Keywords>
+<META 
+content="This article contains a brief description and a sample macro detailing how to automate Microsoft Word from another program. For more detailed information, see the " 
+name=Description article.? this of end the at section References?>
+<SCRIPT language=Javascript>
+var CookieDomain = "support.microsoft.com";
+document.domain = "support.microsoft.com";
+function fetchcookieval(key){
+	var cookiename;
+	var cookieval;
+	var keyfound = false;
+	var cookiearray = document.cookie.split(";")
+	for(i=0;i<cookiearray.length;i++){
+		cookiename = cookiearray[i].substring(0, cookiearray[i].indexOf("="));
+		if(cookiename.charAt(0) == " ") cookiename = cookiename.substring(1, cookiename.length);
+		cookieval = cookiearray[i].substring(cookiearray[i].indexOf("=")+1, cookiearray[i].length);
+		if(key == cookiename){keyfound = true; break;}
+	}
+	if(keyfound) return cookieval;
+	else return "blank";
+}
+function setcookieval(key, val){
+	if(typeof(CookieDomain) != "undefined"){
+		if(document.domain.indexOf(".com") > -1 && CookieDomain.length > 0){
+			document.domain = CookieDomain;
+			document.cookie = key+'='+val+'; expires=Fri, 31 Dec 2002 23:59:59 GMT; Domain=' + CookieDomain  + '; path=/';
+		}else{ 
+			document.cookie = key+'='+val+'; expires=Fri, 31 Dec 2002 23:59:59 GMT; path=/';
+		}
+	}
+}
+</SCRIPT>
+<LINK href="3_files/default.css" type=text/css rel=stylesheet></LINK>
+<SCRIPT language=Javascript src="3_files/common.js"></SCRIPT>
+
+<SCRIPT language=Javascript src="3_files/uplevel.js"></SCRIPT>
+<LINK href="3_files/KBArticleV2.css" type=text/css rel=stylesheet></LINK><LINK 
+href="3_files/webparts.css" type=text/css rel=stylesheet></LINK>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 onload=thisLoad(); 
+onunload=thisUnload(); marginwidth="0" marginheight="0"><!-- USING XSLT:  KBPUBV2 -->
+<DIV id=TopPanel name="TopPanel">
+<SCRIPT language=JavaScript src="3_files/toolbar.js"></SCRIPT>
+
+<SCRIPT language=javascript src="3_files/global.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+<!--
+	var ToolBar_Supported = ToolBar_Supported;
+	if(ToolBar_Supported != null && ToolBar_Supported == true){
+		Frame_Supported = false;
+		setToolbarBGColor("#3366CC");
+		setICPBanner("/library/images/support/en-us/banner.gif","/default.aspx","Return to Support home page");
+		setMSBanner("mslogo_3366CC.gif","/isapi/gomscom.asp?target=/","Microsoft.com Home Page");
+ 		HTMLStr = HTMLStr.replace(/\/library\/toolbar\/images\/curve.gif/g, "/library/images/support/curve_003399.gif");
+		drawToolbar();
+	}
+//-->
+</SCRIPT>
+</DIV>
+<TABLE id=CenterPanel height="100%" cellSpacing=0 cellPadding=0 width="100%" 
+border=0 name="CenterPanel">
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE class=tpl_top_banner cellSpacing=0 cellPadding=0 width="100%" 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE class=bbar_outer height=18 cellSpacing=0 cellPadding=0 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Return to Support Home Page" 
+                  href="http://support.microsoft.com/">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="3_files/1ptrans.gif" width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;EN-US;KBHOWTO'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Search the Knowledge Base" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;KBHOWTO">&nbsp;&nbsp;Search&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="3_files/1ptrans.gif" width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;[LN];faqs'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Frequently Asked Questions" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[LN];faqs">&nbsp;&nbsp;FAQs&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="3_files/1ptrans.gif" width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;EN-US;downloadover'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Software Downloads, Updates, and Service Packs" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;downloadover">&nbsp;&nbsp;Downloads&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="3_files/1ptrans.gif" width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Community Newsgroups" 
+                  href="http://support.microsoft.com/newsgroups/default.aspx">&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="3_files/1ptrans.gif" width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='/default.aspx?scid=fh;[ln];csshome&amp;style=home'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Customer Service" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[ln];csshome&amp;style=home">&nbsp;&nbsp;Customer 
+                  Service&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="3_files/1ptrans.gif" width=1></TD></TR></TBODY></TABLE></TD>
+          <TD align=right>
+            <TABLE class=fbtn_outer cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" onclick="" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="Send the contents of this page to a Friend" 
+                  href="mailto:?body=http://support.microsoft.com/default.aspx?scid=KB;en-us;q237337" 
+                  target="">Send&nbsp;<IMG height=16 
+                  alt="Send the contents of this page to a Friend" hspace=0 
+                  src="3_files/send_icon.gif" width=16 align=absMiddle 
+                  border=0></A>&nbsp;&nbsp;</TD>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" onclick="" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="Print the contents of this page" 
+                  href="javascript:PrintContents();" target="">Print&nbsp;<IMG 
+                  height=16 alt="Print the contents of this page" hspace=0 
+                  src="3_files/print_icon.gif" width=16 align=absMiddle 
+                  border=0></A>&nbsp;&nbsp;</TD>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat'" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="View information on how to use this site effectively" 
+                  href="http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat" 
+                  target="">Help&nbsp;<IMG height=16 
+                  alt="View information on how to use this site effectively" 
+                  hspace=0 src="3_files/help_icon.gif" width=16 align=absMiddle 
+                  border=0></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=tpl_left_nav_cell vAlign=top width=207>
+            <DIV class=kbRightNav>
+            <DIV class=ListNugget id=KBFeedback style="WIDTH: 180px" 
+            name="KBFeedback">
+            <TABLE class=ListNuggetHeader id=KBFeedbackHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="KBFeedbackHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('KBFeedback');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('KBFeedback');" 
+                  href="javascript:PartWrapperToggle('KBFeedback');">Comments?</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('KBFeedback');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=KBFeedbackUp height=17 alt="Hide options" 
+                  src="3_files/blue-chevron_up.gif" width=17 align=right 
+                  border=0 name=KBFeedbackUp><IMG class=ListNuggetDownButton 
+                  id=KBFeedbackDown height=17 alt=Options 
+                  src="3_files/gray-chevron_down.gif" width=17 align=right 
+                  border=0 name=KBFeedbackDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=KBFeedbackBody name="KBFeedbackBody">
+            <TABLE class=KBFeedbackTable cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="3_files/blue_bullet.gif" width=5 border=0 
+                VALIGN="MIDDLE"></TD>
+                <TD vAlign=top><A class=ListNuggetItem 
+                  href="javascript:ShowSurveyWindow('/common/survey.aspx?scid=sw;EN;1075', 'GN', 'en-us' ,'/default.aspx', 'KB', 'en-us', '237337 ')">Provide 
+                  us with feedback on this 
+            article</A></TD></TR></TBODY></TABLE></DIV></DIV>
+            <DIV class=ListNugget id=SupportCenters style="WIDTH: 180px" 
+            name="SupportCenters">
+            <TABLE class=ListNuggetHeader id=SupportCentersHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="SupportCentersHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('SupportCenters');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('SupportCenters');" 
+                  href="javascript:PartWrapperToggle('SupportCenters');">Product 
+                  Support Centers</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('SupportCenters');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=SupportCentersUp height=17 alt="Hide options" 
+                  src="3_files/blue-chevron_up.gif" width=17 align=right 
+                  border=0 name=SupportCentersUp><IMG class=ListNuggetDownButton 
+                  id=SupportCentersDown height=17 alt=Options 
+                  src="3_files/gray-chevron_down.gif" width=17 align=right 
+                  border=0 name=SupportCentersDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=SupportCentersBody 
+            name="SupportCentersBody">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="3_files/blue_bullet.gif" width=5 border=0 
+                VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;wrd">Word 
+                  for Windows</A> </TD></TR>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="3_files/blue_bullet.gif" width=5 border=0 
+                VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;wrd20">Word 
+                  2000</A> </TD></TR></TBODY></TABLE></DIV></DIV>
+            <DIV class=ListNugget id=GeneralInfo style="WIDTH: 180px" 
+            name="GeneralInfo">
+            <TABLE class=ListNuggetHeader id=GeneralInfoHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="GeneralInfoHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('GeneralInfo');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('GeneralInfo');" 
+                  href="javascript:PartWrapperToggle('GeneralInfo');">Other 
+                  Support Options</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('GeneralInfo');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=GeneralInfoUp height=17 alt="Hide options" 
+                  src="3_files/blue-chevron_up.gif" width=17 align=right 
+                  border=0 name=GeneralInfoUp><IMG class=ListNuggetDownButton 
+                  id=GeneralInfoDown height=17 alt=Options 
+                  src="3_files/gray-chevron_down.gif" width=17 align=right 
+                  border=0 name=GeneralInfoDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=GeneralInfoBody name="GeneralInfoBody">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="3_files/blue_bullet.gif" width=5 vspace=4 border=0 
+                  VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS">Contact 
+                  Microsoft</A>
+                  <P>Phone Numbers, Support Options and Pricing, Online Help, 
+                  and more.</P></TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="3_files/blue_bullet.gif" width=5 vspace=4 border=0 
+                  VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[ln];csshome&amp;style=home">Customer 
+                  Service</A>
+                  <P>For non-technical assistance with product purchases, 
+                  subscriptions, online services, events, training courses, 
+                  corporate sales, piracy issues, and more.</P></TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="3_files/blue_bullet.gif" width=5 vspace=4 border=0 
+                  VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/newsgroups">Newsgroups</A>
+                  <P>Pose a question to other users. Discussion groups and 
+                  Forums about specific Microsoft products, technologies, and 
+                  services.</P></TD></TR></TBODY></TABLE></DIV></DIV></DIV></TD>
+          <TD vAlign=top width="100%">
+            <DIV class=tpl_content_bar>Microsoft Knowledge Base 
+            Article&nbsp;-&nbsp;237337 </DIV>
+            <DIV class=tpl_content><!--START KBCONTENT-->
+            <DIV class=LTRContent id=LTRContent dir=ltr><IMG 
+            class=tpl_header_icon height=75 
+            alt="WD2000: How to Use (OLE) Automation with Word" 
+            src="3_files/kb_hdr_icon.jpg" width=75>
+            <DIV class=KBPUBV2 name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS BELOW HERE - - - - - - - - - - -->
+            <H1 class=title>WD2000: How to Use (OLE) Automation with Word</H1>
+            <DIV class=appliesto>The information in this article applies to:
+            <UL>
+              <LI>Microsoft Word 2000</LI></UL></DIV>
+            <DIV class=notice>This article was previously published under 
+            Q237337</DIV>
+            <DIV class=notice></DIV>
+            <DIV class=summary>
+            <H2>SUMMARY</H2>This article contains a brief description and a 
+            sample macro detailing how to automate Microsoft Word from another 
+            program. For more detailed information, see the "References" section 
+            at the end of this article. </DIV>
+            <DIV class=moreinformation>
+            <H2>MORE INFORMATION</H2>Microsoft provides programming examples for 
+            illustration only, without warranty either expressed or implied, 
+            including, but not limited to, the implied warranties of 
+            merchantability and/or fitness for a particular purpose. This 
+            article assumes that you are familiar with the programming language 
+            being demonstrated and the tools used to create and debug 
+            procedures. Microsoft support professionals can help explain the 
+            functionality of a particular procedure, but they will not modify 
+            these examples to provide added functionality or construct 
+            procedures to meet your specific needs. If you have limited 
+            programming experience, you may want to contact a Microsoft 
+            Certified Partner or the Microsoft fee-based consulting line at 
+            (800) 936-5200. For more information about Microsoft Certified 
+            Partners, please visit the following Microsoft Web site: <BR>
+            <DIV class=indent><A class=URLLink 
+            href="http://support.microsoft.com/default.aspx?scid=http://www.microsoft.com/partner/referral/" 
+            target=_top>http://support.microsoft.com/default.aspx?scid=http://www.microsoft.com/partner/referral/</A></DIV><BR>For 
+            more information about the support options that are available and 
+            about how to contact Microsoft, visit the following Microsoft Web 
+            site: <BR>
+            <DIV class=indent><A class=URLLink 
+            href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS" 
+            target=_top>http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS</A></DIV><BR><BR><BR>Automation 
+            (formerly OLE Automation) is a feature that programs use to expose 
+            their objects to development tools, macro languages, and other 
+            programs that support automation. For example, a spreadsheet program 
+            may expose a worksheet, chart, cell, or range of cells, each as a 
+            different type of object. A word processor might expose objects such 
+            as an application, a document, a paragraph, a sentence, a bookmark, 
+            or a selection.<BR><BR>When a program supports Automation, you can 
+            use Visual Basic for Applications to access the objects it exposes. 
+            You manipulate these objects in Visual Basic for Applications by 
+            invoking methods on the object or by getting and setting the 
+            object's properties.<BR><BR>You can use the code samples in this 
+            article to control Microsoft Word from Microsoft Access 2000, 
+            Microsoft Excel 2000, Microsoft PowerPoint 2000, Microsoft Visual 
+            Basic for Applications, or any other client that supports Automation 
+            to control Word. 
+            <H3>Getting Started</H3>There are four main steps to automate Word 
+            for Windows: 
+            <OL class=dec>
+              <LI>Add a reference to the <STRONG class=uiterm>Microsoft Word 9.0 
+              Object Library</STRONG>.
+              <LI>Declare a variable as a Word object type (Application, 
+              Document, and so on).
+              <LI>Assign the object returned by the 
+              <STRONG>CreateObject</STRONG> function to the object variable you 
+              declared in step 2.
+              <LI>Use the properties and methods of the object variable to 
+              automate Word.</LI></OL>
+            <H3>Step 1: Add a Reference to the Word 9.0 Object Library</H3>To 
+            add a reference to the <STRONG class=uiterm>Microsoft Word 9.0 
+            Object Library</STRONG> using Microsoft Access 2000, Microsoft 
+            PowerPoint 2000, or Microsoft Excel 2000, follow these 
+steps:<BR><BR>
+            <OL class=dec>
+              <LI>In Microsoft Access, PowerPoint, or Excel, on the 
+              <STRONG>Tools</STRONG> menu, point to <STRONG>Macros</STRONG> and 
+              then click <STRONG>Visual Basic Editor</STRONG>.
+              <LI>In the Visual Basic Editor, on the <STRONG>Tools</STRONG> 
+              menu, click <STRONG>References</STRONG>.
+              <LI>In the list of <STRONG>Available References</STRONG>, click to 
+              select the <STRONG class=uiterm>Microsoft Word 9.0 Object 
+              Library</STRONG> check box.</LI></OL><STRONG>NOTE</STRONG>: To add 
+            the reference using Microsoft Visual Basic 6.0, click 
+            <STRONG>References</STRONG> on the <STRONG>Project</STRONG> 
+            menu.<BR><BR>Adding the <STRONG class=uiterm>Microsoft Word 9.0 
+            Object Library</STRONG> reference allows your program to access 
+            Microsoft Word Online Help and the Microsoft Word Visual Basic for 
+            Applications constants, properties, and methods. Note that the 
+            <STRONG class=uiterm>Microsoft Word 9.0 Object Library</STRONG> 
+            reference is required to automate the Word object types 
+            directly.<BR><BR>Adding a reference to the <STRONG 
+            class=uiterm>Microsoft Word 9.0 Object Library</STRONG> is called 
+            early binding.<BR><BR>For more information about Object Binding, 
+            please see the following article in the Microsoft Knowledge 
+            Base:<BR><BR><BR>
+            <DIV class=indent><A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;138138">138138</A> 
+            INFO: Late, ID, Early Binding Types Possible in VB for Apps 
+            </DIV><BR>
+            <H3>Step 2: Declare the Object Variable</H3>To declare an object 
+            variable, you dimension the variable just as you dimension any 
+            variable, except that you specify the type when declaring the 
+            object. For example, <STRONG>Word.Application</STRONG>, 
+            <STRONG>Document</STRONG>, and <STRONG>Paragraph</STRONG> are 
+            separate Word Objects.<BR><BR>The following sample command line 
+            declares the variable objWD as an object of type <STRONG 
+            class=uiterm>Word.Application</STRONG>:<BR><BR><PRE>Dim objWD as Word.Application
+				</PRE>
+            <H3>Step 3: Set the Variable</H3>There are two Visual Basic 
+            functions you can use to "bind" the already declared object variable 
+            to Word: <STRONG>CreateObject</STRONG> and 
+            <STRONG>GetObject</STRONG>. The primary differences are that the 
+            <STRONG>CreateObject</STRONG> function creates a new instance of 
+            Word, and the <STRONG>GetObject</STRONG> function uses an existing, 
+            or already running instance of Word. You can also use 
+            <STRONG>GetObject</STRONG> to bind your object variable to a 
+            specific Word document.<BR><BR>The following sample command lines 
+            bind the objWD variable to Word using the 
+            <STRONG>CreateObject</STRONG> function: <PRE>Dim objWD as Word.Application
+   Set objWD = CreateObject("Word.Application")
+				</PRE>The following sample command lines bind the objWdDoc 
+            variable to a specific Word document: <PRE>Dim objWdDoc As Word.Document
+   Set objWdDoc = GetObject("c:\my documents\doc1.doc")
+				</PRE><STRONG>NOTE</STRONG>: It is recommended to use only the 
+            <STRONG>CreateObject </STRONG>function to automate Word for Windows. 
+            The <STRONG>GetObject</STRONG> function can cause unpredictable 
+            behavior if WordMail is running or if a Word document is embedded 
+            inside another program.<BR><BR>For more information about getting 
+            help with Visual Basic for Applications, please see the following 
+            article in the Microsoft Knowledge Base:<BR>
+            <DIV class=indent><BR>
+            <DIV class=indent><A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;237338">237338</A> 
+            WD2000: How to Check for WordMail Using Automation 
+            </DIV><BR></DIV><BR>
+            <H3>Step 4: Use Properties and Methods to Automate Word</H3>When you 
+            complete steps 1 through 3, you can use the object variable to 
+            automate Word.<BR><BR>The following sample macro uses automation to 
+            create a Word object, create a new document, add some text, and save 
+            the document. <PRE>Sub AutomateWord()
+   ' Declare the variable.
+   Dim objWD As Word.Application
+   ' Set the variable (runs new instance of Word.)
+   Set objWD = CreateObject("Word.Application")
+   ' Add a new document.
+   objWD.Documents.Add
+   ' Add some text.
+   objWD.Selection.TypeText "This is some text."
+   ' Save the document.
+   objWD.ActiveDocument.SaveAs filename:="mydoc.doc"
+   ' Quit Word.
+   objWD.Quit
+   ' Clear the variable from memory.
+   Set objWD = Nothing
+End Sub
+				</PRE><STRONG>NOTE</STRONG>: The following sample macro 
+            duplicates the process described in the AutomateWord macro and runs 
+            directly in Word: <PRE>Sub WordMacro()
+   Documents.Add
+   Selection.TypeText "This is some text"
+   ActiveDocument.SaveAs filename:="mydoc.doc"
+   Quit
+End Sub
+				</PRE></DIV>
+            <DIV class=references>
+            <H2>REFERENCES</H2>For more information specific to automating Word 
+            using Visual Basic for Applications, please see the following 
+            resources. 
+            <H3>Microsoft Office Developer Web Site</H3><A class=URLLink 
+            href="http://www.msdn.microsoft.com/office" 
+            target=_top>http://www.msdn.microsoft.com/office</A><BR><BR>
+            <H3>NewsGroups</H3>The following peer-to-peer newsgroup is available 
+            to help you interact with other users of Visual Basic for 
+            Applications:<BR><BR><BR>
+            <DIV class=indent>microsoft.public.vb.ole.automation<BR></DIV><BR>
+            <H3>Knowledge Base</H3>For more information about getting help with 
+            Visual Basic for Applications, please see the following articles in 
+            the Microsoft Knowledge Base:<BR><BR><BR>
+            <DIV class=indent><A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;226118">226118</A> 
+            OFF2000: Programming Resources for Visual Basic for Applications 
+            </DIV><BR>For more information about how to use the sample code in 
+            this article, click the article number below to view the article in 
+            the Microsoft Knowledge Base: <BR>
+            <DIV class=indent><A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;212536">212536</A> 
+            OFF2000: How to Run Sample Code from Knowledge Base Articles 
+            </DIV><BR><BR><BR>
+            <H3>Office Assistant</H3>For more information about Automation, in 
+            the Visual Basic Editor, click <STRONG>Microsoft Visual Basic 
+            Help</STRONG> on the <STRONG>Help</STRONG> menu, type 
+            <STRONG>Communicating with other applications</STRONG> in the Office 
+            Assistant or the Answer Wizard, and then click 
+            <STRONG>Search</STRONG> to view the topic.<BR></DIV><!--******************* PUBLIC INFO SECTION ***********************-->
+            <TABLE class=docinfo cellSpacing=1 cellPadding=3 align=center>
+              <TBODY>
+              <TR>
+                <TD class=label vAlign=top noWrap align=right width="10%">Last 
+                  Reviewed:</TD>
+                <TD class=data vAlign=top align=left>8/30/2002</TD></TR>
+              <TR class=composite>
+                <TD class=label vAlign=top noWrap align=left 
+                  width="10%">Keywords:</TD>
+                <TD class=data vAlign=top align=left colSpan=3>kbinfo 
+                  kbProgramming KB237337</TD></TR></TBODY></TABLE><!--********************* END PUBLIC INFO SECTION ***********************--><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --><BR>
+            <DIV 
+        class=disclaimer></DIV></DIV></DIV><!--END KBCONTENT--></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<DIV class=tpl_footer id=BottomPanel name="BottomPanel">
+<DIV class=tpl_footer_row1>
+<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=left width="50%">
+      <TABLE class=fbtn_outer cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="" onmouseout="this.className='fbtn_cell';" 
+            noWrap>&nbsp;&nbsp;<A 
+            title="Send the contents of this page to a Friend" 
+            href="mailto:?body=http://support.microsoft.com/default.aspx?scid=KB;en-us;q237337" 
+            target="">Send&nbsp;<IMG height=16 
+            alt="Send the contents of this page to a Friend" hspace=0 
+            src="3_files/send_icon.gif" width=16 align=absMiddle 
+            border=0></A>&nbsp;&nbsp;</TD>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="" onmouseout="this.className='fbtn_cell';" 
+            noWrap>&nbsp;&nbsp;<A title="Print the contents of this page" 
+            href="javascript:PrintContents();" target="">Print&nbsp;<IMG 
+            height=16 alt="Print the contents of this page" hspace=0 
+            src="3_files/print_icon.gif" width=16 align=absMiddle 
+            border=0></A>&nbsp;&nbsp;</TD>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat'" 
+          onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+            title="View information on how to use this site effectively" 
+            href="http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat" 
+            target="">Help&nbsp;<IMG height=16 
+            alt="View information on how to use this site effectively" hspace=0 
+            src="3_files/help_icon.gif" width=16 align=absMiddle 
+            border=0></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD>
+    <TD noWrap align=right>
+      <DIV style="MARGIN-RIGHT: 12px">Last reviewed &nbsp;Friday, August 30, 
+      2002</DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tpl_footer_row2>© 2002 Microsoft Corporation. All rights 
+reserved.&nbsp;&nbsp;<A class=ftr_copyright_text 
+href="http://support.microsoft.com/default.aspx?scid=/support/misc/cpyright.asp" 
+target=_top>Terms of use</A>&nbsp;&nbsp;<A class=ftr_copyright_text 
+href="http://www.microsoft.com/security/default.asp" target=_top>Security &amp; 
+Privacy</A>&nbsp;&nbsp;<A class=ftr_copyright_text 
+href="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" 
+target=_top>Accessibility</A>&nbsp;&nbsp;</DIV></DIV><IMG style="DISPLAY: none" 
+src="3_files/1ptrans.gif" name=metrixgif><IMG style="DISPLAY: none" height=0 
+alt=* src="3_files/c.gif" width=0 border=0><!-- Qualified for Survey -->
+<SCRIPT language=javascript src="3_files/surveytrigger.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+
+					var Exp = 90;
+					var Delay = 0;
+					var Freq = 200;
+					var CookieDef = 'ST_GN_EN-US';
+				
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+	function thisLoad(){
+setcookieval('sd', 'GN');setcookieval('SD', 'GN');gsfxUpLevel();
+LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/en-us/KB_en-us_q237337&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=http://www.vb2themax.com');	}
+
+	function thisUnload(){
+fireTrigger('/common/survey.aspx?scid=sw;en;1022&XSL=','GN','en-us','%2fdefault.aspx%3fscid%3dKB%3ben-us%3bq237337','KB','en-us','237337','','','','','','','');	}
+</SCRIPT>
+ </BODY></HTML>

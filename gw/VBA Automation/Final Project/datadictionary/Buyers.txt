@@ -1,0 +1,7 @@
+BuyerID
+BuyerName
+Address1
+Address2
+Address3
+City
+Pincode

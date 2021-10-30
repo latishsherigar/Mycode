@@ -1,0 +1,7 @@
+LISTING 4: The Form_Terminate Event
+
+PRIVATE Sub Form_Terminate()
+	Set oCustomerDoc = Nothing
+	oWordApp.Quit
+	Set oWordApp = Nothing
+END Sub

@@ -1,0 +1,17 @@
+frmmain = 2, 2, 412, 318, , 46, 51, 469, 376, C
+frmabout = 71, 71, 445, 388, , 47, 61, 452, 378, C
+declarations = 157, 157, 565, 471, 
+frmpassword = 0, 0, 460, 305, , 73, 203, 484, 512, C
+frmnewarchivedialog = 135, 135, 543, 449, , 88, 88, 510, 408, C
+functions = 113, 113, 521, 427, 
+frmpasswordopen = 29, 36, 495, 324, , 92, -6, 503, 303, C
+clsSystem_Image_List = 88, 88, 510, 408, C
+frmextractarchivedialog = 91, 91, 499, 405, , 70, 2, 492, 416, C
+frmpasswordwarning = 69, 69, 477, 383, , 22, 29, 503, 338, C
+frmTip = 47, 47, 455, 361, , 89, 89, 417, 407, C
+frmconfiguration = 25, 25, 433, 339, , 22, 22, 444, 342, C
+frmopenarchivedialog = 3, 3, 411, 317, , 71, -1, 494, 310, C
+clsencryption = 22, 22, 444, 342, C
+frmprogress = 47, 47, 455, 361, , 22, 22, 436, 342, C
+clscompression = 0, 0, 460, 298, 
+clsregistry = 89, 89, 513, 414, 

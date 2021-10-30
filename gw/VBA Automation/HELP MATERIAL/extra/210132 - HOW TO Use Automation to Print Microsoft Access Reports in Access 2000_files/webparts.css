@@ -1,0 +1,267 @@
+.bbar_outer {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; MARGIN: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.bbar_cell {
+	BORDER-RIGHT: white 1px solid; HEIGHT: 18px
+}
+.bbar_cell_hot {
+	BORDER-RIGHT: white 1px solid; CURSOR: hand; BACKGROUND-COLOR: #3366cc
+}
+.bbar_cell A {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell_hot A {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell_hot A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell_hot A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell_hot A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.bbar_cell_hot A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_outer {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; MARGIN: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.fbtn_cell {
+	BORDER-LEFT: white 1px solid; HEIGHT: 18px
+}
+.fbtn_cell_hot {
+	BORDER-LEFT: white 1px solid; CURSOR: hand; BACKGROUND-COLOR: #3366cc
+}
+.fbtn_cell A {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell_hot A {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell_hot A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell_hot A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell_hot A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.fbtn_cell_hot A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: white; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.ftr_copyright_text {
+	FONT-SIZE: 10px; COLOR: white
+}
+.tpl_footer .fbtn_cell {
+	BORDER-RIGHT: white 1px solid; BORDER-LEFT: medium none
+}
+.tpl_footer .fbtn_cell_hot {
+	BORDER-RIGHT: white 1px solid; BORDER-LEFT: medium none
+}
+.ftr_copyright_text {
+	COLOR: white
+}
+.ftr_copyright_text:link {
+	COLOR: white
+}
+.ftr_copyright_text:active {
+	COLOR: white
+}
+.ftr_copyright_text:visited {
+	COLOR: white
+}
+.ftr_copyright_text:hover {
+	COLOR: red
+}
+.mghead {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.mginhead {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none
+}
+.LeftNav_Header {
+	FONT-SIZE: 12px; COLOR: #ffffff
+}
+.blue_bg {
+	BACKGROUND-COLOR: #3366cc
+}
+.consolewpchevron {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/chevron.png', sizing='scale'); CURSOR: hand
+}
+.consolewpchevrondn {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/chevrondn.png', sizing='scale'); CURSOR: hand
+}
+.consolewpgrip {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/grippy.png', sizing='scale'); CURSOR: move
+}
+.xnewstree {
+	OVERFLOW: scroll; WIDTH: 100%; HEIGHT: 100%; BACKGROUND-COLOR: #ffffff; scroll: auto
+}
+.xnewsgroup {
+	FONT-SIZE: 12px; COLOR: #003399; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.xnewsheader {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: inherit; TEXT-DECORATION: none
+}
+.xnewsborder {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; WIDTH: 100%; HEIGHT: 100%; BACKGROUND-COLOR: #3366cc
+}
+.webContentContainer {
+	MARGIN-TOP: 12px; MARGIN-BOTTOM: 12px; MARGIN-LEFT: 12px; WIDTH: 95%
+}
+.webExceptionBlock .webContentContainer {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; POSITION: relative; TOP: -24px
+}
+.webExceptionBlock .webContentContainer .faqHeaderIcon {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; POSITION: relative; TOP: -17px
+}
+.webContentContainer .GenericError {
+	MARGIN-LEFT: 1em; POSITION: relative; TOP: 48px
+}
+.FHerror {
+	MARGIN-TOP: 24px
+}
+.LinkPartsListItem {
+	FONT-SIZE: 11px; FONT-FAMILY: inherit
+}
+.ListNugget {
+	MARGIN-TOP: 12px; FONT-SIZE: 12px; MARGIN-BOTTOM: 8px
+}
+.ListNugget P {
+	MARGIN-TOP: 3px
+}
+.ListNugget A {
+	COLOR: blue
+}
+.ListNugget A:active {
+	COLOR: blue
+}
+.ListNugget A:hover {
+	COLOR: red
+}
+.ListNuggetHeader {
+	WIDTH: 100%; CURSOR: hand; COLOR: white; BACKGROUND-COLOR: #003399
+}
+.ListNuggetHeaderClosed {
+	WIDTH: 100%; COLOR: black; BACKGROUND-COLOR: #cccccc
+}
+.ListNuggetTitleCellBlue {
+	BACKGROUND-POSITION: left top; PADDING-LEFT: 8px; BACKGROUND-IMAGE: url(/common/resources/left_blue_bg.gif); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; BACKGROUND-REPEAT: no-repeat
+}
+.ListNuggetButtonCellBlue {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(/common/resources/right_blue_bg.gif); CURSOR: hand; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: right
+}
+.ListNuggetTitleCellWhite {
+	BACKGROUND-POSITION: left top; PADDING-LEFT: 8px; BACKGROUND-IMAGE: url(/common/resources/left.gif); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; BACKGROUND-REPEAT: no-repeat
+}
+.ListNuggetButtonCellWhite {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(/common/resources/right.gif); CURSOR: hand; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: right
+}
+.ListNuggetButton {
+	MARGIN: 2px 4px 2px 2px
+}
+.ListNuggetUpButton {
+	
+}
+.ListNuggetDownButton {
+	DISPLAY: none
+}
+.ListNuggetHeader .ListNuggetTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: white; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeader .ListNuggetTitle:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: white; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeader .ListNuggetTitle:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: white; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeader .ListNuggetTitle:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: white; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeader .ListNuggetTitle:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: white; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeader .ListNuggetTitle:active {
+	COLOR: #ffff66
+}
+.ListNuggetHeaderClosed .ListNuggetTitle:active {
+	COLOR: #ffff66
+}
+.ListNuggetHeaderClosed .ListNuggetTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: black; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeaderClosed .ListNuggetTitle:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: black; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeaderClosed .ListNuggetTitle:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: black; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeaderClosed .ListNuggetTitle:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: black; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetHeaderClosed .ListNuggetTitle:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: black; FONT-FAMILY: Arial,Helvetica,Tahoma,Verdana; TEXT-DECORATION: none
+}
+.ListNuggetBody {
+	BORDER-RIGHT: #003399 1px solid; BORDER-TOP: #003399 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 2px; BORDER-LEFT: #003399 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #003399 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica; BACKGROUND-COLOR: #f1f1f1
+}
+.ListNuggetBody UL {
+	MARGIN-TOP: 2px; LIST-STYLE-IMAGE: url(/library/images/support/blue_bullet.gif); MARGIN-BOTTOM: 2px; MARGIN-LEFT: 18px
+}
+.ListNuggetBody LI {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 4px
+}
+.LinkDescription {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 6px
+}
+.ListNuggetItem {
+	FONT-SIZE: 11px
+}
+.ListNuggetItemLink {
+	FONT-SIZE: 11px
+}
+#Part_gsfxSearch .ListNuggetBody {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; PADDING-TOP: 0px
+}
+.fhRightNav .ListNuggetHeader {
+	BACKGROUND-COLOR: #3366cc
+}
+.fhRightNav .ListNugget {
+	MARGIN-TOP: 0px; WIDTH: 100%; TEXT-ALIGN: left
+}
+#foFlyoutMenuDown .ListNuggetBody {
+	PADDING-LEFT: 0px
+}
+#foFlyoutMenuUpBody {
+	PADDING-LEFT: 6px
+}
+#AdvSearch .ListNuggetHeader {
+	BACKGROUND-COLOR: #3366cc
+}

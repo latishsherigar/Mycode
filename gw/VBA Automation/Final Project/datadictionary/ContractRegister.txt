@@ -1,0 +1,9 @@
+OrderID
+Date
+ContractNo
+BuyerID
+SellerID
+ProductID
+Quantiy
+Delivery_Status
+Shipping_Mark

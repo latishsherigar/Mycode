@@ -1,0 +1,217 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+
+[Package|Dep File 1|Files Released]
+
+[Package|Dep File 1|Missing Dependency Information]
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a\comctl32.dll=
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+
+[Package|Dep File 1|Files Added]
+f:\latish\programming\vb\practise codes\color coder\colorcoder.exe.manifest=
+f:\latish\programming\vb\practise codes\color coder\readme.txt=
+
+[Package|Dep File 1|Files Removed]
+
+[Package|Dep File 1|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe=Yes
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a\comctl32.dll=Yes
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe.manifest=Yes
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\readme.txt=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=No
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Dep File 1|Install Locations]
+G:\PROJECTS\VB\CODES\Colorcoder\Colorcoder.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\LATISH\DATA\PROGRAMMING\VB\FINAL CODE\COLOR CODER\Colorcoder.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe=$(AppPath)
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a\comctl32.dll=$(WinSysPath)
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe.manifest=$(AppPath)
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\readme.txt=$(AppPath)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=Yes
+G:\PROJECTS\VB\CODES\Colorcoder\Colorcoder.exe=No
+D:\LATISH\DATA\PROGRAMMING\VB\FINAL CODE\COLOR CODER\Colorcoder.exe=No
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe=No
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe.manifest=No
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\readme.txt=No
+
+[Package|Dep File 1|Distribution]
+Type=single
+Size=
+Title=Color Coder
+
+[Package|Dep File 1|IconGroups]
+Group0=Color Coder
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|Dep File 1|Color Coder]
+Icon1=Colorcoder.exe
+Title1=Color Coder
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Dep File 1|DepFile]
+DepCabFile=Colorcoder.CAB
+DepCabRun=Colorcoder.INF
+
+[Package|Dep File 1|Package]
+PackageFolder=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package
+ProjectFolder=F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER
+ServerSideCab=
+File1=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package\Colorcoder.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+colorcoder.exe.manifest=
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a\comctl32.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+colorcoder.exe.manifest=
+f:\latish\programming\vb\practise codes\color coder\readme.txt=
+
+[Package|Standard Setup Package 1|Files Removed]
+c:\windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a\comctl32.dll=
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe=Yes
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a\comctl32.dll=No
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\readme.txt=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+G:\PROJECTS\VB\CODES\Colorcoder\Colorcoder.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\LATISH\DATA\PROGRAMMING\VB\FINAL CODE\COLOR CODER\Colorcoder.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe=$(AppPath)
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a\comctl32.dll=$(WinSysPath)
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe.manifest=$(AppPath)
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\readme.txt=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+G:\PROJECTS\VB\CODES\Colorcoder\Colorcoder.exe=No
+D:\LATISH\DATA\PROGRAMMING\VB\FINAL CODE\COLOR CODER\Colorcoder.exe=No
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe=No
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Colorcoder.exe.manifest=No
+F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\readme.txt=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Color Coder
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Color Coder
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Color Coder]
+Icon1=Colorcoder.exe
+Title1=Color Coder
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package
+ProjectFolder=F:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER
+ServerSideCab=
+File1=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package\setup.exe
+File2=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package\Setup.Lst
+File3=f:\LATISH\PROGRAMMING\VB\PRACTISE CODES\COLOR CODER\Package\Colorcoder.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

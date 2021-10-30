@@ -1,0 +1,1112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.sqlmag.com/Articles/Index.cfm?ArticleID=5446 -->
+<HTML><HEAD><TITLE>Querying & Reporting: Generate Reports with Word</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content=TRUE name=MSSmartTagsPreventParsing><LINK 
+href="Querying &amp; Reporting Generate Reports with Word_files/channel.css" 
+type=text/css rel=stylesheet><LINK 
+href="Querying &amp; Reporting Generate Reports with Word_files/sql.css" 
+type=text/css rel=stylesheet><LINK 
+href="Querying &amp; Reporting Generate Reports with Word_files/windows.css" 
+type=text/css rel=stylesheet><!-- BEGIN WEBSIDESTORY CODE v7.2 --><!-- COPYRIGHT 1997-2001 WEBSIDESTORY, INC. ALL RIGHTS RESERVED. U.S.PATENT PENDING. Privacy notice at: http://websidestory.com/privacy -->
+<SCRIPT language=javascript>
+var _pn="Querying+and+Reporting+Generate+Reports+with+Word"; 	//page name(s)
+var _mlc="Articles/Issues/7-01-99";	//multi-level content category
+var _seg=""; // visitor segmentation
+var _cmp=""; // campaign analysis - id
+var _gp="";  // campaign analysis - goal page 
+var _cmpn="";// campaign analysis - query name for id
+var _gpn=""; // campaign analysis - query name for goal page
+var _cp="null"; 	//campaign
+var _acct="DM5102262CSF83EN3"; 	//account number(s)
+var _pndef="title";	//default page name
+var _ctdef="full"; 	//default content category
+var _dlf="n";	//download filter
+var _elf="n";	//exit link filter
+var _epg="n"; 	//event page identifier
+var _mn="we50"; //machine name
+var _gn="ehg.hitbox.com"; //gateway name
+var _lp=location.protocol.indexOf('https')>-1?'https://':'http://';
+var _hcv=68;function _wn(_nm){if((_nm.indexOf("NAME")>0&&_nm.indexOf("PUT")>=0)||
+(_nm.indexOf("CONTENT")>=0&&_nm.indexOf("CATEGORY")>0))return true;return false;}
+function _gd(_x,_w){_ed = (_x.lastIndexOf("/"));
+_be = (_w!="full")?(_x.lastIndexOf("/",(_ed-2))):(_x.indexOf("/"));
+_dn = (_be==_ed)?"/":(_x.substring(_be, _ed));return _dn;}
+function _gf(_x){_ed = (_x.length);_be = ((_x.lastIndexOf("/"))+1);
+_fn = (_x.substring(_be, _ed));return _fn;}
+function _vc(_ml){_mll=_ml.length-1;if(_ml.lastIndexOf("/")==_mll){_ml=_ml.substring(0,_mll)}
+if(_ml.indexOf("/")!=0){_ml="/"+_ml;}return _ml;}
+function _ps(_ip,_pml){if(!_ip){_pml=(_wn(_pml))?_gd(location.pathname,_ctdef):_vc(_pml);}
+else{if (_wn(_pml)){if (_pndef=="title"){_pt=document.title; if (_pt!=""){_pml=_pt};}
+else{_pml=_gf(location.pathname);if (_pml==""){_pml=_pndef};}};}return _pml;}
+function _pm(_ml,_fml,_ipn){if (_ml.indexOf(";")!=-1){_nml=_ml.substring(0,(_ml.indexOf(";")));
+_rm=_ml.substring((_ml.indexOf(";")+1),_ml.length);_fml+=_ps(_ipn,_nml)+";";
+_fp=_pm(_rm,_fml,_ipn);return _fp;}else {_fml+=_ps(_ipn,_ml);return _fml;}}
+var _sv=10;var _bn=navigator.appName;if(_bn.substring(0,9)=="Microsoft"){_bn="MSIE";};
+var _bv=(Math.round(parseFloat(navigator.appVersion)*100));if((_bn=="MSIE")&&(parseInt(_bv)==2))_bv=301;
+var _rf=escape(document.referrer);_mlc=_pm(_mlc,"",false);_pn=_pm(_pn,"",true);
+</SCRIPT>
+
+<SCRIPT language=javascript1.1 id=_hbc>_sv=11;</SCRIPT>
+
+<SCRIPT language=javascript1.1 
+src="Querying &amp; Reporting Generate Reports with Word_files/hbe.js"></SCRIPT>
+
+<SCRIPT language=javascript>if (_sv==10){if (document.cookie.indexOf("CP=")!=-1){_ce="y";}else{
+document.cookie="CP=null*; path=/; expires=Wed, 1 Jan 2020 00:00:00 GMT";
+_ce=(document.cookie.indexOf("CP=")!=-1)?"y":"n";};if((_rf=="undefined")||(_rf=="")){_rf="bookmark";};
+_x2="<img src='"+_lp+_gn+"/HG?hc="+_mn+"&hb="+escape(_acct)+"&n="+escape(_pn);
+_x3="&cd=1&hv=6&seg="+_seg+"' border=0 height=1 width=1>";
+_ar="&bn="+escape(_bn)+"&bv="+_bv+"&ce="+_ce+"&ss=na&sc=na&dt=&sv="+_sv+"&con="+escape(_ct);
+_ar+="&vcon="+escape(_mlc)+"&epg="+_epg+"&hp=u&cy=u&ja=na&ln=na&cp="+escape(_cp)+"&pl=&rf="+_rf;
+document.write(_x2+_ar+_x3);}document.write("<\!--");</SCRIPT>
+<NOSCRIPT>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#ffffff leftMargin=0 
+background="Querying &amp; Reporting Generate Reports with Word_files/1400_white.gif" 
+topMargin=0><IMG height=1 
+src="Querying &amp; Reporting Generate Reports with Word_files/HG.gif" width=1 
+border=0> </NOSCRIPT><!--//--><!-- END WEBSIDESTORY CODE  -->
+<SCRIPT language=JavaScript>
+	<!--
+	function PopUpWindow(theURL,winName,features) {
+		  window.open(theURL,winName,features);
+	}
+	//-->
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+		<!-- 
+		if(top != self) { top.location = location }
+		 //-->
+		</SCRIPT>
+<!-- START TOP NAVIGATION --><MAP name=channelLogo><AREA shape=RECT 
+  alt="SQL Server Magazine" coords=0,13,220,90 
+  href="http://www.sqlmag.com/"><AREA shape=RECT 
+  alt="Windows &amp; .NET Magazine Network" coords=0,0,220,12 
+  href="http://www.winnetmag.com/"></MAP>
+<TABLE cellSpacing=0 cellPadding=0 width=760 bgColor=#ffffff border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=250 bgColor=#990033 rowSpan=3><IMG height=90 
+      src="Querying &amp; Reporting Generate Reports with Word_files/channelLogo.gif" 
+      width=220 useMap=#channelLogo border=0></TD>
+    <TD class=nav10top bgColor=#990033 height=22><A 
+      href="http://www.winnetmag.com/"><FONT class=nav10top>Network 
+      Home</FONT></A> | <A 
+      href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=Map"><FONT 
+      class=nav10top>Network Map</FONT></A> | <A 
+      href="http://www.sqlmag.com/Info/Index.cfm?Action=ContactUs"><FONT 
+      class=nav10top>Contact Us</FONT></A> | <A 
+      href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=OurPubs"><FONT 
+      class=nav10top>Our Pubs</FONT></A> | <A 
+      href="http://www.winnetmag.com/events/pentontech/"><FONT 
+      class=nav10top>Our Events</FONT></A> | <A 
+      href="http://www.sqlmag.com/mediakit/"><FONT 
+      class=nav10top>Advertising</FONT></A></TD></TR>
+  <TR>
+    <TD vAlign=top align=left width=510 bgColor=#990033 height=64>
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left>
+            <SCRIPT language=JavaScript1.1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/articles;kw=;abr=!webtv;sz=468x60;ptile=1;ord=59388366">
+					</SCRIPT>
+
+            <SCRIPT> 
+					if ((!document.images && navigator.userAgent.indexOf('Mozilla/2.') >= 0)  || navigator.userAgent.indexOf("WebTV")>= 0) {
+					document.write('<A HREF="http://ad.doubleclick.net/jump/msft.sqlmag.dfp5/articles;kw=;sz=468x60;ptile=1;ord=59388366">');
+					document.write('<IMG SRC="http://ad.doubleclick.net/ad/msft.sqlmag.dfp5/articles;kw=;sz=468x60;ptile=1;ord=59388366?" border="0" height="60" width="468"></A>') 
+					} 
+					</SCRIPT>
+            <NOSCRIPT><A 
+            href="http://ad.doubleclick.net/jump/msft.sqlmag.dfp5/articles;kw=;sz=468x60;ptile=1;ord=59388366?"><IMG 
+            height=60 
+            src="Querying &amp; Reporting Generate Reports with Word_files/sql_proclar_b_1101_nov_ad.gif" 
+            width=468 border=0></A> </NOSCRIPT></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD width=510 bgColor=#990033><IMG height=6 
+      src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+      border=0></TD></TR>
+  <TR>
+    <TD><IMG height=4 
+      src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+      width=1 border=0></TD></TR></TBODY></TABLE><!-- END TOP NAVIGATION --><!-- START LEFT NAVIGATION AND SPACER -->
+<TABLE cellSpacing=0 cellPadding=0 width=137 align=left bgColor=#bbbbbb 
+border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 border=0>
+        <TBODY>
+        <TR>
+          <TD class=nav10top vAlign=center width=118 bgColor=#000000 
+            height=16>&nbsp;November 23, 2002</TD></TR>
+        <TR>
+          <TD><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=18><A 
+            href="http://www.sqlmag.com/Login/Index.cfm"><FONT 
+            class=nav10boldwhite>&nbsp;Log On</FONT></A> </TD></TR>
+        <TR>
+          <TD><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=125 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG height=19 
+            src="Querying &amp; Reporting Generate Reports with Word_files/magazine_head.gif" 
+            width=125 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=18><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=Issues"><FONT 
+            class=nav10boldwhite>&nbsp;Magazine Archive</FONT></A></TD></TR>
+        <TR>
+          <TD><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=125 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG height=19 
+            src="Querying &amp; Reporting Generate Reports with Word_files/contents_head.gif" 
+            width=125 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=News"><FONT 
+            class=nav10boldwhite>&nbsp;News</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=Topic"><FONT 
+            class=nav10boldwhite>&nbsp;Topics</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=Department"><FONT 
+            class=nav10boldwhite>&nbsp;Departments</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=Author"><FONT 
+            class=nav10boldwhite>&nbsp;Authors</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=Code"><FONT 
+            class=nav10boldwhite>&nbsp;Code Library</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=18><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=Review"><FONT 
+            class=nav10boldwhite>&nbsp;Product Reviews</FONT></A></TD></TR>
+        <TR>
+          <TD><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=125 align=center border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG height=19 
+            src="Querying &amp; Reporting Generate Reports with Word_files/qa_head.gif" 
+            width=125 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/forums/Index.cfm"><FONT 
+            class=nav10boldwhite>&nbsp;Forums</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=18><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?Action=FAQ"><FONT 
+            class=nav10boldwhite>&nbsp;FAQs</FONT></A></TD></TR>
+        <TR>
+          <TD><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=125 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG height=19 
+            src="Querying &amp; Reporting Generate Reports with Word_files/resources_head.gif" 
+            width=125 border=0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=18><A 
+            href="http://www.sqlmag.com/benefits/"><FONT 
+            class=nav10boldwhite>&nbsp;SQL Benefits</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=18><A 
+            href="http://www.sqlmag.com/sub/webseminar/"><FONT 
+            class=nav10boldwhite>&nbsp;Web Seminars</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/Events/"><FONT 
+            class=nav10boldwhite>&nbsp;Event Calendar</FONT></A><BR><IMG 
+            height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://events.pentontech.com/sql/"><FONT 
+            class=nav10boldwhite>&nbsp;SQL Server<BR>&nbsp;Magazine 
+            LIVE</FONT></A><BR><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.sqlmag.com/sub/webseminar/ssmu/"><FONT 
+            class=nav10boldwhite>&nbsp;SSMU</FONT></A><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/grey120.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD vAlign=center bgColor=#990033 height=20><A 
+            href="http://www.up2research.com/sqlpanel"><FONT 
+            class=nav10boldwhite>&nbsp;Research Panel</FONT></A></TD></TR>
+        <TR>
+          <TD><IMG height=2 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0></TD></TR></TBODY></TABLE><IMG height=10 
+      src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+      width=1 border=0><BR><IMG height=10 
+      src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+      width=1 border=0><BR><!-- START RENEW/SUBSCRIBE BOX -->
+      <TABLE cellSpacing=0 cellPadding=0 width=116 align=center bgColor=#e4e4e4 
+      border=0>
+        <SCRIPT language=JavaScript>
+<!--
+<!-- hide this script from non-javascript-enabled browsers
+function Details(Path, Width, Height) {
+  window.open(Path,'Details','toolbar=no,scroll=yes,'+Width+Height);
+}
+//  End -->
+</SCRIPT>
+
+        <TBODY>
+        <TR>
+          <TD><IMG height=19 
+            src="Querying &amp; Reporting Generate Reports with Word_files/subscribe_top.gif" 
+            width=116 border=0></TD></TR>
+        <TR>
+          <TD><IMG height=4 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0></TD></TR>
+        <TR>
+          <TD class=leftnav10bold align=middle><IMG height=6 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><FONT color=#990033>SQL Server 
+            Magazine</FONT><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/subscribe_rule.gif" 
+            width=112 vspace=2></TD></TR>
+        <TR>
+          <TD class=leftnav10bold align=left><FONT 
+            class=meta9bold>&nbsp;•</FONT>&nbsp;<A 
+            href="http://secure.duke.com/nt/sqlmag/newsub.cfm?code=00INXHOM"><FONT 
+            color=#000000>Print Format</FONT></A><BR><FONT 
+            class=meta9bold>&nbsp;•</FONT>&nbsp;<A 
+            href="http://www.zinio.com/offer?issn=1522-2187T&amp;offer=pf1sqlt&amp;rf=sql123"><FONT 
+            color=#000000>Digital Format</FONT></A><BR><BR></TD></TR>
+        <TR>
+          <TD class=leftnav10bold align=middle><IMG height=6 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><FONT color=#990033>Print 
+            Newsletter</FONT><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/subscribe_rule.gif" 
+            width=112 vspace=2></TD></TR>
+        <TR>
+          <TD class=leftnav10bold align=left><FONT 
+            class=meta9bold>&nbsp;•</FONT>&nbsp;<A 
+            href="http://secure.duke.com/Nt/tsql/index.cfm?Code=&amp;PC=ts"><FONT 
+            color=#000000>T-SQL Solutions</FONT></A><BR><BR></TD></TR>
+        <TR>
+          <TD class=leftnav10bold align=middle><IMG height=6 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR><FONT color=#990033>FREE 
+            E-Newsletter</FONT><BR><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/subscribe_rule.gif" 
+            width=112 vspace=2></TD></TR>
+        <TR>
+          <TD>
+            <DIV class=box10>Please subscribe me to:</DIV></TD></TR>
+        <TR>
+          <FORM action=/Update/Index.cfm method=post>
+          <TD align=middle>
+            <TABLE cellSpacing=0 cellPadding=0 width=116 border=0>
+              <TBODY>
+              <TR>
+                <TD class=nav10 vAlign=top width=24>&nbsp;<INPUT type=checkbox 
+                  name=SQL></TD>
+                <TD class=nav10 align=left><B>SQL Server Magazine UPDATE &amp; 
+                  Alerts</B><BR><IMG height=4 
+                  src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                  width=1 border=0><BR></TD></TR>
+              <TR>
+                <TD class=nav10 align=middle colSpan=2>&nbsp;<A 
+                  onclick="Details('http://www.win2000mag.net/email/sql/sqlserver_detail.html','Width=370,','Height=340')" 
+                  href="http://www.sqlmag.com/Articles/Index.cfm?ArticleID=5446#">Details</A>&nbsp; 
+                  | &nbsp;<A 
+                  href="http://www.win2000mag.net/email/index.cfm?Action=Archive&amp;EmailNewsletterID=5">Archive</A><BR><IMG 
+                  height=8 
+                  src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                  width=1 border=0><BR></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=0 width=116 border=0>
+              <TBODY>
+              <TR><INPUT type=hidden value=SQL name=SiteCameFrom> <INPUT 
+                type=hidden name=ExcludeArticles> <INPUT type=hidden 
+                value="You must enter your email address." name=Email_required> 
+                <INPUT type=hidden value=Subscribe name=Action> 
+                <TD class=nav10 align=right width=98 height=20>&nbsp;Email: 
+                  <INPUT style="FONT-SIZE: 10px; WIDTH: 58px" maxLength=255 
+                  size=8 name=Email> </TD>
+                <TD width=18><INPUT type=image height=18 width=18 
+                  src="Querying &amp; Reporting Generate Reports with Word_files/go2.gif" 
+                  border=0><BR><IMG height=8 
+                  src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                  width=1 border=0><BR></TD></FORM></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=nav10 align=middle><A 
+            href="http://www.win2000mag.net/Email/Index.cfm?ID=2">More Email 
+            Newsletters</A><BR><IMG height=4 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1 border=0><BR></TD></TR>
+        <TR>
+          <TD><IMG height=5 
+            src="Querying &amp; Reporting Generate Reports with Word_files/subscribe_bottom.gif" 
+            width=116 border=0></TD></TR></TBODY></TABLE><!-- END RENEW/SUBSCRIBE BOX --><IMG 
+      height=16 
+      src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+      width=1 border=0><BR>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 bgColor=#bbbbbb border=0>
+        <TBODY>
+        <TR>
+          <TD colSpan=2><A href="http://www.winnetmag.com/"><IMG height=52 
+            alt="" 
+            src="Querying &amp; Reporting Generate Reports with Word_files/channels_leftnav.gif" 
+            width=120 border=0></A></TD></TR></TBODY></TABLE><BR>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 bgColor=#bbbbbb border=0>
+        <TBODY>
+        <TR>
+          <TD colSpan=2><IMG height=38 
+            src="Querying &amp; Reporting Generate Reports with Word_files/topics.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD colSpan=2><IMG height=6 
+            src="C:\Documents and Settings\ignou.000\Desktop\pro\wordreports3\Querying &amp; Reporting Generate Reports with Word_files\pixel(1).gif" 
+            width=1 border=0></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/Magazine/"><FONT 
+            class=leftnav10bold>Windows &amp; .NET Magazine</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A href="http://63.88.172.222/"><FONT 
+            class=leftnav10bold>CertTutor.net</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.connectedhomemag.com/"><FONT 
+            class=leftnav10bold>Connected Home <BR>Magazine</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.exchangeadmin.com/"><FONT 
+            class=leftnav10bold>Exchange &amp; Outlook Admin</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.mobile-and-wireless.com/"><FONT 
+            class=leftnav10bold>Mobile &amp; Wireless Solutions</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.secadministrator.com/"><FONT 
+            class=leftnav10bold>Security Admin</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.storageadmin.com/"><FONT 
+            class=leftnav10bold>Storage Admin</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A href="http://63.88.172.208/"><FONT 
+            class=leftnav10bold>T-SQL Solutions</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A href="http://www.sqlmag.com/"><FONT 
+            class=leftnav10bold>SQL Server Magazine</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winscriptingsolutions.com/"><FONT 
+            class=leftnav10bold>Windows Scripting</FONT></A> <BR><A 
+            href="http://www.winscriptingsolutions.com/"><FONT 
+            class=leftnav10bold>Solutions</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.windowswebsolutions.com/"><FONT 
+            class=leftnav10bold>Windows Web 
+      Solutions</FONT></A></TD></TR></TBODY></TABLE><BR>
+      <TABLE cellSpacing=0 cellPadding=0 width=120 bgColor=#bbbbbb border=0>
+        <TBODY>
+        <TR>
+          <TD colSpan=2><IMG height=38 
+            src="Querying &amp; Reporting Generate Reports with Word_files/resources.gif" 
+            width=120 border=0></TD></TR>
+        <TR>
+          <TD colSpan=2><IMG height=6 
+            src="C:\Documents and Settings\ignou.000\Desktop\pro\wordreports3\Querying &amp; Reporting Generate Reports with Word_files\pixel(1).gif" 
+            width=1 border=0></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.wininformant.com/"><FONT 
+            class=leftnav10bold>WinInfo News</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winsupersite.com/"><FONT 
+            class=leftnav10bold>SuperSite for <BR>Windows</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/Forums/"><FONT 
+            class=leftnav10bold>Forums</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=30>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.windows2000faq.com/"><FONT 
+            class=leftnav10bold>Windows NT/2000<BR>FAQ</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A href="http://www.jsifaq.com/"><FONT 
+            class=leftnav10bold>JSI FAQ</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A href="http://www.itbuynet.com/"><FONT 
+            class=leftnav10bold>IT Buyer's Network</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.windowsitlibrary.com/"><FONT 
+            class=leftnav10bold>Windows IT Library</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=OurPubs"><FONT 
+            class=leftnav10bold>Subscribe/Renew</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/Events/"><FONT 
+            class=leftnav10bold>Events</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/mobile/"><FONT 
+            class=leftnav10bold>Mobile Edition</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/usergroups/"><FONT 
+            class=leftnav10bold>User Groups</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/seminars/"><FONT 
+            class=leftnav10bold>Web Seminars</FONT></A></TD></TR>
+        <TR>
+          <TD class=subhead9 vAlign=top width=10 height=22>&nbsp;•</TD>
+          <TD vAlign=top width=110><A 
+            href="http://www.winnetmag.com/whitepapers/"><FONT 
+            class=leftnav10bold>White Paper 
+      Central</FONT></A></TD></TR></TBODY></TABLE></TD><!-- SPACER -->
+    <TD class=body10 width=12 bgColor=#ffffff>&nbsp;</TD></TR></TBODY></TABLE><!-- END LEFT NAVIGATION --><!-- START COLUMN 2 -->
+<TABLE cellSpacing=0 cellPadding=0 width=620 align=left bgColor=#ffffff 
+border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top><!-- START SEARCH -->
+      <TABLE height=24 cellSpacing=0 cellPadding=0 width=620 bgColor=#666666 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD class=nav10boldwhite align=right width=48>Search&nbsp;</TD>
+          <FORM action=/Search/Index.cfm method=post>
+          <TD width=130><INPUT style="FONT-SIZE: 10px; WIDTH: 124px" size=10 
+            name=SearchString></TD>
+          <TD vAlign=center align=left width=20><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?ArticleID=5446#"><INPUT 
+            type=image height=18 width=18 
+            src="Querying &amp; Reporting Generate Reports with Word_files/go1.gif" 
+            border=0></A></TD></FORM>
+          <TD class=nav10boldwhite width=107>&nbsp;<A 
+            href="http://search.winnetmag.com/Index.html"><FONT 
+            color=#ffffff>Advanced</FONT></A>&nbsp;&nbsp;<A 
+            href="javascript:%20helpWindow%20=%20PopUpWindow(%20'http://search.winnetmag.com/help/?la=en', 'SearchHelp', 'width=600,height=450,toolbar=0,location=0,directories=0,status=1,menuBar=0,scrollBars=1,resizable=1' );"><FONT 
+            color=#ffffff>Help</FONT></A></TD>
+          <TD width=2 bgColor=#ffffff><IMG height=1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+            width=1></TD>
+          <FORM action=/Articles/Index.cfm method=post><INPUT type=hidden 
+          value="You must enter an InstantDoc." name=ArticleID_required> 
+          <TD class=nav10boldwhite align=right width=70>InstantDoc&nbsp;</TD>
+          <TD width=56><INPUT style="FONT-SIZE: 10px; WIDTH: 50px" maxLength=8 
+            size=8 name=ArticleID> </TD>
+          <TD vAlign=center align=left width=20><A 
+            href="http://www.sqlmag.com/Articles/Index.cfm?ArticleID=5446#"><INPUT 
+            type=image height=18 width=18 
+            src="Querying &amp; Reporting Generate Reports with Word_files/go1.gif" 
+            border=0></A></TD></TR></FORM></TBODY></TABLE><!-- END SEARCH --><BR>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=No>
+            <SCRIPT language=JavaScript1.1 
+            src="Querying &amp; Reporting Generate Reports with Word_files/articles;kw=sponsor;abr=!webtv;sz=481x60;ptile=1;ord=59388366">
+					</SCRIPT>
+
+            <SCRIPT> 
+					if ((!document.images && navigator.userAgent.indexOf('Mozilla/2.') >= 0)  || navigator.userAgent.indexOf("WebTV")>= 0) {
+					document.write('<A HREF="http://ad.doubleclick.net/jump/msft.sqlmag.dfp5/articles;kw=sponsor;sz=481x60;ptile=1;ord=59388366">');
+					document.write('<IMG SRC="http://ad.doubleclick.net/ad/msft.sqlmag.dfp5/articles;kw=sponsor;sz=481x60;ptile=1;ord=59388366?" border="0" height="60" width="481"></A>') 
+					} 
+					</SCRIPT>
+            <NOSCRIPT><A 
+            href="http://ad.doubleclick.net/jump/msft.sqlmag.dfp5/articles;kw=sponsor;sz=481x60;ptile=1;ord=59388366?"><IMG 
+            height=60 
+            src="Querying &amp; Reporting Generate Reports with Word_files/817-grey.gif" 
+            width=481 border=0></A> </NOSCRIPT></TD></TR></TBODY></TABLE><BR><!-- AD SPONSORSHIP TOP END --><!-- START CONTENT -->
+      <TABLE cellSpacing=0 cellPadding=0 width=620 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD class=body12 vAlign=top>
+            <TABLE cellSpacing=0 cellPadding=0 width=620 border=0>
+              <TBODY>
+              <TR>
+                <TD width=620>
+                  <TABLE cellSpacing=0 cellPadding=0 width=620 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=620 bgColor=#990033><IMG height=1 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1></TD></TR>
+                    <TR>
+                      <TD><IMG height=12 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1><BR>
+                        <SCRIPT language=JavaScript>
+function winPop(loc)	{
+	window.open(loc,'ultralink','width=500,height=400,resizable=yes,scrollbars=1');
+}
+</SCRIPT>
+                        <FONT class=body></FONT><FONT class=nav11 
+                        color=#000000><FONT class=nav11 color=#000000><A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?IssueID=146"><FONT 
+                        color=#000000>July 1999</FONT></A> </FONT><FONT 
+                        class=nav11 color=#000000>&nbsp;|&nbsp;</FONT> <A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?AuthorID=88"><FONT 
+                        color=#000000>Ken Spencer</FONT></A> <FONT class=nav11 
+                        color=#000000>&nbsp;|&nbsp;</FONT> <A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?DepartmentID=87"><FONT 
+                        color=#000000>Columns</FONT></A> <FONT class=nav11 
+                        color=#000000>&nbsp;|&nbsp;</FONT> <FONT class=nav11 
+                        color=#000000>InstantDoc #5446</FONT> </FONT><BR><FONT 
+                        class=head>Querying &amp; Reporting: Generate Reports 
+                        with Word</FONT><BR>
+                        <TABLE cellSpacing=0 cellPadding=0 align=right 
+                          border=0><TBODY>
+                          <TR>
+                            <TD vAlign=top align=right>
+                              <SCRIPT language=JavaScript1.1 
+                              src="Querying &amp; Reporting Generate Reports with Word_files/articles;kw=;abr=!webtv;sz=120x600;ptile=1;ord=59388366">
+					</SCRIPT>
+
+                              <SCRIPT> 
+					if ((!document.images && navigator.userAgent.indexOf('Mozilla/2.') >= 0)  || navigator.userAgent.indexOf("WebTV")>= 0) {
+					document.write('<A HREF="http://ad.doubleclick.net/jump/msft.sqlmag.dfp5/articles;kw=;sz=120x600;ptile=1;ord=59388366">');
+					document.write('<IMG SRC="http://ad.doubleclick.net/ad/msft.sqlmag.dfp5/articles;kw=;sz=120x600;ptile=1;ord=59388366?" border="0" height="600" width="120"></A>') 
+					} 
+					</SCRIPT>
+                              <NOSCRIPT><A 
+                              href="http://ad.doubleclick.net/jump/msft.sqlmag.dfp5/articles;kw=;sz=120x600;ptile=1;ord=59388366?"><IMG 
+                              height=600 
+                              src="Querying &amp; Reporting Generate Reports with Word_files/20571_EXAD_120x600.gif" 
+                              width=120 border=0></A> 
+                        </NOSCRIPT></TD></TR></TBODY></TABLE><FONT class=body>
+                        <DIV class=deck>The process is easier than you think 
+                        </DIV>
+                        <P>Organizations often create applications that serve 
+                        both internal and external customers. For example, an 
+                        organization might need to regularly generate customized 
+                        Word documents for both users and customers. 
+                        Fortunately, you can use COM objects with Microsoft 
+                        Office applications. Office lets you drive most of its 
+                        features from a programming language such as <A 
+                        class=richlinkstyle6 title="Click for more information!" 
+                        href="javascript:winPop('http://www.winnetmag.com/FindIT/Index.cfm?ID=44')">Visual</A> 
+                        Basic (VB). This compatibility lets you automate almost 
+                        any task. In this article, I show you how to use VB and 
+                        Word to create custom reports from a <A 
+                        class=richlinkstyle6 title="Click for more information!" 
+                        href="javascript:winPop('http://www.winnetmag.com/FindIT/Index.cfm?ID=39')">SQL</A> 
+                        Server database.</P>
+                        <P><FONT class=subhead>Getting Started 
+                        </FONT><BR>Suppose you need to create a custom Word 
+                        document that contains a list of products that match a 
+                        particular category. The document must also show the 
+                        category name and the name of the person requesting the 
+                        report. The completed document needs to resemble the one 
+                        in <A 
+                        href="http://www.sqlmag.com/Files/09/5446/Screen_01.gif">Screen 
+                        1</A>.</P>
+                        <P>You can use VB and Word to create an application that 
+                        lets users create this Products by Category report. 
+                        Creating this application is easy. Word has several 
+                        features that come in handy. First, you can create 
+                        templates for commonly used documents. <A 
+                        href="http://www.sqlmag.com/Files/09/5446/Screen_02.gif">Screen 
+                        2</A> shows the template, ProductTemplate2.dot, that I 
+                        developed for this article. To create a new template, 
+                        create a document, modify it, then use File, Save As and 
+                        select the document type Word template (*.dot) to save 
+                        it. Also, you can use File, New and select the Template 
+                        radio button. Make sure you save it in your document 
+                        templates directory, which is C:\Program Files\ 
+                        Microsoft Office\Templates by default. You can change 
+                        the Template directory by selecting Tools, Options, File 
+                        Locations.</P>
+                        <P>The template for this project contains three 
+                        bookmarks that the application uses, as Screen 2 shows. 
+                        Use these bookmarks to properly place the text in the 
+                        document. To insert bookmarks into a document, place the 
+                        cursor where you want to insert the bookmark. Then 
+                        select the Bookmark command on the Insert menu. The 
+                        bookmarks for this example are Customer, Category, and 
+                        Products. The template also contains the formatting 
+                        necessary for the final document, such as headers and 
+                        custom styles.</P>
+                        <P>Now, let's look at the VB application. <A 
+                        href="http://www.sqlmag.com/Files/09/5446/Screen_03.gif">Screen 
+                        3</A>, page 58, shows the user interface. The user first 
+                        selects a customer, then enters a filename for the 
+                        document. Next, the user selects the product category to 
+                        extract from the database, which prompts Word to create 
+                        the document. The user can create multiple documents by 
+                        changing the filename, then selecting a new 
+category.</P>
+                        <P><FONT class=subhead>How the Application 
+                        Works</FONT><BR>The application declares several 
+                        variables and constants, including: oWordApp as 
+                        Word.Application, oCustomerDoc as Word.Document, 
+                        mCustomer as String, mCategory as String, and Const 
+                        wdLine-Break = 6.</P>
+                        <P>The oWordApp and oCustomerDoc variables represent the 
+                        Word objects you are using. The module-level mCustomer 
+                        and mCategory variables store the customer and category 
+                        name, respectively. Both variables place information 
+                        into the Word document. The wdLineBreak constant inserts 
+                        a line break into the Word document.</P>
+                        <P>When the application starts, it triggers the 
+                        Form_Load event, which Listing 1 shows, so that the user 
+                        sees the form in Screen 3. The event code first uses the 
+                        New keyword to create a reference to the Word 
+                        Application object (oWordApp).</P>
+                        <P>When the user selects a customer, the code calls the 
+                        LoadCustomerList procedure to fill the cboCustomer combo 
+                        box. This procedure calls the LoadCustomer function, 
+                        which retrieves the customer from SQL Server's Northwind 
+                        database. When the user selects a category, the code 
+                        calls the LoadCategory-List procedure to fill the 
+                        cboProductCategories list in a similar fashion.</P>
+                        <P>When the user selects a category, the 
+                        cboProductCategories _Click event also fires. This event 
+                        creates the document. Listing 2 shows how this event 
+                        works.</P>
+                        <P>As you see in Listing 2, the event code uses the 
+                        InStr function to find the left parenthesis first, then 
+                        extracts the CategoryID from cboProductCategories 
+                        drop-down box. If the InStr function finds the left 
+                        parenthesis in the string, the IF statement executes and 
+                        extracts the CategoryID. Next, the event code extracts 
+                        the category name from the left portion of the text, and 
+                        then the code executes the GetProductsByCategory 
+                        function. This function extracts all the products that 
+                        match sCategoryID from the database. If the 
+                        GetProductsByCategory function returns any data, the 
+                        next IF statement executes and calls the CreateDocument 
+                        procedure to create the Word document.</P>
+                        <P>The GetProductsByCategory function takes the 
+                        CategoryID as a parameter and retrieves all the products 
+                        that match. The function executes the data command, 
+                        cmdProductByCategory, to perform the search:</P><PRE>envNorthwind.cmdProductByCategory CategoryID</PRE>
+                        <P>This data command is based on the SQL statement:</P><PRE>SELECT ProductID, ProductName, UnitPrice, CategoryID FROM Products WHERE (CategoryID = ?) ORDER BY ProductName DESC
+</PRE>
+                        <P>Notice how the data command sorts the recordset in 
+                        descending (reverse) order. The Word code inserts the 
+                        products into the Products by Category report in reverse 
+                        order.</P>
+                        <P>The GetProductsByCategory function's DO WHILE loop 
+                        processes the products in the recordset. This loop 
+                        places the ProductName, ProductID, and UnitPrice in the 
+                        sProductList array. As Listing 3 shows, the loop inserts 
+                        the Tab characters (chr(9)) into the string to align the 
+                        fields with the tabs in the Word document. The 
+                        ProductInfo style in the template has tab stops that 
+                        align the elements of the string correctly under the 
+                        appropriate headers.</P>
+                        <P>Notice the use of the Format function in the DO WHILE 
+                        loop. The Format function returns the UnitPrice as a 
+                        nicely formatted custom currency field. When this text 
+                        drops into Word, Word applies its formatting to 
+                        correctly display the text. If you display the value 
+                        from an sProductList() entry in the Immediate window in 
+                        VB (without the special formatting), the value appears 
+                        as:</P><PRE>Raclette Courdavault	59  $55.00</PRE>
+                        <P>The Form_Terminate event, shown in Listing 4, 
+                        contains the code to destroy the objects you create in 
+                        the application. This event also contains code to exit 
+                        Word. If you do not exit Word in your application code, 
+                        Word continues to execute after the application 
+                        terminates. The Form_Terminate event executes when the 
+                        form is terminated at the end of the application.</P>
+                        <P><FONT class=subhead>Coding the Word Document 
+                        </FONT><BR>The CreateDocument procedure in Listing 5 
+                        contains the code that drives Word. Because you did most 
+                        of the work in the Word template, you don't have much to 
+                        do in the application code to drive Word. At this point, 
+                        your document template has become an object that works 
+                        with your application. If you need to change the look of 
+                        the document, you can change most of it in Word without 
+                        changing the application code.</P>
+                        <P>The IF statement at the beginning of the 
+                        CreateDocument procedure ensures that the user has 
+                        entered a valid filename. If the filename is blank, the 
+                        ELSE clause executes and the subroutine exits without 
+                        performing any action. After the user enters the 
+                        filename, the application creates the document. The SET 
+                        statement creates a document and adds it to the 
+                        collection of Word documents by executing the Add method 
+                        of the Documents collection:</P><PRE>SET oCustomerDoc = oWordApp.Documents.Add("ProductTemplate2.dot")</PRE>
+                        <P>The procedure passes the name of the template 
+                        (Product-Template2.dot) to the Add method. After the Add 
+                        method executes, oCustomerDoc references the new 
+                        document.</P>
+                        <P>Next, the procedure saves the document by calling the 
+                        SaveAs method:</P><PRE>oCustomerDoc.SaveAs "c:\temp\" &amp; txtFileName</PRE>
+                        <P>In this application, the directory path is hard coded 
+                        and the filename is pulled from the txtFileName textbox. 
+                        If you have the Prompt for Document Properties check box 
+                        selected on the Saved tab of the Tools, Options dialog 
+                        box, this dialog box displays when the SaveAs method 
+                        first saves the document. In this application, this 
+                        feature does not present a problem because a user is 
+                        directly executing the application. If you are using 
+                        these features in a COM object, make sure this setting 
+                        is not turned on. You can programmatically control this 
+                        feature through the Save-PropertiesPrompt property (a 
+                        member of the Word libraries Options class).</P>
+                        <P>Next, the procedure adds the entries to the document. 
+                        As callout A in Listing 5 shows, the first two entries 
+                        are the customer's name and the selected category. The 
+                        bookmark names (Customer and Category) must exist in the 
+                        Word document or an error will occur. (Place 
+                        error-handling routines in any procedures in your code 
+                        that use COM objects. These error handlers must check 
+                        for errors that are returned from the COM object.) 
+                        Placing and finding elements in a document becomes easy. 
+                        You simply reference the bookmark name as if it were a 
+                        position on a form, and then work with it. I used the 
+                        Text property of the Range object to change the text at 
+                        the bookmark. I was interested only in placing one text 
+                        string at a time, so using the Range object made 
+                        sense.</P>
+                        <P>The FOR loop inserts the product information from the 
+                        array. The calling procedure passes this information 
+                        into the CreateDocument procedure as the vCategory 
+                        parameter. The first statement in the FOR loop inserts a 
+                        line of text into the Word document, and the next line 
+                        inserts a line break after the line of text.</P>
+                        <P>Always load the array with the products in descending 
+                        (reverse) order. You load products in reverse order 
+                        because of the way Word inserts products into the 
+                        document. If the products were in ascending order, you 
+                        would need to process the array from back to front or 
+                        put in more code to manipulate Word to continually find 
+                        the end of the last line inserted. Loading the documents 
+                        in descending order and then processing the array from 
+                        front to back is much easier.</P>
+                        <P>After the loop terminates, the procedure saves the 
+                        document and moves the current position to the end of 
+                        the range, in case the user terminates the application 
+                        and leaves Word running. This safeguard makes it harder 
+                        for users to accidentally destroy the text.</P>
+                        <P><FONT class=subhead>Further References 
+                        </FONT><BR>Keep Office's ease of use in mind when you 
+                        are working on tough application development projects. 
+                        For more information about automating Office tasks, look 
+                        at the Help files for each Office product. If you did 
+                        not install the <A class=richlinkstyle6 
+                        title="Click for more information!" 
+                        href="javascript:winPop('http://www.winnetmag.com/FindIT/Index.cfm?ID=7')">Developer</A> 
+                        Help for a particular application, you can use 
+                        Add/Remove Programs in Control Panel to add those files. 
+                        More information is available in the <I>Office 97 Visual 
+                        Basic Programmer's Guide</I> from Microsoft 
+                        Press.</P><BR><BR><A 
+                        href="http://www.winnetmag.com/mediakit/custom/index.html"><FONT 
+                        class=body11>Click Here to buy a Reprint or Eprint of a 
+                        SQL Server Magazine Article</FONT></A> 
+                        <BR><BR><BR><BR></FONT></TD></TR>
+                    <TR>
+                      <TD bgColor=#990033><IMG height=1 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=620></TD></TR>
+                    <TR>
+                      <TD><IMG height=6 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1></TD></TR></TBODY></TABLE>
+                  <SCRIPT language=JavaScript>
+	<!--
+	<!-- hide this script from non-javascript-enabled browsers
+	function Email() {
+	  window.open('EmailForm.cfm?ArticleID=5446','Email','toolbar=yes,scrollbars=yes,width=550,height=620');
+	}
+	
+	function Comment() {
+	  window.open('FeedBackForm.cfm?ArticleID=5446','Comment','toolbar=yes,scrollbars=yes,width=550,height=600');
+	}
+	
+	//  End -->
+	</SCRIPT>
+
+                  <TABLE cellSpacing=0 cellPadding=0 width=481 align=top 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=subhead vAlign=top width=304>Topics</TD>
+                      <TD class=body12 width=12>&nbsp;</TD>
+                      <TD class=subhead vAlign=top width=304>Related 
+                      Articles</TD></TR>
+                    <TR>
+                      <TD class=links10bold vAlign=top><FONT 
+                        class=subhead9bold>&nbsp;•&nbsp;</FONT> <A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?TopicID=79"><FONT 
+                        class=links10bold>SQL Server and 
+                        Database</FONT></A><BR><IMG height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><FONT 
+                        class=subhead9bold>&nbsp;•&nbsp;</FONT> <A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?TopicID=101"><FONT 
+                        class=links10bold>Visual Basic (VB)</FONT></A><BR><IMG 
+                        height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><FONT 
+                        class=subhead9bold>&nbsp;•&nbsp;</FONT> <A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?TopicID=760"><FONT 
+                        class=links10bold>Development</FONT></A><BR><IMG 
+                        height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><FONT 
+                        class=subhead9bold>&nbsp;•&nbsp;</FONT> <A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?TopicID=792"><FONT 
+                        class=links10bold>Reporting</FONT></A><BR><IMG height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><FONT 
+                        class=subhead9bold>&nbsp;•&nbsp;</FONT> <A 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?TopicID=850"><FONT 
+                        class=links10bold>Querying</FONT></A><BR><IMG height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><BR></TD>
+                      <TD class=body12 width=12>&nbsp;</TD>
+                      <TD class=links10bold vAlign=top><A 
+                        href="http://search.win2000mag.net/query.html?col=0&amp;ady=6&amp;amo=2&amp;ayr=2001&amp;bdy=13&amp;bmo=2&amp;byr=2001&amp;lk=1&amp;rf=0&amp;ht=0&amp;qp=&amp;qt=&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=en&amp;qm=1&amp;st=1&amp;nh=10&amp;oq=&amp;rq=0&amp;si=0&amp;fs=http%3A%2F%2Fwww%2Esqlmag%2Ecom%2FArticles%2FIndex%2Ecfm%3FArticleID%3D5446&amp;t=Querying%20%26%20Reporting%3A%20Generate%20Reports%20with%20Word"><IMG 
+                        height=10 hspace=2 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/button_findRelated.gif" 
+                        width=10 border=0><FONT class=links10bold>Find Related 
+                        Articles</FONT></A><BR><IMG height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><A 
+                        href="http://www.itbuynet.com/Search/Index.cfm?qp=Visual%20Basic%20%28VB%29%2CDevelopment%2CReporting%2CQuerying&amp;SearchString="><IMG 
+                        height=10 hspace=2 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/button_findRelated.gif" 
+                        width=10 border=0><FONT class=links10bold>Related 
+                        Products</FONT></A><BR><IMG height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><BR><BR><FONT class=subhead>Article 
+                        Information</FONT><BR><A onclick=Email() 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?ArticleID=5446#"><IMG 
+                        height=10 hspace=2 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/button_email.gif" 
+                        width=10 border=0><FONT class=links10bold>Email this 
+                        Article</FONT></A><BR><IMG height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><A 
+                        href="http://www.sqlmag.com/Articles/Print.cfm?ArticleID=5446"><IMG 
+                        height=10 hspace=2 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/button_printer.gif" 
+                        width=10 border=0><FONT 
+                        class=links10bold>Printer-Friendly</FONT></A><BR><IMG 
+                        height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR><A 
+                        href="http://www.winnetmag.com/Files/09/5446/5446.zip"><IMG 
+                        height=10 alt="" hspace=2 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/button_download.gif" 
+                        width=10 border=0><FONT class=links10bold>Download the 
+                        Code</FONT></A><BR><IMG height=3 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/pixel.gif" 
+                        width=1 border=0><BR></TD></TR></TBODY></TABLE><BR><A 
+                  name=Comments></A>
+                  <TABLE cellSpacing=0 cellPadding=0 width=620 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=subhead vAlign=top colSpan=2>Reader 
+                    Comments</TD></TR>
+                    <TR>
+                      <TD vAlign=top width=14><A onclick=Comment() 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?ArticleID=5446#"><IMG 
+                        height=10 hspace=2 
+                        src="Querying &amp; Reporting Generate Reports with Word_files/button_comment.gif" 
+                        width=10 border=0></A></TD>
+                      <TD class=links10bold vAlign=top width=606><A 
+                        onclick=Comment() 
+                        href="http://www.sqlmag.com/Articles/Index.cfm?ArticleID=5446#"><FONT 
+                        class=links10bold>&nbsp;Post a 
+                      Comment</FONT></A><BR><BR></TD></TR>
+                    <TR>
+                      <TD class=body11 vAlign=top 
+                  colSpan=2></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD><!-- SPACER -->
+    <TD class=body10 width=9 bgColor=#ffffff>&nbsp;</TD></TR></TBODY></TABLE><!-- END COLUMN 2 --><LINK 
+href="C:\Documents and Settings\ignou.000\Desktop\pro\wordreports3\Querying &amp; Reporting Generate Reports with Word_files\channel(1).css" 
+type=text/css rel=stylesheet><BR clear=all><!-- START SPONSORED AND FEATURED LINKS -->
+<TABLE cellSpacing=0 cellPadding=0 width=760 bgColor=#bbbbbb border=0>
+  <TBODY>
+  <TR>
+    <TD class=box10 vAlign=top width=125>&nbsp;</TD>
+    <TD class=box10 width=12>&nbsp;</TD>
+    <TD vAlign=top width=623><BR>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#0202a3>
+            <TABLE cellSpacing=1 cellPadding=0 width=612 border=0>
+              <TBODY>
+              <TR>
+                <TD width=430 bgColor=#0202a3><IMG height=14 
+                  src="Querying &amp; Reporting Generate Reports with Word_files/sponsoredlinks.gif" 
+                  width=130></TD>
+                <TD width=182 bgColor=#0202a3><IMG height=14 
+                  src="Querying &amp; Reporting Generate Reports with Word_files/featuredlinks.gif" 
+                  width=130></TD></TR>
+              <TR>
+                <TD class=box10 vAlign=top width=430 bgColor=#ffffff><IFRAME 
+                  border=0 name=FRAME1 marginWidth=0 marginHeight=0 
+                  src="Querying &amp; Reporting Generate Reports with Word_files/sql;kw=;sz=1x1;ptile=10;ord=91794533.htm" 
+                  frameBorder=NO width=1 scrolling=no 
+                  height=1>
+			<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/msft.sponsorlinks.dfp5/sql;kw=;abr=!ie;sz=1x1;ptile=10;ord=59388366?">
+			</script>
+			<noscript>
+			<a href="http://ad.doubleclick.net/jump/msft.sponsorlinks.dfp5/sql;kw=;abr=!ie;sz=1x1;ptile=10;ord=59388366?">
+			<img src="http://ad.doubleclick.net/ad/msft.sponsorlinks.dfp5/sql;kw=;abr=!ie;sz=1x1;ptile=10;ord=59388366?" border=0 height="1"
+			width="1"></A>
+			</NOSCRIPT>
+			</IFRAME>
+                  <P class=links10><FONT class=box10>&nbsp;•<A 
+                  href="http://ad.doubleclick.net/clk;4799637;6134867;f?http://www.dataflux.com/forms/enews.asp" 
+                  target=_top><B>Accurate, reliable data. Your next competitive 
+                  edge.- DataFlux</B></A></FONT><BR><BR><FONT 
+                  class=box10>&nbsp;•<A 
+                  href="http://ad.doubleclick.net/clk;4780376;6134867;v?http://www.unisys.com/simplify/?b=01sl01ss" 
+                  target=_top><B>Learn more about Unisys Enterprise class 
+                  servers and solutions</B></A></FONT><BR><BR><FONT 
+                  class=box10>&nbsp;•<A 
+                  href="http://ad.doubleclick.net/clk;4842379;6134867;x?http://diskeeper.com//downloads/survey.asp?PId=15&amp;ad=sqlonline3" 
+                  target=_top><B>FREE Diskeeper Lite. Find out what you're 
+                  MISSING</B></A></FONT><BR><BR><FONT class=box10>&nbsp;•<A 
+                  href="http://ad.doubleclick.net/clk;4885530;6134867;t?http://www.dw-institute.com/education/conferences/neworleans2003/j.asp" 
+                  target=_top><B>Premier BI&amp;DW industry event. Register now 
+                  &amp; save!</B></A></FONT><BR><BR></P></TD>
+                <TD class=box10 vAlign=top width=182 bgColor=#ffffff><BR><FONT 
+                  class=box10>&nbsp;•&nbsp;<A 
+                  href="http://www.sqlmag.com/sub/webinar" target=_top>Get 
+                  quality SQL Server training without leaving your 
+                  desk!</A></FONT><BR><BR><FONT class=box10>&nbsp;•&nbsp;<A 
+                  href="http://secure.duke.com/nt/sqlmag/archivecd/newsqlcdsub.cfm?code=wi28xxhm" 
+                  target=_top>Get real answers fast - with the SQL Server Master 
+                  CD!</A></FONT><BR><BR><FONT class=box10>&nbsp;•&nbsp;<A 
+                  href="http://www.sswug.org/default.asp?rb=602302" 
+                  target=_top>SSWUG provides ultimate support to local user 
+                  groups</A></FONT><BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR></TD></TR></TBODY></TABLE><!-- END SPONSORED AND FEATURED LINKS --><LINK 
+href="C:\Documents and Settings\ignou.000\Desktop\pro\wordreports3\Querying &amp; Reporting Generate Reports with Word_files\channel(2).css" 
+type=text/css rel=stylesheet><!-- START PENTON INFO -->
+<TABLE cellSpacing=0 cellPadding=10 width=760 align=left bgColor=#dcdcdc 
+border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=150><A 
+      href="http://www.penton.com/"><IMG height=23 alt="" 
+      src="Querying &amp; Reporting Generate Reports with Word_files/penton_4c.gif" 
+      width=110 border=0></A></TD>
+    <TD vAlign=center><FONT class=Nav10><A href="http://www.winnetmag.com/" 
+      target=_top>Network Home</A> | <A 
+      href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=Map" 
+      target=_top>Network Map</A> | <A 
+      href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=OurPubs" 
+      target=_top>Our Pubs</A> | <A 
+      href="http://www.winnetmag.com/events/pentontech/" target=_top>Our 
+      Events</A> | <A 
+      href="http://www.sqlmag.com/Info/Index.cfm?Action=ContactUs" 
+      target=_top>Contact Us</A> | <A 
+      href="http://www.winnetmag.com/AboutUs/Index.cfm" target=_top>About Us</A> 
+      | <A href="http://www.sqlmag.com/mediakit/" target=_top>Advertising</A> | 
+      <A href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=overview" 
+      target=_top>Affiliates/Licensing</A><BR><A 
+      href="http://www.penton.com/copyright.html" target=_top>Copyright © 
+      2002</A> Penton Media, Inc., All rights reserved. <A 
+      href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=Legal" 
+      target=_top>Legal</A> | <A 
+      href="http://www.winnetmag.com/AboutUs/Index.cfm?Action=Privacy" 
+      target=_top>Privacy</A></FONT></TD></TR></TBODY></TABLE><!-- END PENTON INFO --></BODY></HTML>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Form ST-3  ....Shri Durga Eximport Services</title>
+<script src="../../common/js/lib.js"></script>
+<script src="form_st3.js"></script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- the table code -->
+<div id="asas" style="display:none;visibility:hidden">
+<br/>
+<?php
+//disp_pdsc();
+?>
+
+<hr/><br/>
+</div>
+
+<!-- rfsc template -->
+<div id="div_template_rfsc" style="display:none;visibility:hidden">
+ <tr>
+  <td><input type="text" name="rfsc_desc[]" size=50></td>
+   <td><input type="hidden" name="rfsc_desc_no[]" value="_no%"></td>
+ </tr>
+</div>
+
+
+<!-- ipsvcs template -->
+<div id="div_template_ipsvcs" style="display:none;visibility:hidden">
+ <tr>
+  <td>
+   <input type="text" name="ipsvcs_desc[]" size=50>
+   <td><input type="hidden" name="ipsvcs_desc_no[]" value="_no%"></td>
+  </td>
+ </tr>
+</div>
+
+
+<center><h3>FORM  ST -3</h3></center>
+<form name="form_st3" method="post" onsubmit="return submitform()">
+<table border=0 width="100%">
+<tr><td>FINANCIAL YEAR: </td><td><script>pop_fin_yr('<?php echo $fin_year?>');</script></td></tr>
+<tr><td>Period: </td><td><?php pop_fin_period(); ?></td></tr>
+<tr>
+ <td>Name of the assessee:</td>
+ <td><input type="text" name="fst3_assessee_name" size=50 value="<?php echo $fst3_assessee_name?>">  </td>
+</tr>
+<tr>
+ <td width="40%">Registration Number of premises for which return is being filled:</td>
+ <td><input type="text" name="fst3_premises_reg_no" size=28  value="<?php echo $fst3_premises_reg_no?>">  </td>
+</tr>
+</table>
+
+<br/>
+
+<input type="hidden"  value="<?php echo $rfsc_desc_count?>"  id="rfsc_desc_count"/>
+<table border=0>
+<tr>
+  <td>Category of taxable services for which return is being filed</td>
+  <td><input type="button" value="ADD" onclick="add_rfsc();"></td>
+</tr>
+</table>
+
+<table border=0>
+<tr><td></td></tr>
+ <?php  pop_rfsc_desc() ?>
+<tr><td><div id="div_rfsc"> </div></td></tr> <!--the rfsc div -->
+</table>
+
+</table>
+
+<br/>
+
+
+Payment of Service Tax category of Service:
+<input type="hidden" value="0" name="pdsc_group_no" />
+<input type="button" value="Add" onclick="add_pay_srv_tax_cat();">
+<p/>
+
+ <?php  disp_pdsc() ?>
+
+<table border=0>
+<tr>
+  <td>The taxable services on which input service credit has been distributed
+       during the half year period.</td>
+  <td><input type="button" value="ADD" onclick="add_ipsvcs();"></td>
+</tr>
+</table>
+
+<input type="hidden"  value="0"  id="ipsvcs_desc_count"/>
+
+<table border=0>
+<tr><td></td></tr>
+ <?php  pop_ipsvcs_desc() ?>
+<tr><td><div id="div_ipsvcs"> </div></td></tr> <!--the ipsvcs div -->
+</table>
+
+<p/>
+7. Details of amount payable but not paid as on the last day of the period
+   for which the Return is filled.
+<table>
+<tr><td><input type="text" name="fst3_lastday_amt_payable" 
+ value="<?php echo $fst3_lastday_amt_payable?>" size=100></td></tr>
+</table>
+<p/>
+<table align="center" border="1">
+<tr>
+<td><input type="submit" value="SAVE" name="btnsubmit" ></td>
+<td><input type="button" value="PREVIEW" 
+ onclick=location.href="<?php echo $REPORT_SERVER_PATH."&fin_year=".$fin_year."&fin_period_cd=".$fin_period ?>" >
+  </td>
+<td><input type="button" value="CLOSE" onclick="close_win();"></td>
+</tr>
+</table>
+
+<script>
+//load atleast a single payment details table
+//add_pay_srv_tax_cat();
+add_rfsc();
+add_ipsvcs();
+</script>
+
+<input type="hidden" name="operation"/>
+
+</form>
+
+</body>
+</html>

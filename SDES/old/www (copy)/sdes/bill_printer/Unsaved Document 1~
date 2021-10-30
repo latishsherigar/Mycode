@@ -1,0 +1,71 @@
+select invd_sno from invoice_details where invd_inv_no='322-06' 
+union all 
+select 'ZZZZZZ' from dummy_invd_count 
+ORDER BY invd_sno
+LIMIT 11 
+;
+
+
+SELECT invd_sno,invd_inv_no,invd_part_desc,invd_part_rs
+      FROM invoice_details,invoices a
+      WHERE invd_inv_no = a.inv_no
+      union all 
+      select '99','','','' from dummy_invd_count 
+      
+      
+      SELECT IFNULL(SUM(invd_part_rs),0)
+              FROM   invoice_details
+              WHERE  invd_inv_no = '1312'
+              
+              
+              
+              
+              
+              SELECT a.inv_no,
+       DATE_FORMAT(inv_date,'%d-%m-%Y') as inv_date,
+       a.inv_cmp_code,
+       a.inv_total_rs,
+       a.inv_total_rs_text,
+       ,c.*,
+       concat(c.ed_city,"   ",ed_pincode) as ed_city_pincode,
+       CASE invd_sno
+       when   99 then " " 
+       else  format(invd_part_rs,2) end as invd_part_rs_comma,
+       format(inv_total_rs,2) as inv_total_rs_comma,
+       CASE invd_sno
+       when   99 then " " 
+       else  invd_sno end as invd_sno_99,
+       d.pan_no,
+       e.srvtax_no,
+       f.sdes_add_line1,
+       CONCAT(g.sdes_tel,'    ', h.sdes_mailid) as sdes_tel_mail 
+FROM 
+     (SELECT inv_no, inv_date,
+       inv_cmp_code, inv_total_rs, inv_total_rs_text,
+       invd_sno,invd_inv_no,invd_part_desc,invd_part_rs
+      FROM invoices,invoice_details
+      where inv_no = invd_inv_no
+      and invd_inv_no ='322-06'
+      union all 
+      select '','','','','','99','','','' from dummy_invd_count 
+     ) a ,
+entity_details c ,
+(SELECT answ1 as pan_no FROM generic_master
+ WHERE mastercode = 'PAN_NO'
+) d,
+(SELECT answ1 as srvtax_no FROM generic_master
+ WHERE mastercode = 'SERVICE_TAX_NO'
+) e,
+(SELECT answ1 as sdes_add_line1 FROM generic_master
+ WHERE mastercode = 'ADDRESS_LINE1'
+) f,
+(SELECT CONCAT('Tel. : ',answ1) as sdes_tel FROM generic_master
+ WHERE mastercode = 'TELEPHONE_NO'
+) g,
+(SELECT CONCAT('Email : ',answ1) as sdes_mailid FROM generic_master
+ WHERE mastercode = 'EMAIL_ID'
+) h
+WHERE inv_cmp_code = ed_code 
+AND ed_entity_type = 'COMPANY'
+ORDER BY invd_sno
+LIMIT 11

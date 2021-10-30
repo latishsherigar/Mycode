@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Help">
+		<param name="Local" value="htmlfiles\introduction.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Introduction">
+			<param name="Local" value="htmlfiles\introduction.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Features">
+			<param name="Local" value="htmlfiles\features.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Working">
+			<param name="Local" value="htmlfiles\working.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Hiding the Archive">
+				<param name="Local" value="htmlfiles\hide.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Extracting the Archive">
+				<param name="Local" value="htmlfiles\show.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Legal Disclaimer">
+			<param name="Local" value="htmlfiles\disclaimer.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="About">
+			<param name="Local" value="htmlfiles\about.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

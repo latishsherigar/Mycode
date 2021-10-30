@@ -1,0 +1,663 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0063)http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132 -->
+<!-- CONTENT NAMESPACE:  http://support.microsoft.com/common/schemas/kbpub/2/kbpubv2.dtd --><!-- CONTENT CLASS:  MS.Support.GSFx.Web.KBArticle CREATION OK --><HTML><HEAD><TITLE>210132 - HOW TO: Use Automation to Print Microsoft Access Reports in Access 2000</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved --><!-- CPMSFTWBSU04 ASM: GSS, Version=3.3.3.4, Culture=neutral, PublicKeyToken=null FW: 1.0.3705.0 --><!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 11/23/2002 10:32:46 PM RESX: 1/1/0001 12:00:00 AM -->
+<META content="kbhowto kbHOWTOmaster kbProgramming kbusage KB210132 " 
+name=Keywords>
+<META 
+content="By carrying out the OpenReport method of the DoCmd object, you can print Access reports from any Automation client application, such as Microsoft Visual Basic or the Microsoft Visual Basic Environment (VBE). This enables you to implement Access as the..." 
+name=Description>
+<SCRIPT language=Javascript>
+var CookieDomain = "support.microsoft.com";
+document.domain = "support.microsoft.com";
+function fetchcookieval(key){
+	var cookiename;
+	var cookieval;
+	var keyfound = false;
+	var cookiearray = document.cookie.split(";")
+	for(i=0;i<cookiearray.length;i++){
+		cookiename = cookiearray[i].substring(0, cookiearray[i].indexOf("="));
+		if(cookiename.charAt(0) == " ") cookiename = cookiename.substring(1, cookiename.length);
+		cookieval = cookiearray[i].substring(cookiearray[i].indexOf("=")+1, cookiearray[i].length);
+		if(key == cookiename){keyfound = true; break;}
+	}
+	if(keyfound) return cookieval;
+	else return "blank";
+}
+function setcookieval(key, val){
+	if(typeof(CookieDomain) != "undefined"){
+		if(document.domain.indexOf(".com") > -1 && CookieDomain.length > 0){
+			document.domain = CookieDomain;
+			document.cookie = key+'='+val+'; expires=Fri, 31 Dec 2002 23:59:59 GMT; Domain=' + CookieDomain  + '; path=/';
+		}else{ 
+			document.cookie = key+'='+val+'; expires=Fri, 31 Dec 2002 23:59:59 GMT; path=/';
+		}
+	}
+}
+</SCRIPT>
+<LINK 
+href="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/default.css" 
+type=text/css rel=stylesheet></LINK>
+<SCRIPT language=Javascript 
+src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/common.js"></SCRIPT>
+
+<SCRIPT language=Javascript 
+src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/uplevel.js"></SCRIPT>
+<LINK 
+href="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/KBArticleV2.css" 
+type=text/css rel=stylesheet></LINK><LINK 
+href="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/webparts.css" 
+type=text/css rel=stylesheet></LINK>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 onload=thisLoad(); 
+onunload=thisUnload(); marginwidth="0" marginheight="0"><!-- USING XSLT:  KBPUBV2 -->
+<DIV id=TopPanel name="TopPanel">
+<SCRIPT language=JavaScript 
+src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/toolbar.js"></SCRIPT>
+
+<SCRIPT language=javascript 
+src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/global.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+<!--
+	var ToolBar_Supported = ToolBar_Supported;
+	if(ToolBar_Supported != null && ToolBar_Supported == true){
+		Frame_Supported = false;
+		setToolbarBGColor("#3366CC");
+		setICPBanner("/library/images/support/en-us/banner.gif","/default.aspx","Return to Support home page");
+		setMSBanner("mslogo_3366CC.gif","/isapi/gomscom.asp?target=/","Microsoft.com Home Page");
+ 		HTMLStr = HTMLStr.replace(/\/library\/toolbar\/images\/curve.gif/g, "/library/images/support/curve_003399.gif");
+		drawToolbar();
+	}
+//-->
+</SCRIPT>
+</DIV>
+<TABLE id=CenterPanel height="100%" cellSpacing=0 cellPadding=0 width="100%" 
+border=0 name="CenterPanel">
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE class=tpl_top_banner cellSpacing=0 cellPadding=0 width="100%" 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE class=bbar_outer height=18 cellSpacing=0 cellPadding=0 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Return to Support Home Page" 
+                  href="http://support.microsoft.com/">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;EN-US;KBHOWTO'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Search the Knowledge Base" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;KBHOWTO">&nbsp;&nbsp;Search&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;[LN];faqs'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Frequently Asked Questions" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[LN];faqs">&nbsp;&nbsp;FAQs&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;EN-US;downloadover'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Software Downloads, Updates, and Service Packs" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;downloadover">&nbsp;&nbsp;Downloads&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Community Newsgroups" 
+                  href="http://support.microsoft.com/newsgroups/default.aspx">&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='/default.aspx?scid=fh;[ln];csshome&amp;style=home'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Customer Service" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[ln];csshome&amp;style=home">&nbsp;&nbsp;Customer 
+                  Service&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/1ptrans.gif" 
+                  width=1></TD></TR></TBODY></TABLE></TD>
+          <TD align=right>
+            <TABLE class=fbtn_outer cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" onclick="" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="Send the contents of this page to a Friend" 
+                  href="mailto:?body=http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132" 
+                  target="">Send&nbsp;<IMG height=16 
+                  alt="Send the contents of this page to a Friend" hspace=0 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/send_icon.gif" 
+                  width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" onclick="" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="Print the contents of this page" 
+                  href="javascript:PrintContents();" target="">Print&nbsp;<IMG 
+                  height=16 alt="Print the contents of this page" hspace=0 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/print_icon.gif" 
+                  width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat'" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="View information on how to use this site effectively" 
+                  href="http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat" 
+                  target="">Help&nbsp;<IMG height=16 
+                  alt="View information on how to use this site effectively" 
+                  hspace=0 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/help_icon.gif" 
+                  width=16 align=absMiddle 
+              border=0></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=tpl_left_nav_cell vAlign=top width=207>
+            <DIV class=kbRightNav>
+            <DIV class=ListNugget id=KBFeedback style="WIDTH: 180px" 
+            name="KBFeedback">
+            <TABLE class=ListNuggetHeader id=KBFeedbackHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="KBFeedbackHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('KBFeedback');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('KBFeedback');" 
+                  href="javascript:PartWrapperToggle('KBFeedback');">Comments?</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('KBFeedback');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=KBFeedbackUp height=17 alt="Hide options" 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue-chevron_up.gif" 
+                  width=17 align=right border=0 name=KBFeedbackUp><IMG 
+                  class=ListNuggetDownButton id=KBFeedbackDown height=17 
+                  alt=Options 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/gray-chevron_down.gif" 
+                  width=17 align=right border=0 
+              name=KBFeedbackDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=KBFeedbackBody name="KBFeedbackBody">
+            <TABLE class=KBFeedbackTable cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue_bullet.gif" 
+                  width=5 border=0 VALIGN="MIDDLE"></TD>
+                <TD vAlign=top><A class=ListNuggetItem 
+                  href="javascript:ShowSurveyWindow('/common/survey.aspx?scid=sw;EN;1075', 'GN', 'en-us' ,'/default.aspx', 'KB', 'en-us', '210132 ')">Provide 
+                  us with feedback on this 
+            article</A></TD></TR></TBODY></TABLE></DIV></DIV>
+            <DIV class=ListNugget id=SupportCenters style="WIDTH: 180px" 
+            name="SupportCenters">
+            <TABLE class=ListNuggetHeader id=SupportCentersHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="SupportCentersHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('SupportCenters');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('SupportCenters');" 
+                  href="javascript:PartWrapperToggle('SupportCenters');">Product 
+                  Support Centers</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('SupportCenters');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=SupportCentersUp height=17 alt="Hide options" 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue-chevron_up.gif" 
+                  width=17 align=right border=0 name=SupportCentersUp><IMG 
+                  class=ListNuggetDownButton id=SupportCentersDown height=17 
+                  alt=Options 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/gray-chevron_down.gif" 
+                  width=17 align=right border=0 
+              name=SupportCentersDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=SupportCentersBody 
+            name="SupportCentersBody">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue_bullet.gif" 
+                  width=5 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;acc">Access</A> 
+                </TD></TR>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue_bullet.gif" 
+                  width=5 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;acc2000">Access 
+                  2000</A> </TD></TR></TBODY></TABLE></DIV></DIV>
+            <DIV class=ListNugget id=GeneralInfo style="WIDTH: 180px" 
+            name="GeneralInfo">
+            <TABLE class=ListNuggetHeader id=GeneralInfoHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="GeneralInfoHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('GeneralInfo');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('GeneralInfo');" 
+                  href="javascript:PartWrapperToggle('GeneralInfo');">Other 
+                  Support Options</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('GeneralInfo');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=GeneralInfoUp height=17 alt="Hide options" 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue-chevron_up.gif" 
+                  width=17 align=right border=0 name=GeneralInfoUp><IMG 
+                  class=ListNuggetDownButton id=GeneralInfoDown height=17 
+                  alt=Options 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/gray-chevron_down.gif" 
+                  width=17 align=right border=0 
+              name=GeneralInfoDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=GeneralInfoBody name="GeneralInfoBody">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue_bullet.gif" 
+                  width=5 vspace=4 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS">Contact 
+                  Microsoft</A>
+                  <P>Phone Numbers, Support Options and Pricing, Online Help, 
+                  and more.</P></TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue_bullet.gif" 
+                  width=5 vspace=4 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[ln];csshome&amp;style=home">Customer 
+                  Service</A>
+                  <P>For non-technical assistance with product purchases, 
+                  subscriptions, online services, events, training courses, 
+                  corporate sales, piracy issues, and more.</P></TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/blue_bullet.gif" 
+                  width=5 vspace=4 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/newsgroups">Newsgroups</A>
+                  <P>Pose a question to other users. Discussion groups and 
+                  Forums about specific Microsoft products, technologies, and 
+                  services.</P></TD></TR></TBODY></TABLE></DIV></DIV></DIV></TD>
+          <TD vAlign=top width="100%">
+            <DIV class=tpl_content_bar>Microsoft Knowledge Base 
+            Article&nbsp;-&nbsp;210132 </DIV>
+            <DIV class=tpl_content><!--START KBCONTENT-->
+            <DIV class=LTRContent id=LTRContent dir=ltr><IMG 
+            class=tpl_header_icon height=75 
+            alt="HOW TO: Use Automation to Print Microsoft Access Reports in Access 2000" 
+            src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/kb_hdr_icon.jpg" 
+            width=75>
+            <DIV class=KBPUBV2 name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS BELOW HERE - - - - - - - - - - -->
+            <H1 class=title>HOW TO: Use Automation to Print Microsoft Access 
+            Reports in Access 2000</H1>
+            <DIV class=appliesto>The information in this article applies to:
+            <UL>
+              <LI>Microsoft Access 2000
+              <LI>Microsoft Visual Basic for Applications</LI></UL></DIV>
+            <DIV class=notice>This article was previously published under 
+            Q210132</DIV>
+            <DIV class=notice>Advanced: Requires expert coding, 
+            interoperability, and multiuser skills. <BR><BR>This article applies 
+            to a Microsoft Access database (.mdb) and to a Microsoft Access 
+            project (.adp). <BR><BR><A class=bookmark name=toc></A>
+            <H3>IN THIS TASK</H3>
+            <UL>
+              <LI><A class=bookref 
+              href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#1">SUMMARY</A>
+              <LI>
+              <UL>
+                <LI><A class=bookref 
+                href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#2">Retail 
+                Version of Microsoft Access</A>
+                <LI><A class=bookref 
+                href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#3">Run-Time 
+                Version of Microsoft Access</A></LI></UL>
+              <LI><A class=bookref 
+              href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#4">REFERENCES</A></LI></UL><A 
+            class=bookmark name=1></A></DIV>
+            <DIV class=summary>
+            <H2>SUMMARY</H2>By carrying out the <STRONG>OpenReport</STRONG> 
+            method of the <STRONG>DoCmd</STRONG> object, you can print Access 
+            reports from any Automation client application, such as Microsoft 
+            Visual Basic or the Microsoft Visual Basic Environment (VBE). This 
+            enables you to implement Access as the reporting component in your 
+            application solutions. <BR><BR><STRONG>NOTE</STRONG>: This article 
+            explains a technique demonstrated in the sample file, RptSmp00.mdb. 
+            For information about how to obtain this sample file, please see the 
+            following article in the Microsoft Knowledge Base: <BR>
+            <DIV class=indent><A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;231851">231851</A> 
+            ACC2000: Microsoft Access 2000 Sample Reports Available in Download 
+            Center </DIV><BR>Microsoft provides programming examples for 
+            illustration only, without warranty either expressed or implied, 
+            including, but not limited to, the implied warranties of 
+            merchantability and/or fitness for a particular purpose. This 
+            article assumes that you are familiar with the programming language 
+            being demonstrated and the tools used to create and debug 
+            procedures. Microsoft support professionals can help explain the 
+            functionality of a particular procedure, but they will not modify 
+            these examples to provide added functionality or construct 
+            procedures to meet your specific needs. If you have limited 
+            programming experience, you may want to contact a Microsoft 
+            Certified Partner or the Microsoft fee-based consulting line at 
+            (800) 936-5200. For more information about Microsoft Certified 
+            Partners, please visit the following Microsoft Web site: <BR>
+            <DIV class=indent><A class=URLLink 
+            href="http://support.microsoft.com/default.aspx?scid=http://www.microsoft.com/partner/referral/" 
+            target=_top>http://support.microsoft.com/default.aspx?scid=http://www.microsoft.com/partner/referral/</A></DIV><BR>For 
+            more information about the support options that are available and 
+            about how to contact Microsoft, visit the following Microsoft Web 
+            site: <BR>
+            <DIV class=indent><A class=URLLink 
+            href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS" 
+            target=_top>http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS</A></DIV><BR><STRONG>CAUTION</STRONG>: 
+            If you follow the steps in this example, you modify the sample 
+            database Northwind.mdb. You may want to back up the Northwind.mdb 
+            file and follow these steps on a copy of the 
+            database.<BR><BR><STRONG>NOTE:</STRONG> The following code is 
+            designed for the retail version of Access. If you are using the 
+            run-time version of Access, please refer to the "Run-time Version of 
+            Microsoft Access" section later in this article.<BR><BR><SPAN 
+            class=weboutput><A 
+            href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#toc" 
+            name=bottom>back to the top</A> </SPAN>
+            <H3><A class=bookmark name=2></A>Retail Version of Microsoft 
+            Access</H3>
+            <OL class=dec>
+              <LI>Open Microsoft Access. 
+              <LI>Create a new, blank database. 
+              <LI>Create a module and type the following in the Declarations 
+              section: <PRE>Option Explicit
+' In other applications like Microsoft Visual Basic,
+' you can include a reference to Microsoft Access to
+' gain the use of Access constants. Or, use the following
+' constant values...
+' Global Const acNormal = 0
+' Global Const acDesign = 1
+' Global Const acPreview = 2
+' -----------------------------------------------------
+' Application Quit options...
+' saves all objects without displaying a dialog box:
+' Global Const acSaveYes = 0
+' displays a dialog box that asks whether you want to save any
+' database objects that have been changed but not saved:
+' Global Const acPrompt = 1
+' quits Microsoft Access without saving any objects:
+' Global Const acExit = 2
+						</PRE>
+              <LI>Type the following procedure:<PRE>Function OLEOpenReport(strDBName As String, _
+                       strRptName As String, _
+                       Optional ByVal intDisplay As Variant, _
+                       Optional ByVal strFilter As Variant, _
+                       Optional ByVal strWhere As Variant) As Boolean
+
+   On Error GoTo OLEOpenReport_Err
+
+   ' Create Automation object.
+   Dim objAccess As Object
+   Set objAccess = CreateObject("Access.Application")
+
+   ' Open the supplied database.
+   ' Optional parameter at the end of statement
+   ' indicates exclusive mode if set to True...
+   objAccess.OpenCurrentDatabase strDBName, False
+
+   ' The OpenReport method uses the following arguments...
+   ' Report Name - Name of the report object.
+   ' View - Display in Print Preview or send to printer.
+   '        acNormal - Print report
+   '        acDesign - open report in design (n/a in runtime)
+   '        acPreview - open in preview window
+   ' Filter Name - Name of a saved filter query.
+   ' Where Condition = valid SQL where condition.
+
+   If IsMissing(intDisplay) Then intDisplay = acNormal
+   If IsMissing(strFilter) Then strFilter = ""
+   If IsMissing(strWhere) Then strWhere = ""
+   objAccess.DoCmd.OpenReport strRptName, intDisplay, strFilter, _
+      strWhere
+
+   ' Close Microsoft Access session instance...
+   objAccess.Quit acExit
+
+   Set objAccess = Nothing
+   OLEOpenReport = True
+OLEOpenReport_End:
+   Exit Function
+
+OLEOpenReport_Err:
+   MsgBox Error$(), vbInformation, "Automation"
+   Resume OLEOpenReport_End
+End Function
+
+					</PRE>
+              <LI>To test this function, type the following line in the 
+              Immediate window, and then press ENTER:<PRE>?OLEOpenReport("c:\Program Files\Microsoft Office\Office\Samples\Northwind.mdb", "Invoice", strWhere:="OrderId = 10251")
+					</PRE></LI></OL>The function opens the Northwind database, 
+            opens the Invoice report, sets the recordset to OrderId# 10251, and 
+            prints the report to the printer. <BR><BR><STRONG>NOTE:</STRONG> 
+            Make sure to provide appropriate paths to the files on your 
+            system.<BR><BR><SPAN class=weboutput><A 
+            href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#toc" 
+            name=bottom>back to the top</A> </SPAN>
+            <H3><A class=bookmark name=3></A>Run-Time Version of Microsoft 
+            Access</H3>The run-time version of Access only supports the 
+            Automation <STRONG>GetObject</STRONG>() function. <BR><BR>
+            <OL class=dec>
+              <LI>Open Microsoft Access. 
+              <LI>Create a new database. 
+              <LI>Create a module and type the following in the Declarations 
+              section:<PRE>Option Explicit
+' In other applications like Microsoft Visual Basic,
+' you can include a reference to Microsoft Access to
+' gain the use of Microsoft Access constants. Or, use the following
+' constant values...
+' Global Const acNormal = 0
+' Global Const acDesign = 1
+' Global Const acPreview = 2
+' -----------------------------------------------------
+' Application Quit options...
+' saves all objects without displaying a dialog box:
+' Global Const acSaveYes = 0
+' displays a dialog box that asks whether you want to save any
+' database objects that have been changed but not saved:
+' Global Const acPrompt = 1
+' quits Microsoft Access without saving any objects:
+' Global Const acExit = 2
+					</PRE>
+              <LI>Type the following procedure:<PRE>Function OLEOpenReportRuntime(strDBName As String, _
+strRptName As String, _
+Optional ByVal intDisplay As Variant, _
+Optional ByVal strFilter As Variant, _
+Optional ByVal strWhere As Variant _
+) As Boolean
+
+On Error GoTo OLEOpenReportRuntime_Err
+
+Dim x As Long
+Dim objAccess As Object
+
+' Open the run-time instance and database...
+' ------------------------------------------
+' The use of the Chr$(34) function supplies
+' quotation marks around the database name which is
+' required by Shell when the optional command
+' line parameter contains spaces...
+
+x = Shell("c:\myapp\Office\msaccess.exe " &amp;_
+Chr$(34) &amp; strDBName &amp; Chr$(34) &amp; _
+"/Runtime /Wrkgrp " &amp; Chr$(34) &amp; _
+"c:\myapp\system.mdw" &amp; Chr$(34))
+
+Set objAccess = GetObject(strDBName)
+
+' The OpenReport method uses the following arguments...
+' Report Name - Name of the report object.
+' View - Display in Print Preview or send to printer.
+'        acNormal - Print report
+'        acDesign - open report in design (n/a in runtime)
+'        acPreview - open in preview window
+' Filter Name - Name of a saved filter query.
+' Where Condition = valid SQL where condition.
+
+If IsMissing(intDisplay) Then intDisplay = acNormal
+If IsMissing(strFilter) Then strFilter = ""
+If IsMissing(strWhere) Then strWhere = ""
+objAccess.DoCmd.OpenReport strRptName, intDisplay, strFilter, _
+strWhere
+
+' Close Microsoft Access session instance...
+objAccess.Quit acExit
+
+Set objAccess = Nothing
+OLEOpenReportRuntime = True
+OLEOpenReportRuntime_End:
+Exit Function
+
+OLEOpenReportRuntime_Err:
+MsgBox Error$(), vbInformation, "Automation"
+Resume OLEOpenReportRuntime_End
+End Function
+					</PRE>
+              <LI>To test this function, type the following line in the 
+              Immediate window, and then press ENTER:<PRE>?OLEOpenReportRuntime("c:\Program Files\Microsoft Office\Office\Samples\Northwind.mdb", "Invoice", strWhere:="OrderId = 10251")
+					</PRE></LI></OL>The function opens the Northwind database, 
+            opens the Invoice report, sets the recordset to OrderId# 10251, and 
+            prints the report to the printer. <BR><BR><STRONG>NOTE:</STRONG> 
+            Make sure to provide appropriate paths to the files on your 
+            system.<BR><BR><SPAN class=weboutput><A 
+            href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#toc" 
+            name=bottom>back to the top</A> </SPAN><BR><BR><A class=bookmark 
+            name=4></A></DIV>
+            <DIV class=references>
+            <H2>REFERENCES</H2>For a Microsoft Access 2002 version of this 
+            article, see <A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;296586">296586</A>. 
+            <BR><BR><BR><BR><SPAN class=weboutput><A 
+            href="http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132#toc" 
+            name=bottom>back to the top</A> 
+</SPAN><BR><BR><BR><BR><BR><BR></DIV><!--******************* PUBLIC INFO SECTION ***********************-->
+            <TABLE class=docinfo cellSpacing=1 cellPadding=3 align=center>
+              <TBODY>
+              <TR>
+                <TD class=label vAlign=top noWrap align=right width="10%">Last 
+                  Reviewed:</TD>
+                <TD class=data vAlign=top align=left>10/27/2002</TD></TR>
+              <TR class=composite>
+                <TD class=label vAlign=top noWrap align=left 
+                  width="10%">Keywords:</TD>
+                <TD class=data vAlign=top align=left colSpan=3>kbhowto 
+                  kbHOWTOmaster kbProgramming kbusage KB210132 
+              kbAudDeveloper</TD></TR></TBODY></TABLE><!--********************* END PUBLIC INFO SECTION ***********************--><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --><BR>
+            <DIV 
+        class=disclaimer></DIV></DIV></DIV><!--END KBCONTENT--></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<DIV class=tpl_footer id=BottomPanel name="BottomPanel">
+<DIV class=tpl_footer_row1>
+<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=left width="50%">
+      <TABLE class=fbtn_outer cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="" onmouseout="this.className='fbtn_cell';" 
+            noWrap>&nbsp;&nbsp;<A 
+            title="Send the contents of this page to a Friend" 
+            href="mailto:?body=http://support.microsoft.com/default.aspx?scid=KB;en-us;q210132" 
+            target="">Send&nbsp;<IMG height=16 
+            alt="Send the contents of this page to a Friend" hspace=0 
+            src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/send_icon.gif" 
+            width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="" onmouseout="this.className='fbtn_cell';" 
+            noWrap>&nbsp;&nbsp;<A title="Print the contents of this page" 
+            href="javascript:PrintContents();" target="">Print&nbsp;<IMG 
+            height=16 alt="Print the contents of this page" hspace=0 
+            src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/print_icon.gif" 
+            width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat'" 
+          onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+            title="View information on how to use this site effectively" 
+            href="http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat" 
+            target="">Help&nbsp;<IMG height=16 
+            alt="View information on how to use this site effectively" hspace=0 
+            src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/help_icon.gif" 
+            width=16 align=absMiddle 
+      border=0></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD>
+    <TD noWrap align=right>
+      <DIV style="MARGIN-RIGHT: 12px">Last reviewed &nbsp;Sunday, October 27, 
+      2002</DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tpl_footer_row2>© 2002 Microsoft Corporation. All rights 
+reserved.&nbsp;&nbsp;<A class=ftr_copyright_text 
+href="http://support.microsoft.com/default.aspx?scid=/support/misc/cpyright.asp" 
+target=_top>Terms of use</A>&nbsp;&nbsp;<A class=ftr_copyright_text 
+href="http://www.microsoft.com/security/default.asp" target=_top>Security &amp; 
+Privacy</A>&nbsp;&nbsp;<A class=ftr_copyright_text 
+href="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" 
+target=_top>Accessibility</A>&nbsp;&nbsp;</DIV></DIV><IMG style="DISPLAY: none" 
+src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/1ptrans.gif" 
+name=metrixgif><IMG style="DISPLAY: none" height=0 alt=* 
+src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/c.gif" 
+width=0 border=0><!-- Qualified for Survey -->
+<SCRIPT language=javascript 
+src="210132 - HOW TO Use Automation to Print Microsoft Access Reports in Access 2000_files/surveytrigger.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+
+					var Exp = 90;
+					var Delay = 0;
+					var Freq = 200;
+					var CookieDef = 'ST_GN_EN-US';
+				
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+	function thisLoad(){
+setcookieval('sd', 'GN');setcookieval('SD', 'GN');gsfxUpLevel();
+LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/en-us/KB_en-us_q210132&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=');	}
+
+	function thisUnload(){
+fireTrigger('/common/survey.aspx?scid=sw;en;1022&XSL=','GN','en-us','%2fdefault.aspx%3fscid%3dKB%3ben-us%3bq210132','KB','en-us','210132','','','','','','','');	}
+</SCRIPT>
+ </BODY></HTML>

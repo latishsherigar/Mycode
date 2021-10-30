@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0053)http://216.26.168.92/articles/wordreports/index3.html -->
+<HTML><HEAD><TITLE>VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="reports, word, ole, automation,visual basic,vb,visual,basic,win32,vb4,vb5,vb6" 
+name=keywords>
+<META 
+content="ActiveXpert Neil Avent shows you how to create catchy reports with only MS Word and OLE automation." 
+name=description>
+<STYLE type=text/css>.blfont {
+	COLOR: #99ccff
+}
+.redfont {
+	COLOR: #cc0033
+}
+.yllwfont {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffff33; FONT-FAMILY: Verdana, Arial
+}
+.bluefont {
+	FONT-SIZE: 11px; COLOR: #99ccff; FONT-FAMILY: Verdana, Arial
+}
+.navbit {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Geneva, Lucida, Arial
+}
+.whitefont {
+	COLOR: #ffffff
+}
+.blackfont {
+	COLOR: #000000
+}
+A:hover {
+	COLOR: #ff0000
+}
+A:link {
+	COLOR: #333399
+}
+TABLE.zzzzlunatable {
+	BACKGROUND-COLOR: #ffffff
+}
+TR.zzzzlunatoprow {
+	BACKGROUND-COLOR: #ffffff
+}
+</STYLE>
+<!-- <SCRIPT LANGUAGE="JavaScript" SRC="http://a1028.g.akamai.net/6/1028/968/444516c765e1c0/lunafetch.about.com/cgi/luna/lunaD.js?vpn=000177"></SCRIPT> -->
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT>
+
+	alert('VB-World has changed! The network is now more interactive and features dozens of fresh articles. This page is now officially archived. To visit the updated site, click the logo or visit www.vbworld.com')
+
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="73%" bgColor=#4a558c><A href="http://www.vbworld.com/"><IMG 
+      height=41 
+      src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/vbworld.gif" 
+      width=182 border=0></A></TD>
+    <TD align=right width="27%" bgColor=#4a558c><A 
+      href="http://www.vbworld.com/"><IMG height=41 
+      src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/globe.gif" 
+      width=103 border=0></A></TD></TR>
+  <TR>
+    <TD width="100%" colSpan=2><!-- breadcrumb table -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="100%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#003399 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD width="100%" bgColor=#000060 height=2><IMG height=2 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD noWrap width="100%" bgColor=#000060><B><FONT 
+                  face="Verdana, Arial, Helvetica" size=2>&nbsp;&nbsp;<A 
+                  href="http://216.26.168.92/"><FONT class=whitefont 
+                  color=#ffffff>Home</FONT></A> <FONT 
+                  color=#ffffff>&nbsp;&gt;</FONT> <A 
+                  href="http://216.26.168.92/articles/"><FONT class=whitefont 
+                  color=#ffffff>Articles</FONT></A> </B></FONT></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#000060 height=2><IMG height=2 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#22246f height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#494b88 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#6e70a0 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#9295b6 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD width="100%" bgColor=#b2b4c9 height=1><IMG height=1 
+                  src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+                  width=1 border=0></TD></TR></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- /breadcrumb table --><!-- content table -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=10 bgColor=#ffffff><IMG height=10 
+            src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+            width=10 border=0></TD>
+          <TD vAlign=top width="100%"><!-- padding table -->
+            <TABLE cellSpacing=0 cellPadding=4 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width="100%">
+                  <TABLE width=125 align=right>
+                    <TBODY>
+                    <TR>
+                      <TD><!-- Start Options --><!-- <TABLE border=0 cellPadding=2 cellSpacing=0 width=125 bgcolor="#99CCFF"><TBODY>
+<TR>
+<TD vAlign=middle width=16><img src="/images/email_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/sendtofriend.php?subject=Creating+Reports+with+Microsoft+Word">Email this page</A></font></TD>
+</TR><TR>
+<TD vAlign=middle width=16><img src="/images/print_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/printfriendly.php?articlepageid=166">Printer Friendly</A></font></TD>
+</TR>
+<TR>
+<TD vAlign=middle width=16><img src="/images/more_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/authorbio.php?authorid=27&associd=36&assoctype=2">More From Neil</A></font></TD>
+</TR>
+<TR>
+<TD vAlign=middle width=16><img src="/images/feedback_button.gif" width="16" height="16" border="0"></TD>
+<TD vAlign=middle><font size="-1" class=navbit><A href="/php-bin/feedback.php?action=viewtopics&associd=36&assoctype=2">Post Feedback</A></font></TD>
+</TR>
+</TBODY></TABLE> --><!-- End Options --><BR><!-- Start More Articles -->
+                        <TABLE cellSpacing=0 cellPadding=0 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=top width=125 bgColor=#99ccff>
+                              <CENTER><FONT face=arial,helvetica size=2><B>More 
+                              Articles</B> </FONT></CENTER></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=2 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/lander3/">Lander 
+                              3: Adding a touch of Class</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/caret/">Using 
+                              Carets</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/console/">Writing 
+                              Console-Mode Applications in Visual 
+                              Basic</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/dbtutorial/">Visual 
+                              Basic Database Tutorial - Part 
+                          1</A></FONT></TD></TR></TBODY></TABLE><!-- End More Articles --><BR><!-- Start Hot Picks -->
+                        <TABLE cellSpacing=0 cellPadding=0 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=top width=125 bgColor=#99ccff>
+                              <CENTER><FONT face=arial,helvetica size=2><B>Hot 
+                              Picks</B> </FONT></CENTER></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=2 width=125 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/dbtutorial7/">Visual 
+                              Basic Database Tutorial - Part 7</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/articles/dbtutorial6/">Visual 
+                              Basic Database Tutorial - Part 6</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/tips/tip464.html">Adding 
+                              a Related Document to a project</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/demos/opendemo/">Open 
+                              Statement</A></FONT></TD></TR>
+                          <TR>
+                            <TD vAlign=center><FONT class=navbit size=-1><A 
+                              href="http://216.26.168.92/books/learnvb6/">Learn 
+                              to Program with Visual Basic 
+                          6</A></FONT></TD></TR></TBODY></TABLE><!-- End Hot Picks -->
+                        <HR>
+                      </TD></TR></TBODY></TABLE><FONT 
+                  face="verdana, arial, helvetica" size=-1>
+                  <P><FONT face="Arial, Helvetica" color=#003399 
+                  size=+1><B>Creating Reports with Microsoft Word</B></FONT></P>
+                  <P><I>By Neil Avent</I></P>
+                  <P><FONT face="Arial, Helvetica" color=#003399 
+                  size=+1><B>Creating our report in Word</B></FONT></P>
+                  <P>Just like the previous tutorial, you have to make a 
+                  reference to the object library before the object is visible 
+                  to your project. We do this by selecting the References menu 
+                  item from the Project drop down menu.</P>
+                  <P>This time we want Microsoft Word 8.0 Object Library. Once 
+                  you have added a tick to reference the object library in your 
+                  project you can close the dialog box by selecting OK.</P>
+                  <P>Add these lines to the General Declarations for your form, 
+                  it will set up the early binding to the class so we can see 
+                  what methods and properties we can manipulate. In this 
+                  scenario we are not interested in Events so we did not use the 
+                  withevents keyword. The Option Explicit command is there to 
+                  prevent us creating rogue variables.</P></FONT><PRE><FONT color=#00007f>Option</FONT> <FONT color=#00007f>Explicit</FONT>
+<FONT color=#00007f>Dim</FONT> ObjWord <FONT color=#00007f>As</FONT> Word.Application</PRE><FONT 
+                  face="verdana, arial, helvetica" size=-1>
+                  <P>Now we have bound the reference to our project so you can 
+                  have the popup help as you type the object name into the code 
+                  window. This means we can write the Subroutines to handle the 
+                  document manipulation before we think about actually creating 
+                  the Word object and loading the document into it.</P>
+                  <P>I structured the document so we can put information into it 
+                  in two ways. The first way is to replace the marker with the 
+                  information we collected.</P>
+                  <P align=center><B><A 
+                  href="http://216.26.168.92/demos/wordreportsdemo/Report.doc">Download 
+                  Template</A></B></P>
+                  <P>So in this case USERID01 will become whatever was inputted 
+                  into the text box.</P>
+                  <P>The other method will be to delete the Marker and also the 
+                  following line if necessary.</P>
+                  <P>If Option A was selected then Q11Option A will become 
+                  Option A otherwise the whole line will be deleted.</P>
+                  <P>If you are unsure why we would use these two methods for 
+                  manipulating the text then look at the report document before 
+                  and after the project as been run. Hopefully it will be a lot 
+                  clearer then.</P>
+                  <P>So lets look at the code for these two 
+                  subroutines:</P></FONT><PRE><FONT color=#00007f>Private</FONT> <FONT color=#00007f>Sub</FONT> DelPara(Header <FONT color=#00007f>As</FONT> <FONT color=#00007f>String</FONT>, Keep <FONT color=#00007f>As</FONT> <FONT color=#00007f>Boolean</FONT>)
+    <FONT color=#00007f>With</FONT> ObjWord.Selection.Find
+        .ClearFormatting
+        .Text = Header
+        .Execute Forward:=True
+    <FONT color=#00007f>End</FONT> <FONT color=#00007f>With</FONT>
+    <FONT color=#00007f>If</FONT> Keep = False <FONT color=#00007f>Then</FONT>
+        <FONT color=#00007f>Call</FONT> ObjWord.Selection.MoveDown(wdParagraph, 1, wdExtend)
+    <FONT color=#00007f>End</FONT> <FONT color=#00007f>If</FONT>
+    ObjWord.Selection.Delete
+<FONT color=#00007f>End</FONT> <FONT color=#00007f>Sub</FONT>
+
+<FONT color=#00007f>Private</FONT> <FONT color=#00007f>Sub</FONT> RepPara(Header <FONT color=#00007f>As</FONT> <FONT color=#00007f>String</FONT>, Data <FONT color=#00007f>As</FONT> <FONT color=#00007f>String</FONT>)
+    <FONT color=#00007f>With</FONT> ObjWord.Selection.Find
+        .ClearFormatting
+        .Text = Header
+        .Execute Forward:=True
+    <FONT color=#00007f>End</FONT> <FONT color=#00007f>With</FONT>
+    Clipboard.<FONT color=#00007f>Clear</FONT>
+    Clipboard.SetText (Data)
+    ObjWord.Selection.Paste
+    Clipboard.<FONT color=#00007f>Clear</FONT>
+<FONT color=#00007f>End</FONT> Sub</PRE><FONT 
+                  face="verdana, arial, helvetica" size=-1>
+                  <P>Hopefully this code should be quite self-explanatory. It 
+                  searches the document for whatever is held in the Header 
+                  string. In the first Subroutine it then deletes the selection 
+                  together with the following paragraph if the value passed 
+                  across is false.</P>
+                  <P>The second routine loads a string into the clipboard and 
+                  then pastes it over the selection.</P>
+                  <P>Now that is done all we have left to do is write the code 
+                  behind the command button. This code will need to:</P>
+                  <UL>
+                    <LI>Create our instance of the Word Object. 
+                    <LI>Load the Document into it 
+                    <LI>Call the subroutines to enter our data 
+                    <LI>Save the report under a different name. 
+                    <LI>Quit word and clear our pointer to it</LI></UL>
+                  <P>That sounds straight-forward enough so lets look at the 
+                  code:</P></FONT><PRE><FONT color=#00007f>Private</FONT> <FONT color=#00007f>Sub</FONT> cmdReport_Click()
+    <FONT color=#00007f>Dim</FONT> temp <FONT color=#00007f>As</FONT> <FONT color=#00007f>String</FONT>
+    <FONT color=#00007f>Set</FONT> ObjWord = <FONT color=#00007f>New</FONT> Word.Application
+<FONT color=#007f00>'  Disable command button to prevent object being recreated</FONT>
+    cmdReport.Enabled = False
+<FONT color=#007f00>'  <FONT color=#00007f>Name</FONT> of report file, change path to whatever is applicable</FONT>
+    ObjWord.Documents.<FONT color=#00007f>Open</FONT> ("c:Report.doc")
+    
+<FONT color=#007f00>'  Calling subroutines with header and data</FONT>
+    <FONT color=#00007f>Call</FONT> RepPara("userid01", txtName)
+    <FONT color=#00007f>Call</FONT> RepPara("userid02", txtDept)
+    <FONT color=#00007f>Call</FONT> DelPara("Q11", OptA.Value)
+    <FONT color=#00007f>Call</FONT> DelPara("Q12", OptB.Value)
+    <FONT color=#00007f>Call</FONT> DelPara("Q13", OptNone.Value)
+    <FONT color=#00007f>Call</FONT> DelPara("Q20", chkC.Value)
+    <FONT color=#00007f>Call</FONT> DelPara("Q21", chkD.Value)
+    <FONT color=#00007f>Call</FONT> DelPara("Q22", ChkE.Value)
+    <FONT color=#00007f>Call</FONT> DelPara("Q23", ChkF.Value)
+    <FONT color=#00007f>Call</FONT> DelPara("Q24", chkG.Value)
+    
+    temp = "You selected " &amp; <FONT color=#00007f>Str</FONT>$(HScroll1.Value)&amp; " on the scroll bar"
+    <FONT color=#00007f>Call</FONT> RepPara("Q31", temp)
+    <FONT color=#00007f>Call</FONT> RepPara("Q32", temp)
+<FONT color=#007f00>'  Saves report with a new filename</FONT>
+    ObjWord.ActiveDocument.SaveAs ("c:NewReport.doc")
+<FONT color=#007f00>'  Quit Word</FONT>
+    ObjWord.Quit
+<FONT color=#007f00>'  Inform user that report is created</FONT>
+    MsgBox "Report Created"
+<FONT color=#007f00>'  <FONT color=#00007f>Clear</FONT> our pointer to word</FONT>
+    <FONT color=#00007f>Set</FONT> ObjWord = Nothing
+<FONT color=#00007f>End</FONT> Sub</PRE><FONT 
+                  face="verdana, arial, helvetica" size=-1></FONT>
+                  <CENTER>
+                  <TABLE cellSpacing=0 cellPadding=2 width="60%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=center noWrap width="50%"><FONT 
+                        face="Verdana, Arial, Helvetica" size=-1>
+                        <P align=left><IMG height=12 
+                        src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/prev.gif" 
+                        width=12> <A 
+                        href="http://216.26.168.92/articles/wordreports/index2.html">Producing 
+                        the user interface</A></P></FONT></TD>
+                      <TD vAlign=center noWrap align=right width="50%"><FONT 
+                        face="Verdana, Arial, Helvetica" size=-1>
+                        <P align=right><A 
+                        href="http://216.26.168.92/articles/wordreports/index4.html">Summary</A> 
+                        <IMG height=12 
+                        src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/next.gif" 
+                        width=12></P></FONT></TD></TR></TBODY></TABLE></CENTER></TD></TR></TBODY></TABLE><!-- /padding table --></TD>
+          <TD width=10 bgColor=#ffffff><IMG height=10 
+            src="VB-World - Articles - Creating Reports with Microsoft Word - Creating our report in Word_files/clear.gif" 
+            width=10 border=0></TD></TR></TBODY></TABLE><!-- /content table --><!-- copyright table -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#003399 
+        border=0></TD></TR>
+        <TBODY></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD 
+          style="FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: Tahoma, Verdana" 
+          width="100%" bgColor=#4a558c colSpan=2>
+            <P align=center><BR>Copyright 1997 - 2002 VB-World Network. All 
+            rights reserved. <A 
+            style="COLOR: #ffffff; TEXT-DECORATION: underline" 
+            href="http://www.vbworld.com/vbworld/privacy.aspx">Privacy 
+            policy</A>.<BR>Hosted by <A 
+            style="COLOR: #ffffff; TEXT-DECORATION: underline" 
+            href="http://www.maximumasp.com/">MaximumASP.com<BR><BR></A></P></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY></TBODY></TABLE></TR></TBODY></TABLE></BODY></HTML>
