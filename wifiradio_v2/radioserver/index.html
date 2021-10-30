@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+    <title>FM Radio</title>
+
+<script>
+
+function createStationButton(stationid,stationName){
+
+	var btn = document.createElement("BUTTON");
+	btn.id= "btn_" + stationid;
+	btn.innerHTML = stationid + " - " + stationName;                   // Insert text
+	btn.className ="btn btn-info btn-lg btn-block";
+	btn.addEventListener("click",function(){
+	  playStation(stationid,stationName);
+	}
+
+	);
+
+	document.getElementById("stationbuttongroup").appendChild(btn);
+
+}
+
+function hideLoadingSpinner(flag){
+	if(flag){
+		$('#divLoadingspinner').hide();	
+	}else{
+		$('#divLoadingspinner').show();	
+        }	
+
+
+}
+
+
+function hideChannelsButton(flag){
+
+	if(flag){
+		$('#channelsDiv').hide();
+	}else{
+		$('#channelsDiv').show();
+        }	
+
+	
+}
+
+
+function hideStationButtonGroup(flag){
+	if(flag){
+		$('#stationbuttongroup').hide();
+	}else{
+		$('#stationbuttongroup').show();
+		
+        }	
+
+
+}
+
+
+function hideStationInfo(flag){
+	if(flag){
+		$('#currentStationInfoDiv').hide();
+	}else{
+		$('#currentStationInfoDiv').show();
+		
+        }	
+
+
+}
+
+
+function muteFMStream(flag){
+	var fmStreamControl = document.getElementById("fmaudiocontrol");
+	 fmStreamControl.muted = flag;
+	}
+
+function playStation(stationid,stationName){
+
+
+	hideStationButtonGroup(true);
+	hideStationInfo(false);
+	hideChannelsButton(true);
+
+
+	var audoDiv = document.getElementById("audiodiv");
+	  while (audoDiv.firstChild) {
+	    audoDiv.removeChild(audoDiv.firstChild);
+	  }
+
+	hideLoadingSpinner(false);
+	hideStationButtonGroup(true);
+
+	stationUrl = "http://192.169.1.13/fmtuner/channel/" + stationid;
+	document.getElementById("fmtuner").src= stationUrl;
+
+	document.getElementById("currentStationID").innerHTML= stationid;
+	document.getElementById("currentStationName").innerHTML= stationName;
+
+
+	var fmStreamControl = document.createElement("AUDIO");
+
+	fmStreamControl.setAttribute("id", "fmaudiocontrol");
+	fmStreamControl.setAttribute("controls", "controls");
+	fmStreamControl.setAttribute("src","http://192.169.1.10:8000/rapi.mp3") ;
+	fmStreamControl.setAttribute("type","audio/mpeg");
+
+
+
+
+	fmStreamControl.load();
+	fmStreamControl.play();
+	fmStreamControl.muted = true;
+
+
+
+	fmStreamControl.onloadeddata = function() {
+
+		hideLoadingSpinner(true);
+		hideChannelsButton(false);
+		audoDiv.appendChild(fmStreamControl);                              // Append the text to <li>
+		//alert("Browser has loaded the current frame");
+		window.setTimeout(function(){
+				muteFMStream(false);
+			},
+			 2000);
+	};
+
+
+}
+
+</script>
+
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery/jquery-3.4.1.min.js" ></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+<div class="container">
+
+
+  <center>
+<div style="font-size:30px;">Sherigar HiFi FM Radio <img  src="img/radio.jpg" class="img-fluid" alt="Responsive image" 
+             width="107" height="70"/>
+</div>
+
+<div id="currentStationInfoDiv">
+	<div style="font-size:100px;" id="currentStationID"></div>
+	<div style="font-size:50px;" id="currentStationName"></div>
+</div>
+<p></p>
+
+<div id="audiodiv" >
+</div>
+
+<div  id="divLoadingspinner" class="spinner-grow" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+<p></p>
+
+<div id="channelsDiv" >
+<button id="btnChannels" type="button" class="btn btn-info" onclick="hideStationButtonGroup(false); hideStationInfo(true);">Channels</button>
+<p></p>
+</div>
+
+</center>
+
+
+
+<div id="stationbuttongroup"></div>
+
+
+<img id="fmtuner" src=""/>
+
+<script>
+createStationButton("91.1","Radio City");
+createStationButton("91.9","Radio Nasha");
+createStationButton("92.7","BIG 92.7");
+createStationButton("93.5","Red FM");
+createStationButton("94.3","Radio One");
+createStationButton("94.6","Win 94.6");
+createStationButton("98.3","Radio Mirchi");
+createStationButton("100.7","AIR FM Gold");
+createStationButton("104","Fever 104 FM");
+createStationButton("104.8","Ishq 104.8");
+createStationButton("105.6","Gyan Vani");
+createStationButton("106.4","Magic FM");
+createStationButton("107.1","AIR FM Rainbow");
+createStationButton("107.8","MUST FM");
+
+hideLoadingSpinner(true);
+
+hideChannelsButton(true);
+
+$('#fmtuner').hide();
+
+$( document ).ready(function() {
+    //playStation("91.1");
+//document.getElementById("btn_91.1").click(); 
+
+});
+
+</script>
+
+
+
+
+</div>
+  </body>
+</html>

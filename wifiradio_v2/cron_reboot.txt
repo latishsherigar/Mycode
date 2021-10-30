@@ -1,0 +1,2 @@
+@reboot sleep 60 && sudo /home/pi/cron_darkice.sh
+

@@ -1,0 +1,52 @@
+client.print("<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width, initial-scale=1'><style>');
+client.print(".button { ");
+client.print("  padding: 15px 25px; ");
+client.print("  font-size: 24px; ");
+client.print("  text-align: center; ");
+client.print("  cursor: pointer; ");
+client.print("  outline: none; ");
+client.print("  color: #fff; ");
+client.print("  background-color: #4CAF50; ");
+client.print("  border: none; ");
+client.print("  border-radius: 15px; ");
+client.print("  box-shadow: 0 9px #999; ");
+client.print("   width: 40%; ");
+client.print("} ");
+
+
+client.print(".button:hover {background-color: #3e8e41} ");
+
+client.print(".button:active { ");
+client.print("  background-color: #3e8e41; ");
+client.print("  box-shadow: 0 5px #666; ");
+client.print("  transform: translateY(4px); ");
+client.print("} ");
+
+
+client.print("</style> ");
+client.print("</head> ");
+client.print("<body> ");
+
+client.print("<h2>Current channel</h2> ");
+
+
+
+client.print("<button class='button'  onclick='changeChannel(91.1)'>91.1</button> ");
+client.print("<button class='button'>91.9</button><p/> ");
+client.print("<button class='button'>92.7</button> ");
+client.print("<button class='button'>93.5</button><p/> ");
+client.print("<button class='button'>94.3</button> ");
+client.print("<button class='button'>98.3</button><p/> ");
+client.print("<button class='button'>100.7</button> ");
+client.print("<button class='button'>104</button><p/> ");
+client.print("<button class='button'>104.8</button> ");
+client.print("<button class='button'>106.4</button><p/> ");
+
+client.print("<script> ");
+client.print("function changeChannel(channelCode) { ");
+client.print("  window.location='fmtuner/channel/' + channelCode; ");
+client.print("} ");
+client.print("</script></body></html> ");
+
+
+
