@@ -1,0 +1,3 @@
+java -splash:splash-startup.gif  -jar licensevalidator-1.0.0-jar-with-dependencies.jar --app ftphttpbridge-1.0.0.jar.app
+java -splash:splash-startup.gif  -jar licensevalidator-1.0.0-jar-with-dependencies.jar --app tallyattachmentemailer-1.0.0-jar-with-dependencies.jar.app
+

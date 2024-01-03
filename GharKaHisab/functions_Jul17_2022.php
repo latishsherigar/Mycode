@@ -1,5 +1,5 @@
 <?php
-error_reporting ( E_ALL ^ E_NOTICE ^ E_WARNING );
+error_reporting ( E_ALL ^ E_NOTICE );
 ini_set ( 'display_errors', '1' );
 
 //if (session_status () == PHP_SESSION_NONE) {
@@ -1008,8 +1008,7 @@ function populate_all_users_arr(){
 }
 
 function save_current_statement_html($acc_year_month){
-	//$ini_array = parse_ini_file ( "config.ini" );
-	$ini_array = parse_ini_string (file_get_contents( "config.ini" ));
+	$ini_array = parse_ini_file ( "config.ini" );
 	$statement_dir=$ini_array['statements_path'];
 	
 	$current_script_path = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -1025,9 +1024,8 @@ function save_current_statement_html($acc_year_month){
 }
 
 function get_statement_webpath(){
-	//$ini_array = parse_ini_file ( "config.ini" );
-	$ini_array = parse_ini_string (file_get_contents( "config.ini" ));
-	
+	$ini_array = parse_ini_file ( "config.ini" );
+
 	$statements_web_path = "http://".$_SERVER['HTTP_HOST'].'/'.$ini_array['statements_web_path'];
 	
 	return $statements_web_path;
