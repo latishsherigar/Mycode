@@ -1,0 +1,26 @@
+{
+	"expenseTypes": {
+		"expenseType": [
+			{
+				"id": "1",
+				"description": "Food items / Grocery",
+				"sortOrder": "1"
+			},
+			{
+				"id": "2",
+				"description": "50-50",
+				"sortOrder": "2"
+			},
+			{
+				"id": "3",
+				"description": "Personal expense - Latish",
+				"sortOrder": "3"
+			},
+			{
+				"id": "4",
+				"description": "Personal expense - Kishor",
+				"sortOrder": "4"
+			}
+		]
+	}
+}

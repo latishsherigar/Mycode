@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Expense log11</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+</head>
+<body>
+	<script type='text/javascript' src="js/jquery-min.js"></script>
+	<script type='text/javascript' src="js/bootstrap.min.js"></script>
+
+
+	<div class="container">
+
+		<form role="form" id="expense_form" method="post" action="expenseLog.html">
+			<div class="form-group col-xs-5">
+				<label for="expenseType">Expense Type</label> <select
+					id="expenseType" name="expenseType" class="form-control">
+					<option></option>
+						<?php populate_expense_type_dropdown();?>
+					</select>
+
+			</div>
+
+	</div>
+
+</body>
+</html>
